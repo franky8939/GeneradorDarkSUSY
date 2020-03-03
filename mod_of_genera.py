@@ -86,16 +86,17 @@ def genera_data(Event,  # number of event simulate
     DirMadgraph = ""
     if Mode == "out":
         # create file
-        if not os.path.exists(Dir_temp_Madg + "/temp"):
-            os.system("mkdir " + Dir_temp_Madg + "/temp")
+        if not os.path.exists(Dir_temp_Madg):
+            os.system("mkdir " + Dir_temp_Madg)
         NumberOfProcess = str(random.randint(0, 10000))  # NAME OF PROCESS
-        while os.path.exists(Dir_temp_Madg + "/temp/Process_" + NumberOfProcess):
+        while os.path.exists(Dir_temp_Madg + "/Process_" + NumberOfProcess):
             NumberOfProcess = str(random.randint(0, 10000))  # NAME OF PROCESS
-        os.system("mkdir " + Dir_temp_Madg + "/temp/Process_" + NumberOfProcess)
-        print(" :: Se crea la carpeta : temp/Process_" + NumberOfProcess + " ::")
+        os.system("mkdir " + Dir_temp_Madg + "/Process_" + NumberOfProcess)
+        os.system("mkdir " + Dir_temp_Madg + "/Process_" + NumberOfProcess + "/MG5_aMC")
+        print(" :: Se crea la carpeta : Process_" + NumberOfProcess + "/MG5_aMC ::")
 
-        DirMadgraph = Dir_temp_Madg + "/temp/Process_" + NumberOfProcess + "/MG5_aMC"
-        shutil.copytree(Dir_Madg, DirMadgraph)
+        DirMadgraph = Dir_temp_Madg + "/Process_" + NumberOfProcess + "/MG5_aMC"
+        os.system("cp -r " + Dir_Madg + "/* " + DirMadgraph)  # shutil.copytree(Dir_Madg, DirMadgraph)
         print(" :: Se copio mg5 correctamente en la carpeta : " + DirMadgraph + " :: ")
 
         os.environ["MADGRAPH5_N"] = DirMadgraph  # base
@@ -120,8 +121,6 @@ def genera_data(Event,  # number of event simulate
                                         os.environ["Pythia8_N"] + "/lib" + ":" + \
                                         os.environ["lhapdf6"] + "/lib" + ":" + \
                                         os.environ["Heptools_N"] + "/lib" + ":"
-        os.environ["DYLD_LIBRARY_PATH"] = os.environ["DYLD_LIBRARY_PATH"] + ":" + \
-                                          os.environ["ExRoot_N"] + ":"
         os.environ["ROOT_INCLUDE_PATH"] = os.environ["ROOT_INCLUDE_PATH"] + ":" + \
                                           os.environ["ExRoot_N"] + ":"
         os.environ["PYTHONPATH"] = os.environ["PYTHONPATH"] + ":" + \
@@ -129,42 +128,64 @@ def genera_data(Event,  # number of event simulate
     elif Mode == "in":
         DirMadgraph = Dir_Madg
     else:
-        print(" Error in the introduction of Mode")
+        print(" :: Error in the introduction of Mode :: ")
         quit()
 
     # *** || COPY MSSMD_UFO || # Go to the folder MG5_aMC_vXXX/models. Copy the UFO model there in to folder MSSMD_UFO:
     try:
         shutil.rmtree(DirMadgraph + "/models/MSSMD_UFO")  # Borrar el archivo con contenido
         print(" :: Se borro archivo MSSMD_UFO en Madg5 :: ")
-    except all:
+    except:
         print(" :: No se encontro archivo MSSMD_UFO en Madg5 :: ")
         quit()
 
     # *** || copy info MSSMD_UFO || *** #
-    shutil.copytree(Dir_Source + "/MSSMD_UFO", DirMadgraph + "/models/MSSMD_UFO")  # Copiar la info
-    print(" :: Se copio el archivo MSSMD_UFO :: ")
+    try:
+        shutil.copytree(Dir_Source + "/MSSMD_UFO", DirMadgraph + "/models/MSSMD_UFO")  # Copiar la info
+        print(" :: Se copio el archivo MSSMD_UFO :: ")
+    except:
+        print(" :: Error en la copia del archivo MSSMD_UFO :: ")
+        quit()
 
     # *** || Mass Dark Photon || *** # Go to the folder MSSMD_UFO and execute .py:
-    os.system("python " + DirMadgraph + "/models/MSSMD_UFO/write_param_card.py")  # Execute the program
-    print(" :: Se ejecuto write_param_card.py:: ")
+    try:
+        os.chdir(
+            DirMadgraph + "/models/MSSMD_UFO")  # Posicionarse en el lugar, es necesario por la salida param_card.dat
+        os.system("python " + "write_param_card.py")  # Execute the program
+        print(" :: Se ejecuto write_param_card.py:: ")
+    except:
+        print(" :: No se pudo ejecutar write_param_card.py:: ")
+        quit()
 
     # *** || Change the mass of dark photon || *** #
-    modificarLinea(DirMadgraph + "/models/MSSMD_UFO/param_card.dat",
-                   "  3000022 2.500000e-01 # MAD", "  3000022 " + str(Ma_DPho) + " # MAD ")
+    try:
+        modificarLinea(DirMadgraph + "/models/MSSMD_UFO/param_card.dat",
+                       "  3000022 2.500000e-01 # MAD", "  3000022 " + str(Ma_DPho) + " # MAD ")
+        print(" :: Se cambio  mass of dark photon :: ")
+    except:
+        print(" :: Error al cambiar  mass of dark photon :: ")
 
     # *** || Change the mass of lightest neutalino || *** #
-    modificarLinea(DirMadgraph + "/models/MSSMD_UFO/param_card.dat",
-                   "  1000022 1.000000e+01 # Mneu1 ", "  1000022 " + str(Ma_LNeu) + " # Mneu1 ")
+    try:
+        modificarLinea(DirMadgraph + "/models/MSSMD_UFO/param_card.dat",
+                       "  1000022 1.000000e+01 # Mneu1 ", "  1000022 " + str(Ma_LNeu) + " # Mneu1 ")
+        print(" :: Se cambio  mass of lightest neutalino :: ")
+    except:
+        print(" :: Error al cambiar  mass of lightest neutalino :: ")
 
     # *** || Change the mass of dark neutalino || *** #
-    modificarLinea(DirMadgraph + "/models/MSSMD_UFO/param_card.dat",
-                   "  3000001 1.000000e+00 # MneuD ", "  3000001 " + str(Ma_DNeu) + " # MneuD ")
+    try:
+        modificarLinea(DirMadgraph + "/models/MSSMD_UFO/param_card.dat",
+                       "  3000001 1.000000e+00 # MneuD ", "  3000001 " + str(Ma_DNeu) + " # MneuD ")
+        print(" :: Se cambio  mass of dark neutalino :: ")
+    except:
+        print(" :: Error al cambiar  mass of dark neutalino :: ")
 
     # *** || COPY proc_card.dat || *** # Remove the default proc_card.dat in the MG5_aMC_vXXX directory
     try:
         os.remove(DirMadgraph + "/proc_card.dat")
         print(" :: proc_card.dat fue borrado :: ")
-    except all:
+    except:
         print(" :: proc_card.dat no existe en el directorio :: ")
         quit()
     # Copy the following proc_card.dat there:
@@ -173,9 +194,10 @@ def genera_data(Event,  # number of event simulate
 
     # *** || Generar MSSMD || *** # Run ./bin/mg5_aMC proc_card.dat and generate the folder called MSSMD.
     try:
-        os.system("./" + DirMadgraph + "/bin/mg5_aMC proc_card.dat")  # EXECUTE
+        os.chdir(DirMadgraph)  # Posicionarse en el lugar, es necesario
+        os.system("./bin/mg5_aMC proc_card.dat")  # EXECUTE
         print(" :: Generada la carpeta MSSMD :: ")
-    except all:
+    except:
         print(" :: No fue generada la carpeta MSSMD :: ")
         quit()
 
@@ -183,7 +205,7 @@ def genera_data(Event,  # number of event simulate
     try:
         shutil.copy(Dir_Source + "/madspin_card.dat", DirMadgraph + "/MSSMD/Cards")
         print(" :: Se copio el archivo madspin_card.dat ::")
-    except all:
+    except:
         print(" :: No se pudo copiar el archivo madspin_card.dat ::")
         quit()
 
@@ -195,7 +217,7 @@ def genera_data(Event,  # number of event simulate
                        "  10000 = nevents ! Number of unweighted events requested",
                        "  " + str(Event) + "  = nevents ! Number of unweighted events requested ")
         print(" :: Se cambio la Run_card :: ")
-    except all:
+    except:
         print(" :: No se pudo cambiar la Run_card :: ")
         quit()
 
@@ -212,7 +234,7 @@ def genera_data(Event,  # number of event simulate
             print(" :: pythia8_card.dat fue borrado para su desactivacion:: ")
         else:
             print(" :: pythia8_card.dat condicion sin cambios:: ")
-    except all:
+    except:
         print(" :: pythia8_card.dat condicion con problemas:: ")
         quit()
 
@@ -223,49 +245,48 @@ def genera_data(Event,  # number of event simulate
             if os.path.exists(DirMadgraph + "/MSSMD/Cards/delphes_card.dat"):
                 os.remove(DirMadgraph + "/MSSMD/Cards/delphes_card.dat")
                 print(" :: delphes_card.dat fue borrado y desactivado:: ")
-            elif Del_bool in ["ON", "On", "oN", "on"]:
-                if Card == "CMS":
-                    shutil.copy(DirMadgraph + "/MSSMD/Cards/delphes_card_CMS.dat",
+        elif Del_bool in ["ON", "On", "oN", "on"]:
+            if Card == "CMS":
+                shutil.copy(DirMadgraph + "/MSSMD/Cards/delphes_card_CMS.dat",
+                            DirMadgraph + "/MSSMD/Cards/delphes_card.dat")
+            elif Card == "HL":
+                if os.path.exists(DirMadgraph + "/MSSMD/Cards/delphes_card_HL.dat"):
+                    shutil.copy(DirMadgraph + "/MSSMD/Cards/delphes_card_HL.dat",
                                 DirMadgraph + "/MSSMD/Cards/delphes_card.dat")
-                elif Card == "HL":
-                    if os.path.exists(DirMadgraph + "/MSSMD/Cards/delphes_card_HL.dat"):
-                        shutil.copy(DirMadgraph + "/MSSMD/Cards/delphes_card_HL.dat",
-                                    DirMadgraph + "/MSSMD/Cards/delphes_card.dat")
-                    elif os.path.exists(DirMadgraph + "/MSSMD/Cards/delphes_card_HLLHC.dat"):
-                        shutil.copy(DirMadgraph + "/MSSMD/Cards/delphes_card_HLLHC.dat",
-                                    DirMadgraph + "/MSSMD/Cards/delphes_card.dat")
-                    elif os.path.exists(Dir_Source + "/delphes_card_HL.dat"):
-                        shutil.copy(Dir_Source + "/delphes_card_HL.dat",
-                                    DirMadgraph + "/MSSMD/Cards/delphes_card.dat")
-                    elif os.path.exists(Dir_Source + "/delphes_card_HLLHC.dat"):
-                        shutil.copy(Dir_Source + "/delphes_card_HLLHC.dat",
-                                    DirMadgraph + "/MSSMD/Cards/delphes_card.dat")
-                    else:
-                        print(" :: No hay card de delphes para HL disponible, stop program")
-                        quit()
+                elif os.path.exists(DirMadgraph + "/MSSMD/Cards/delphes_card_HLLHC.dat"):
+                    shutil.copy(DirMadgraph + "/MSSMD/Cards/delphes_card_HLLHC.dat",
+                                DirMadgraph + "/MSSMD/Cards/delphes_card.dat")
+                elif os.path.exists(Dir_Source + "/delphes_card_HL.dat"):
+                    shutil.copy(Dir_Source + "/delphes_card_HL.dat",
+                                DirMadgraph + "/MSSMD/Cards/delphes_card.dat")
+                elif os.path.exists(Dir_Source + "/delphes_card_HLLHC.dat"):
+                    shutil.copy(Dir_Source + "/delphes_card_HLLHC.dat",
+                                DirMadgraph + "/MSSMD/Cards/delphes_card.dat")
                 else:
-                    print(" :: delphes_card.dat sin cambios:: ")
-    except all:
+                    print(" :: No hay card de delphes para HL disponible, stop program")
+                    quit()
+        else:
+            print(" :: delphes_card.dat sin cambios:: ")
+    except:
         print(" :: delphes_card.dat condicion con problemas ::  ")
         quit()
 
     # *** || Create /Events_###/MneuL_###/MneuD_###/MphoD_###/Mu_min4 || ***
     try:
-        files = [["/Events_" + str(Event)],
-                 ["/MneuL_" + str(Ma_LNeu)],
-                 ["/MneuD_" + str(Ma_DNeu)],
-                 ["/MphoD_" + str(Ma_DPho)]]
+        files = ["/Events_" + str(Event),
+                 "/MneuL_" + str(Ma_LNeu),
+                 "/MneuD_" + str(Ma_DNeu),
+                 "/MphoD_" + str(Ma_DPho)]
         DirOutput = Dir_Out
         for name in files:
             DirOutput += name
-            print(DirOutput)
             try:
                 os.system("mkdir " + DirOutput)  # crea carpeta
                 print(" :: Directorio :: " + DirOutput + " fue creado :: ")
-            except all:
+            except:
                 print(" :: Directorio :: " + DirOutput + " existe :: ")
                 # quit()
-    except all:
+    except:
         print(" :: Problemas en la creacion de directorios :: ")
         quit()
 
@@ -273,20 +294,21 @@ def genera_data(Event,  # number of event simulate
     try:
         os.system("mkdir " + DirOutput + "/lhe")  # crea carpeta
         print(" :: Directorio :: " + DirOutput + "/lhe" + " fue creado :: ")
-    except all:
+    except:
         print(" :: Directorio :: " + DirOutput + "/lhe" + " existe :: ")
 
     # *** || Create /Events_###/MneuL_###/MneuD_###/MphoD_###/Mu_min4 || ***
     try:
         os.system("mkdir " + DirOutput + "/Mu_min4")  # crea carpeta
         print(" :: Directorio :: " + DirOutput + "/Mu_min4" + " fue creado :: ")
-    except all:
+    except:
         print(" :: Directorio :: " + DirOutput + "/Mu_min4" + " existe :: ")
 
     # *** || Genera datos || *** #
     if tyout == "lhe":
         # Genera
-        os.system("./" + DirMadgraph + "/MSSMD/bin/generate_events <<< 0 <<< 0 ")
+        os.chdir(DirMadgraph + "/MSSMD/")  # Posicionarse en el lugar, es necesario
+        os.system("./bin/generate_events <<< 0 <<< 0 ")
         # directory of copy
         try:
             shutil.rmtree(DirOutput + "/lhe")  # clear directory
@@ -294,21 +316,21 @@ def genera_data(Event,  # number of event simulate
 
             shutil.copytree(DirMadgraph + "/MSSMD/Events", DirOutput + "/lhe")  # Copy the info
             print(" :: Se copio *.lhe en el directorio: /" + DirOutput + "/lhe ::")
-        except all:
+        except:
             print(" :: No se pudo completar la copia de *.lhe ::")
             quit()
         # descomprime
         try:
             os.system("gzip -d " + DirOutput + "/lhe/run_01_decayed_1/unweighted_events.lhe.gz")
             print(" :: Se descomprimio el archivo lhe en la carpeta de guardado::")
-        except all:
+        except:
             print(" :: No se descomprimio el archivo lhe en la carpeta de guardado::")
             quit()
 
         lhe_log = os.path.exists(DirOutput + "/lhe/run_01_decayed_1/unweighted_events.lhe")
         root_log = False
 
-    elif tyout == "root" and os.path.exists(DirOutput + "/lhe/run_01_decayed_1/unweighted_events.lhe.gz"):
+    elif tyout == "root":
 
         # *** || Preparando Madgraph de previos calculos || *** #
         shutil.rmtree(DirMadgraph + "/MSSMD/Events")  # borrar resultados
@@ -318,7 +340,7 @@ def genera_data(Event,  # number of event simulate
         try:  # if os.path.exists(DirOutput + "/lhe/run_01_decayed_1/unweighted_events.lhe.gz"):
             os.system("gzip -d " + DirOutput + "/lhe/run_01_decayed_1/unweighted_events.lhe.gz")  # decompiler
             print(" :: decompiler unweighted_events.lhe.gz en la posicion de guardado :: ")
-        except all:
+        except:
             print(" :: no se decompiler unweighted_events.lhe.gz en la posicion de guardado :: ")
         # copy file
         shutil.copytree(DirOutput + "/lhe/", DirMadgraph + "/MSSMD/Events")
@@ -338,7 +360,9 @@ def genera_data(Event,  # number of event simulate
         print(" :: Se comprimio unweighted_events.lhe.gz en la carpeta Eventos de Madgraph :: ")
 
         # *** || Obtein file root in Madg || *** #
-        os.system("./" + DirMadgraph + "/MSSMD/bin/madevent delphes run_01_decayed_1 <<< 0")  # genera solo el .lhe
+        # Genera
+        os.chdir(DirMadgraph + "/MSSMD/")  # Posicionarse en el lugar, es necesario
+        os.system("./bin/madevent pythia8 run_01_decayed_1 <<< 0")  # genera root
         print(" :: Se genera el archivo *.root :: ")
 
         # *** || Encuentra archivo *.root creado || *** #
@@ -348,24 +372,29 @@ def genera_data(Event,  # number of event simulate
                 outROOT = i
 
         NameOutput = Name + "_" + Card + "_Event_" + str(Event) + "_MNeuL_" + str(Ma_LNeu) + \
-                     "_MNeuD_" + str(Ma_DNeu) + "_MPhoD_" + str(Ma_DPho) + "_"
-        try:
-            os.rename(DirMadgraph + "/MSSMD/Events/run_01_decayed_1/" + outROOT,
-                      DirMadgraph + "/MSSMD/Events/run_01_decayed_1/" + NameOutput + ".root")  # rename root file
-            print(" :: Se renombra el archivo root segun la codificacion recomendada:: ")
+                     "_MNeuD_" + str(Ma_DNeu) + "_MPhoD_" + str(Ma_DPho) + "_TcPhoD_" + str(Tc_DPho) + "_"
+        if len(outROOT) > 0:
+            try:
+                os.rename(DirMadgraph + "/MSSMD/Events/run_01_decayed_1/" + outROOT,
+                          DirMadgraph + "/MSSMD/Events/run_01_decayed_1/" + NameOutput + ".root")  # rename root file
+                print(" :: Se renombra el archivo root segun la codificacion recomendada:: ")
 
-            shutil.copy(DirMadgraph + "/MSSMD/Events/run_01_decayed_1/" + NameOutput + ".root",
-                        DirOutput)
-            print(" :: Se copia el archivo root a su localidad de guardado :: ")
-        except all:
-            print(" :: No se pudo renombrar y copiar el root de salida")
-            quit()
+                shutil.copy(DirMadgraph + "/MSSMD/Events/run_01_decayed_1/" + NameOutput + ".root",
+                            DirOutput)
+                print(" :: Se copia el archivo root a su localidad de guardado :: ")
+            except:
+                print(" :: No se pudo renombrar y copiar el root de salida")
+                quit()
 
         # salida
         lhe_log = os.path.exists(DirOutput + "/lhe/run_01_decayed_1/unweighted_events.lhe")
-        root_log = os.path.exists(DirOutput + NameOutput + ".root")
-    else:
-        lhe_log = 0
-        root_log = 0
+        root_log = os.path.exists(DirOutput + "/" + NameOutput + ".root")
 
+    else:
+        lhe_log = False
+        root_log = False
+
+    # *** || Borrar temporates Madgraph de previos calculos || *** #
+    if Mode == "out":
+        shutil.rmtree(Dir_temp_Madg + "/Process_" + NumberOfProcess)
     return lhe_log, root_log
