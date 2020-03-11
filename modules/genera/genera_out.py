@@ -1,4 +1,4 @@
-from modules.modification_card import *
+from modules.genera.modification_card import *
 
 
 def genera_out(Event,  # number of event simulate

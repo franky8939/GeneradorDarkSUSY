@@ -250,7 +250,7 @@ def main(eventos, MassPhoton, TcPhoton, fileName, dirmad, modo):
             print(" :: Directorio : /output/Events_" + str(eventos) + "/Mphohon_" +
                   str(num) + "/default_lhe  fue creado :: ")
 
-        # # Genera datos si no existen claro # #
+        # # genera datos si no existen claro # #
         if os.path.exists(DirOutput + "/default_lhe/run_01_decayed_1"):
             print(" :: Datos *.lhe existentes :: ")
         else:

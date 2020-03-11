@@ -1,16 +1,16 @@
 import os
 import shutil
-from modules.messange_info import Mess
+from modules.all.messange_info import printG
 
 
 def file_set(inp, info=None):
     # Create file
     try:
         os.makedirs(inp)
-        Mess(" :: Create file :: " + inp, info)
+        printG(" :: Create file :: " + inp, info)
         return file_exists(inp)
     except:
-        Mess(" :: ERROT :: Create file :: " + inp, info)
+        printG(" :: ERROT :: Create file :: " + inp, info)
         return False
 
 
@@ -19,24 +19,24 @@ def file_copy(dir_in, dir_out, mode, info=None):
         if mode == "tt" or mode == "TT":
             os.system("cp -r " + dir_in + "/* " + dir_out)
 
-            Mess(" :: Copy folder :: " + dir_in + " :: to folder:: " + dir_out, info)
+            printG(" :: Copy folder :: " + dir_in + " :: to folder:: " + dir_out, info)
             return True
         elif mode == "ft" or mode == "FT":
             os.system("cp -r " + dir_in + " " + dir_out)
 
-            Mess(" :: Copy file :: " + dir_in + " :: to folder:: " + dir_out, info)
+            printG(" :: Copy file :: " + dir_in + " :: to folder:: " + dir_out, info)
             return True
         elif mode == "ff" or mode == "FF":
             shutil.copy(dir_in, dir_out)
 
-            Mess(" :: Copy file :: " + dir_in + " :: to file :: " + dir_out, info)
+            printG(" :: Copy file :: " + dir_in + " :: to file :: " + dir_out, info)
             return True
         else:
 
-            Mess(" :: ERROR IN MODE :: Copy :: " + dir_in + " :: to folder:: " + dir_out, info)
+            printG(" :: ERROR IN MODE :: Copy :: " + dir_in + " :: to folder:: " + dir_out, info)
             return False
     except:
-        Mess(" :: ERROR IN EXECUTION :: Copy :: " + dir_in + " :: to folder:: " + dir_out, info)
+        printG(" :: ERROR IN EXECUTION :: Copy :: " + dir_in + " :: to folder:: " + dir_out, info)
         return False
 
 
@@ -45,13 +45,13 @@ def file_exists(inp, info=None):
     try:
         log = os.path.exists(inp)
         if log:
-            Mess(" :: Exist file :: " + inp, info)
+            printG(" :: Exist file :: " + inp, info)
             return True
         else:
-            Mess(" :: Not exist file :: " + inp, info)
+            printG(" :: Not exist file :: " + inp, info)
             return False
     except:
-        Mess(" :: NOT Exist file :: " + inp, info)
+        printG(" :: NOT Exist file :: " + inp, info)
         return False
 
 
@@ -62,27 +62,28 @@ def file_clear(inp, mode, info=None):
         elif mode is "File" or mode is "file" or mode is "f":
             os.remove(inp)
         else:
-            Mess(" :: Clear mode unknown :: ", info)
+            printG(" :: Clear mode unknown :: ", info)
             return False
 
         if file_exists(inp):
-            Mess(" :: Clear file :: " + inp, info)
+            printG(" :: Clear file :: " + inp, info)
             return True
         else:
-            Mess(" :: Not posible clear file :: " + inp, info)
+            printG(" :: Not posible clear file :: " + inp, info)
             return False
     except:
-        Mess(" :: ERROR :: Clear file :: " + inp, info)
+        printG(" :: ERROR :: Clear file :: " + inp, info)
         return False
 
 
-def execute(inp, info=None, position=None):
+def execute(inp, position=None, info=None):
     if position is not None:
         os.chdir(position)  # Posicionarse en el lugar, es necesario por la salida param_card.dat
+        printG(" :: Relocalizarse en :: " + position == os.getcwd() + " :: " + position)
     try:
         g = os.system(inp)  # Execute the program
-        Mess(" :: Execute correct :: " + str(g) + " :: " + inp, info)
+        printG(" :: Execute correct :: " + str(g) + " :: " + inp, info)
         return True
     except:
-        Mess(" :: ERROR :: Execute :: " + inp, info)
+        printG(" :: ERROR :: Execute :: " + inp, info)
         return False

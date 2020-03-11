@@ -1,9 +1,29 @@
 import os
-from modules.messange_info import Mess
+import sys
+from modules.all.messange_info import printG
 
 
 def Mad_bashrc(Dir, info=None):
+
     try:
+        # Basic
+        sys.path.insert(0, Dir)  # lib of Programs
+        sys.path.insert(0, Dir + "/Delphes")  # lib of Programs
+        sys.path.insert(0, Dir + "/Delphes/external")  # lib of Programs
+        sys.path.insert(0, Dir + "/Delphes/external/ExRootAnalysis")  # lib of Programs
+        sys.path.insert(0, Dir + "/Delphes/classes")  # lib of Programs
+        sys.path.insert(0, Dir + "/HEPTools/bin")  # lib of Programs
+        sys.path.insert(0, Dir + "/HEPTools/lhapdf6/bin")  # lib of Programs\
+        sys.path.insert(0, Dir + "/HEPTools/lhapdf6")  # lib of Programs
+        sys.path.insert(0, Dir + "/HEPTools/lhapdf6")  # lib of Programs
+        sys.path.insert(0, Dir + "/HEPTools/lhapdf6")  # lib of Programs
+        sys.path.insert(0, Dir + "/HEPTools/lhapdf6")  # lib of Programs
+        sys.path.insert(0, Dir + "/HEPTools/lhapdf6")  # lib of Programs
+
+
+        sys.path.insert(0, "/LUSTRE/home/fmsanchez/GDarkSUSY/")  # lib of Programs
+
+        # Another Form
         os.environ["MAD_N"] = Dir  # base
         os.environ["Deph_N"] = os.environ["Delph"] + ":" + os.environ["MAD_N"] + "/Delph"  # base
         os.environ["ExRoot_N"] = os.environ["Delph"] + "/external" + ":" + \
@@ -29,7 +49,7 @@ def Mad_bashrc(Dir, info=None):
                                           os.environ["ExRoot_N"] + ":"
         os.environ["PYTHONPATH"] = os.environ["PYTHONPATH"] + ":" + \
                                    os.environ["ExRoot_N"] + ":"
-        Mess(" :: Bash execution :: ", info)
+        printG(" :: Bash execution :: ", info)
     except:
-        Mess(" :: ERROR :: Incorrect bash execution :: ", info)
+        printG(" :: ERROR :: Incorrect bash execution :: ", info)
 

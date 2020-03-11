@@ -314,12 +314,12 @@ def genera_data(Event,  # number of event simulate
     except:
         print(" :: Directorio :: " + DirOutput + "/Mu_min4" + " existe :: ")
 
-    # *** || Genera datos || *** #
+    # *** || genera datos || *** #
     lhe_log = False
     root_log = False
     try:
         if tyout == "lhe":
-            # Genera
+            # genera
             os.chdir(DirMadgraph + "/MSSMD/")  # Posicionarse en el lugar, es necesario
             os.system("./bin/generate_events <<< 0 <<< 0 ")
             # directory of copy

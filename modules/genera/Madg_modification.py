@@ -1,4 +1,4 @@
-from modules.modification_card import *
+from modules.genera.modification_card import *
 
 
 def Madg_modification(Event,  # number of event simulate
@@ -17,7 +17,7 @@ def Madg_modification(Event,  # number of event simulate
     file_copy(Dir_Source + "/MSSMD_UFO", DirMadgraph + "/models/MSSMD_UFO", "tt", info)  # Copy the info
 
     # *** || Go to the folder MSSMD_UFO and execute *.py || *** # :
-    execute("python write_param_card.py", info, position=DirMadgraph + "/models/MSSMD_UFO")
+    execute("python write_param_card.py", info=info, position=DirMadgraph + "/models/MSSMD_UFO")
 
     # *** || Change the mass of dark photon || *** #
     change(DirMadgraph + "/models/MSSMD_UFO/param_card.dat", "Ma_DPho", Ma_DPho, info)
@@ -35,7 +35,7 @@ def Madg_modification(Event,  # number of event simulate
     file_copy(Dir_Source + "/proc_card.dat", DirMadgraph, "ft", info)
 
     # *** || Generar MSSMD || *** # Run ./bin/mg5_aMC proc_card.dat and generate the folder called MSSMD.
-    execute("./bin/mg5_aMC proc_card.dat", info, position=DirMadgraph)
+    execute("./bin/mg5_aMC proc_card.dat", info=info, position=DirMadgraph)
 
     # *** || Copy madspin || *** # Copy the madspin card to the Cards directory /MadGraph5/MG5_aMC_vXXX/MSSMD/Cards
     file_copy(Dir_Source + "/madspin_card.dat", DirMadgraph + "/MSSMD/Cards", "ft", info)

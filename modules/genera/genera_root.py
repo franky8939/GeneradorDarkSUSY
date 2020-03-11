@@ -1,4 +1,4 @@
-from modules.Genera.Madg_modification import *
+from modules.genera.Madg_modification import *
 
 
 def genera_root(DirMadgraph,
@@ -13,7 +13,7 @@ def genera_root(DirMadgraph,
     activate("delphes", "ON", DirMadgraph + "/MSSMD/Cards/", Dir_Source, info=info, type=Card)
 
     # *** || Obtein file root in Madg || *** #
-    execute("./bin/madevent pythia8 run_01_decayed_1 <<< 0", info, DirMadgraph + "/MSSMD/")  # genera root
+    execute("./bin/madevent pythia8 run_01_decayed_1 <<< 0", info=info, position=DirMadgraph + "/MSSMD/")  # genera root
     # *** || Encuentra archivo *.root creado || *** #
     outROOT = []
     for i in os.listdir(DirMadgraph + "/MSSMD/Events/run_01_decayed_1/"):

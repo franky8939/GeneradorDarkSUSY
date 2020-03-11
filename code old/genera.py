@@ -158,7 +158,7 @@ def main(eventos, MassPhoton, fileName, dirmad, modo):
         print(" :: delphes_card.dat a sido copiado correctamente en el directorio :: ")
 
         # ================== #
-        # || Genera datos || #
+        # || genera datos || #
         # ================== #
         print(" :: Comienzo de la generacion de datos :: ")
         os.chdir(DirMadgraph + "/MSSMD")  # Posicionarse en el lugar

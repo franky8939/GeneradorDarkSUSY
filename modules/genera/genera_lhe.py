@@ -1,4 +1,4 @@
-from modules.modification_card import *
+from modules.genera.modification_card import *
 
 
 def genera_lhe(DirMadgraph,  # directory of temporal install Madgraph
@@ -10,7 +10,7 @@ def genera_lhe(DirMadgraph,  # directory of temporal install Madgraph
     # *** || Desactiva or activate Delphes || *** #
     activate("delphes", "OFF", DirMadgraph + "/MSSMD/Cards/", info=info)
 
-    # *** || Genera datos || *** #
-    execute("./bin/generate_events <<< 0 <<< 0 ", info, DirMadgraph + "/MSSMD/")
+    # *** || genera datos || *** #
+    execute("./bin/generate_events <<< 0 <<< 0 ", info=info, position=DirMadgraph + "/MSSMD/")
 
     return file_exists(DirMadgraph + "/MSSMD/Events/run_01_decayed_1/unweighted_events.lhe", info)

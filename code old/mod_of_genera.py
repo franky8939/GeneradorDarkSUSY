@@ -1,8 +1,8 @@
 
 # from modules.messange_info import *
 # from modules.modification_files import *
-from modules.modification_bashrc import *
-from modules.modification_card import *
+from modules.genera.modification_bashrc import *
+from modules.genera.modification_card import *
 # from modules.
 
 
@@ -137,10 +137,10 @@ def genera_data(Event,  # number of event simulate
     # *** || Create /Events_###/MneuL_###/MneuD_###/MphoD_###/Bad_log || ***
     # file_set(DirOutput + "/Bad_log", info)  # crea carpeta
 
-    # *** || Genera datos || *** #
+    # *** || genera datos || *** #
     # try:
     if tyout == "lhe":
-        # Genera
+        # genera
         if execute("./bin/generate_events <<< 0 <<< 0 ", info, DirMadgraph + "/MSSMD/"):
             file_clear(DirOutput + "/lhe", "Tree")  # clear directory
             file_copy(DirMadgraph + "/MSSMD/Events", DirOutput + "/lhe", "tt", info)  # Copy the info

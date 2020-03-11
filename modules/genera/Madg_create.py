@@ -1,7 +1,7 @@
 # from modules.messange_info import *
 # from modules.modification_files import *
-from modules.modification_bashrc import *
-from modules.modification_card import *
+from modules.genera.modification_bashrc import *
+from modules.genera.modification_card import *
 
 
 def Madg_create(Dir_Madg,  # directory of install Madgraph
@@ -29,12 +29,12 @@ def Madg_create(Dir_Madg,  # directory of install Madgraph
             DirMadgraph = Dir_temp_Madg + "/Process_" + NumberOfProcess + "/MG5_aMC"
             file_copy(Dir_Madg, DirMadgraph, "tt", info)  # shutil.copytree(Dir_Madg, DirMadgraph)
         except:
-            Mess(" :: ERROR :: Execute Mode out :: EXIT PROGRAM ", info)
+            printG(" :: ERROR :: Execute Mode out :: EXIT PROGRAM ", info)
             return None
     elif Mode == "in":
         DirMadgraph = Dir_Madg
     else:
-        Mess(" :: ERROR :: Execute incorrect modet :: EXIT PROGRAM ", info)
+        printG(" :: ERROR :: Execute incorrect modet :: EXIT PROGRAM ", info)
         return None
 
     # *** | INCLUDE BASH | *** #

@@ -1,1 +1,1 @@
-from modules.messange_info import *
+from modules.all.messange_info import *

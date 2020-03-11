@@ -1,4 +1,4 @@
-def Mess(inp, info=None):
+def printG(inp, info=None):
     print(inp)
     if info is not None:
         try:

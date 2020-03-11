@@ -1,4 +1,3 @@
-
 #
 # Beta card for HL-LHC and HE-LHC studies
 #
@@ -14,11 +13,6 @@
 set ExecutionPath {
 
   ParticlePropagator
-  TrackMergerProp
-
-  DenseProp
-  DenseMergeTracks
-  DenseTrackFilter
 
   ChargedHadronTrackingEfficiency
   ElectronTrackingEfficiency
@@ -28,6 +22,9 @@ set ExecutionPath {
   ElectronMomentumSmearing
   MuonMomentumSmearing
 
+  DenseProp
+  DenseMergeTracks
+  TrackMergerProp  
   TrackMerger
 
   ECal
@@ -55,25 +52,8 @@ set ExecutionPath {
   GenJetFinder
   GenMissingET
 
-  GenJetFinder02
-  GenJetFinder04
-  GenJetFinder08
-  GenJetFinder15
-
-  FastJetFinder02
-  FastJetFinder04
-  FastJetFinder08
-  FastJetFinder15
-
-  CaloJetFinder02
-  CaloJetFinder04
-  CaloJetFinder08
-  CaloJetFinder15
-
-  TrackJetFinder02
-  TrackJetFinder04
-  TrackJetFinder08
-  TrackJetFinder15
+  FastJetFinder
+  FatJetFinder
 
   JetEnergyScale
 
@@ -90,9 +70,9 @@ set ExecutionPath {
 }
 
 
-#####################################
-# Track propagation to calorimeters
-#####################################
+#################################
+# Propagate particles in cylinder
+#################################
 
 module ParticlePropagator ParticlePropagator {
   set InputArray Delphes/stableParticles
@@ -111,93 +91,12 @@ module ParticlePropagator ParticlePropagator {
   set Bz 3.0
 }
 
-##############
-# Track merger
-##############
-
-module Merger TrackMergerProp {
-# add InputArray InputArray
-  add InputArray ParticlePropagator/chargedHadrons
-  add InputArray ParticlePropagator/electrons
-  add InputArray ParticlePropagator/muons
-  set OutputArray tracks
-}
-
-####################################
-# Track propagation to pseudo-pixel
-####################################
-
-module ParticlePropagator DenseProp {
-
-  set InputArray TrackMergerProp/tracks
-
-  # radius of the magnetic field coverage, in m
-  set Radius 0.3
-  set RadiusMax 1.2
-  # half-length of the magnetic field coverage, in m
-  set HalfLength 0.7
-  set HalfLengthMax 3.25
-
-  # magnetic field
-  set Bz 3.0
-}
-
-#####################
-# Dense Track merger
-#####################
-
-module Merger DenseMergeTracks {
-# add InputArray InputArray
-  add InputArray DenseProp/chargedHadrons
-  add InputArray DenseProp/electrons
-  add InputArray DenseProp/muons
-  set OutputArray tracks
-}
-
-
-######################
-#   Dense Track Filter
-######################
-
-module DenseTrackFilter DenseTrackFilter {
-
-  set TrackInputArray DenseMergeTracks/tracks
-
-  set TrackOutputArray tracks
-  set ChargedHadronOutputArray chargedHadrons
-  set ElectronOutputArray electrons
-  set MuonOutputArray muons
-
-  set EtaPhiRes 0.003
-  set EtaMax 4.0
-
-  set pi [expr {acos(-1)}]
-
-  set nbins_phi [expr {$pi/$EtaPhiRes} ]
-  set nbins_phi [expr {int($nbins_phi)} ]
-
-  set PhiBins {}
-  for {set i -$nbins_phi} {$i <= $nbins_phi} {incr i} {
-    add PhiBins [expr {$i * $pi/$nbins_phi}]
-  }
-
-  set nbins_eta [expr {$EtaMax/$EtaPhiRes} ]
-  set nbins_eta [expr {int($nbins_eta)} ]
-
-  for {set i -$nbins_eta} {$i <= $nbins_eta} {incr i} {
-    set eta [expr {$i * $EtaPhiRes}]
-    add EtaPhiBins $eta $PhiBins
-  }
-}
-
-
-
 ####################################
 # Charged hadron tracking efficiency
 ####################################
 
 module Efficiency ChargedHadronTrackingEfficiency {
-  set InputArray DenseTrackFilter/chargedHadrons
+  set InputArray ParticlePropagator/chargedHadrons
   set OutputArray chargedHadrons
 
  # TBC (which eta_max ? which pT min?)
@@ -222,7 +121,7 @@ module Efficiency ChargedHadronTrackingEfficiency {
 ##############################
 
 module Efficiency ElectronTrackingEfficiency {
-  set InputArray DenseTrackFilter/electrons
+  set InputArray ParticlePropagator/electrons
   set OutputArray electrons
 
 # TBC (which eta_max ?)
@@ -233,9 +132,9 @@ module Efficiency ElectronTrackingEfficiency {
           (abs(eta) <= 1.2) * (pt > 0.5 && pt <= 1.0) * (pt * 0.90) + \
           (abs(eta) <= 1.2) * (pt > 1.0) * (0.95) + \
           (abs(eta) > 1.2 && abs(eta) <= 2.5) * (pt > 0.5 && pt <= 1.0) * (pt*0.85) + \
-          (abs(eta) > 1.2 && abs(eta) <= 2.5) * (pt > 1.0) * (0.90)/(-0.033*log10(pt) + 1.033) + \
+          (abs(eta) > 1.2 && abs(eta) <= 2.5) * (pt > 1.0) * (0.90) + \
           (abs(eta) > 2.5 && abs(eta) <= 4.0) * (pt > 0.5 && pt <= 1.0) * (pt*0.80) + \
-          (abs(eta) > 2.5 && abs(eta) <= 4.0) * (pt > 1.0) * (0.85)/(-0.033*log10(pt) + 1.033) + \
+          (abs(eta) > 2.5 && abs(eta) <= 4.0) * (pt > 1.0) * (0.85) + \
           (abs(eta) > 4.0) * (0.00)
   }
 
@@ -245,7 +144,7 @@ module Efficiency ElectronTrackingEfficiency {
 ##########################
 
 module Efficiency MuonTrackingEfficiency {
-  set InputArray DenseTrackFilter/muons
+  set InputArray ParticlePropagator/muons
   set OutputArray muons
 
   set EfficiencyFormula {
@@ -272,7 +171,7 @@ module MomentumSmearing ChargedHadronMomentumSmearing {
   
   # --- CMS resolution Phase II ---
   
-  set ResolutionFormula {    2*((abs(eta) >= 0.0000 && abs(eta) < 0.2000) * (pt >= 0.0000 && pt < 1.0000) * (0.00457888) + \
+  set ResolutionFormula {    ((abs(eta) >= 0.0000 && abs(eta) < 0.2000) * (pt >= 0.0000 && pt < 1.0000) * (0.00457888) + \
      (abs(eta) >= 0.0000 && abs(eta) < 0.2000) * (pt >= 1.0000 && pt < 10.0000) * (0.004579 + (pt-1.000000)* 0.000045) + \
      (abs(eta) >= 0.0000 && abs(eta) < 0.2000) * (pt >= 10.0000 && pt < 100.0000) * (0.004983 + (pt-10.000000)* 0.000047) + \
      (abs(eta) >= 0.0000 && abs(eta) < 0.2000) * (pt >= 100.0000) * (0.009244*pt/100.000000) + \
@@ -365,7 +264,7 @@ module MomentumSmearing ElectronMomentumSmearing {
   set InputArray ElectronTrackingEfficiency/electrons
   set OutputArray electrons
 
-  set ResolutionFormula {    2*((abs(eta) >= 0.0000 && abs(eta) < 0.2000) * (pt >= 0.0000 && pt < 1.0000) * (0.00457888) + \
+  set ResolutionFormula {    ((abs(eta) >= 0.0000 && abs(eta) < 0.2000) * (pt >= 0.0000 && pt < 1.0000) * (0.00457888) + \
      (abs(eta) >= 0.0000 && abs(eta) < 0.2000) * (pt >= 1.0000 && pt < 10.0000) * (0.004579 + (pt-1.000000)* 0.000045) + \
      (abs(eta) >= 0.0000 && abs(eta) < 0.2000) * (pt >= 10.0000 && pt < 100.0000) * (0.004983 + (pt-10.000000)* 0.000047) + \
      (abs(eta) >= 0.0000 && abs(eta) < 0.2000) * (pt >= 100.0000) * (0.009244*pt/100.000000) + \
@@ -462,99 +361,168 @@ module MomentumSmearing MuonMomentumSmearing {
   set ResolutionFormula {    ((abs(eta) >= 0.0000 && abs(eta) < 0.2000) * (pt >= 0.0000 && pt < 1.0000) * (0.00457888) + \
      (abs(eta) >= 0.0000 && abs(eta) < 0.2000) * (pt >= 1.0000 && pt < 10.0000) * (0.004579 + (pt-1.000000)* 0.000045) + \
      (abs(eta) >= 0.0000 && abs(eta) < 0.2000) * (pt >= 10.0000 && pt < 100.0000) * (0.004983 + (pt-10.000000)* 0.000047) + \
-     (abs(eta) >= 0.0000 && abs(eta) < 0.2000) * (pt >= 100.0000) * (0.009244/5.*pt/100.000000 + 4./5.*0.009244) + \
+     (abs(eta) >= 0.0000 && abs(eta) < 0.2000) * (pt >= 100.0000) * (0.009244/5.*pt/100.000000) + \
      (abs(eta) >= 0.2000 && abs(eta) < 0.4000) * (pt >= 0.0000 && pt < 1.0000) * (0.00505011) + \
      (abs(eta) >= 0.2000 && abs(eta) < 0.4000) * (pt >= 1.0000 && pt < 10.0000) * (0.005050 + (pt-1.000000)* 0.000033) + \
      (abs(eta) >= 0.2000 && abs(eta) < 0.4000) * (pt >= 10.0000 && pt < 100.0000) * (0.005343 + (pt-10.000000)* 0.000043) + \
-     (abs(eta) >= 0.2000 && abs(eta) < 0.4000) * (pt >= 100.0000) * (0.009172/5.*pt/100.000000 + 4./5.*0.009172) + \
+     (abs(eta) >= 0.2000 && abs(eta) < 0.4000) * (pt >= 100.0000) * (0.009172/5.*pt/100.000000) + \
      (abs(eta) >= 0.4000 && abs(eta) < 0.6000) * (pt >= 0.0000 && pt < 1.0000) * (0.00510573) + \
      (abs(eta) >= 0.4000 && abs(eta) < 0.6000) * (pt >= 1.0000 && pt < 10.0000) * (0.005106 + (pt-1.000000)* 0.000023) + \
      (abs(eta) >= 0.4000 && abs(eta) < 0.6000) * (pt >= 10.0000 && pt < 100.0000) * (0.005317 + (pt-10.000000)* 0.000042) + \
-     (abs(eta) >= 0.4000 && abs(eta) < 0.6000) * (pt >= 100.0000) * (0.009077/5.*pt/100.000000 + 4./5.*0.009077) + \
+     (abs(eta) >= 0.4000 && abs(eta) < 0.6000) * (pt >= 100.0000) * (0.009077/5.*pt/100.000000) + \
      (abs(eta) >= 0.6000 && abs(eta) < 0.8000) * (pt >= 0.0000 && pt < 1.0000) * (0.00578020) + \
      (abs(eta) >= 0.6000 && abs(eta) < 0.8000) * (pt >= 1.0000 && pt < 10.0000) * (0.005780 + (pt-1.000000)* -0.000000) + \
      (abs(eta) >= 0.6000 && abs(eta) < 0.8000) * (pt >= 10.0000 && pt < 100.0000) * (0.005779 + (pt-10.000000)* 0.000038) + \
-     (abs(eta) >= 0.6000 && abs(eta) < 0.8000) * (pt >= 100.0000) * (0.009177/5.*pt/100.000000 + 4./5.*0.009177) + \
+     (abs(eta) >= 0.6000 && abs(eta) < 0.8000) * (pt >= 100.0000) * (0.009177/5.*pt/100.000000) + \
      (abs(eta) >= 0.8000 && abs(eta) < 1.0000) * (pt >= 0.0000 && pt < 1.0000) * (0.00728723) + \
      (abs(eta) >= 0.8000 && abs(eta) < 1.0000) * (pt >= 1.0000 && pt < 10.0000) * (0.007287 + (pt-1.000000)* -0.000031) + \
      (abs(eta) >= 0.8000 && abs(eta) < 1.0000) * (pt >= 10.0000 && pt < 100.0000) * (0.007011 + (pt-10.000000)* 0.000038) + \
-     (abs(eta) >= 0.8000 && abs(eta) < 1.0000) * (pt >= 100.0000) * (0.010429/5.*pt/100.000000 + 4./5.*0.010429) + \
+     (abs(eta) >= 0.8000 && abs(eta) < 1.0000) * (pt >= 100.0000) * (0.010429/5.*pt/100.000000) + \
      (abs(eta) >= 1.0000 && abs(eta) < 1.2000) * (pt >= 0.0000 && pt < 1.0000) * (0.01045117) + \
      (abs(eta) >= 1.0000 && abs(eta) < 1.2000) * (pt >= 1.0000 && pt < 10.0000) * (0.010451 + (pt-1.000000)* -0.000051) + \
      (abs(eta) >= 1.0000 && abs(eta) < 1.2000) * (pt >= 10.0000 && pt < 100.0000) * (0.009989 + (pt-10.000000)* 0.000043) + \
-     (abs(eta) >= 1.0000 && abs(eta) < 1.2000) * (pt >= 100.0000) * (0.013867/5.*pt/100.000000 + 4./5.*0.013867) + \
+     (abs(eta) >= 1.0000 && abs(eta) < 1.2000) * (pt >= 100.0000) * (0.013867/5.*pt/100.000000) + \
      (abs(eta) >= 1.2000 && abs(eta) < 1.4000) * (pt >= 0.0000 && pt < 1.0000) * (0.01477199) + \
      (abs(eta) >= 1.2000 && abs(eta) < 1.4000) * (pt >= 1.0000 && pt < 10.0000) * (0.014772 + (pt-1.000000)* -0.000128) + \
      (abs(eta) >= 1.2000 && abs(eta) < 1.4000) * (pt >= 10.0000 && pt < 100.0000) * (0.013616 + (pt-10.000000)* 0.000035) + \
-     (abs(eta) >= 1.2000 && abs(eta) < 1.4000) * (pt >= 100.0000) * (0.016800/5.*pt/100.000000 + 4./5.*0.016800) + \
+     (abs(eta) >= 1.2000 && abs(eta) < 1.4000) * (pt >= 100.0000) * (0.016800/5.*pt/100.000000) + \
      (abs(eta) >= 1.4000 && abs(eta) < 1.6000) * (pt >= 0.0000 && pt < 1.0000) * (0.01731474) + \
      (abs(eta) >= 1.4000 && abs(eta) < 1.6000) * (pt >= 1.0000 && pt < 10.0000) * (0.017315 + (pt-1.000000)* -0.000208) + \
      (abs(eta) >= 1.4000 && abs(eta) < 1.6000) * (pt >= 10.0000 && pt < 100.0000) * (0.015439 + (pt-10.000000)* 0.000030) + \
-     (abs(eta) >= 1.4000 && abs(eta) < 1.6000) * (pt >= 100.0000) * (0.018161/5.*pt/100.000000 + 4./5.*0.018161) + \
+     (abs(eta) >= 1.4000 && abs(eta) < 1.6000) * (pt >= 100.0000) * (0.018161/5.*pt/100.000000) + \
      (abs(eta) >= 1.6000 && abs(eta) < 1.8000) * (pt >= 0.0000 && pt < 1.0000) * (0.01942025) + \
      (abs(eta) >= 1.6000 && abs(eta) < 1.8000) * (pt >= 1.0000 && pt < 10.0000) * (0.019420 + (pt-1.000000)* -0.000417) + \
      (abs(eta) >= 1.6000 && abs(eta) < 1.8000) * (pt >= 10.0000 && pt < 100.0000) * (0.015669 + (pt-10.000000)* 0.000026) + \
-     (abs(eta) >= 1.6000 && abs(eta) < 1.8000) * (pt >= 100.0000) * (0.018039/5.*pt/100.000000 + 4./5.*0.018039) + \
+     (abs(eta) >= 1.6000 && abs(eta) < 1.8000) * (pt >= 100.0000) * (0.018039/5.*pt/100.000000) + \
      (abs(eta) >= 1.8000 && abs(eta) < 2.0000) * (pt >= 0.0000 && pt < 1.0000) * (0.02201432) + \
      (abs(eta) >= 1.8000 && abs(eta) < 2.0000) * (pt >= 1.0000 && pt < 10.0000) * (0.022014 + (pt-1.000000)* -0.000667) + \
      (abs(eta) >= 1.8000 && abs(eta) < 2.0000) * (pt >= 10.0000 && pt < 100.0000) * (0.016012 + (pt-10.000000)* 0.000045) + \
-     (abs(eta) >= 1.8000 && abs(eta) < 2.0000) * (pt >= 100.0000) * (0.020098/5.*pt/100.000000 + 4./5.*0.020098) + \
+     (abs(eta) >= 1.8000 && abs(eta) < 2.0000) * (pt >= 100.0000) * (0.020098/5.*pt/100.000000) + \
      (abs(eta) >= 2.0000 && abs(eta) < 2.2000) * (pt >= 0.0000 && pt < 1.0000) * (0.02574300) + \
      (abs(eta) >= 2.0000 && abs(eta) < 2.2000) * (pt >= 1.0000 && pt < 10.0000) * (0.025743 + (pt-1.000000)* -0.001118) + \
      (abs(eta) >= 2.0000 && abs(eta) < 2.2000) * (pt >= 10.0000 && pt < 100.0000) * (0.015681 + (pt-10.000000)* 0.000051) + \
-     (abs(eta) >= 2.0000 && abs(eta) < 2.2000) * (pt >= 100.0000) * (0.020289/5.*pt/100.000000 + 4./5.*0.020289) + \
+     (abs(eta) >= 2.0000 && abs(eta) < 2.2000) * (pt >= 100.0000) * (0.020289/5.*pt/100.000000) + \
      (abs(eta) >= 2.2000 && abs(eta) < 2.4000) * (pt >= 0.0000 && pt < 1.0000) * (0.02885821) + \
      (abs(eta) >= 2.2000 && abs(eta) < 2.4000) * (pt >= 1.0000 && pt < 10.0000) * (0.028858 + (pt-1.000000)* -0.001345) + \
      (abs(eta) >= 2.2000 && abs(eta) < 2.4000) * (pt >= 10.0000 && pt < 100.0000) * (0.016753 + (pt-10.000000)* 0.000053) + \
-     (abs(eta) >= 2.2000 && abs(eta) < 2.4000) * (pt >= 100.0000) * (0.021524/5.*pt/100.000000 + 4./5.*0.021524) + \
+     (abs(eta) >= 2.2000 && abs(eta) < 2.4000) * (pt >= 100.0000) * (0.021524/5.*pt/100.000000) + \
      (abs(eta) >= 2.4000 && abs(eta) < 2.6000) * (pt >= 0.0000 && pt < 1.0000) * (0.03204812) + \
      (abs(eta) >= 2.4000 && abs(eta) < 2.6000) * (pt >= 1.0000 && pt < 10.0000) * (0.032048 + (pt-1.000000)* -0.001212) + \
      (abs(eta) >= 2.4000 && abs(eta) < 2.6000) * (pt >= 10.0000 && pt < 100.0000) * (0.021138 + (pt-10.000000)* 0.000037) + \
-     (abs(eta) >= 2.4000 && abs(eta) < 2.6000) * (pt >= 100.0000) * (0.024477/5.*pt/100.000000 + 4./5.*0.024477) + \
+     (abs(eta) >= 2.4000 && abs(eta) < 2.6000) * (pt >= 100.0000) * (0.024477/5.*pt/100.000000) + \
      (abs(eta) >= 2.6000 && abs(eta) < 2.8000) * (pt >= 0.0000 && pt < 1.0000) * (0.03950405) + \
      (abs(eta) >= 2.6000 && abs(eta) < 2.8000) * (pt >= 1.0000 && pt < 10.0000) * (0.039504 + (pt-1.000000)* -0.001386) + \
      (abs(eta) >= 2.6000 && abs(eta) < 2.8000) * (pt >= 10.0000 && pt < 100.0000) * (0.027026 + (pt-10.000000)* 0.000037) + \
-     (abs(eta) >= 2.6000 && abs(eta) < 2.8000) * (pt >= 100.0000) * (0.030392/5.*pt/100.000000 + 4./5.*0.030392) + \
+     (abs(eta) >= 2.6000 && abs(eta) < 2.8000) * (pt >= 100.0000) * (0.030392/5.*pt/100.000000) + \
      (abs(eta) >= 2.8000 && abs(eta) < 3.0000) * (pt >= 0.0000 && pt < 1.0000) * (0.04084751) + \
      (abs(eta) >= 2.8000 && abs(eta) < 3.0000) * (pt >= 1.0000 && pt < 10.0000) * (0.040848 + (pt-1.000000)* -0.001780) + \
      (abs(eta) >= 2.8000 && abs(eta) < 3.0000) * (pt >= 10.0000 && pt < 100.0000) * (0.024824 + (pt-10.000000)* 0.000029) + \
-     (abs(eta) >= 2.8000 && abs(eta) < 3.0000) * (pt >= 100.0000) * (0.027445/5.*pt/100.000000 + 4./5.*0.027445) + \
+     (abs(eta) >= 2.8000 && abs(eta) < 3.0000) * (pt >= 100.0000) * (0.027445/5.*pt/100.000000) + \
      (abs(eta) >= 3.0000 && abs(eta) < 3.2000) * (pt >= 0.0000 && pt < 1.0000) * (0.04532425) + \
      (abs(eta) >= 3.0000 && abs(eta) < 3.2000) * (pt >= 1.0000 && pt < 10.0000) * (0.045324 + (pt-1.000000)* -0.002497) + \
      (abs(eta) >= 3.0000 && abs(eta) < 3.2000) * (pt >= 10.0000 && pt < 100.0000) * (0.022851 + (pt-10.000000)* 0.000024) + \
-     (abs(eta) >= 3.0000 && abs(eta) < 3.2000) * (pt >= 100.0000) * (0.025053/5.*pt/100.000000 + 4./5.*0.025053) + \
+     (abs(eta) >= 3.0000 && abs(eta) < 3.2000) * (pt >= 100.0000) * (0.025053/5.*pt/100.000000) + \
      (abs(eta) >= 3.2000 && abs(eta) < 3.4000) * (pt >= 0.0000 && pt < 1.0000) * (0.06418925) + \
      (abs(eta) >= 3.2000 && abs(eta) < 3.4000) * (pt >= 1.0000 && pt < 10.0000) * (0.064189 + (pt-1.000000)* -0.004055) + \
      (abs(eta) >= 3.2000 && abs(eta) < 3.4000) * (pt >= 10.0000 && pt < 100.0000) * (0.027691 + (pt-10.000000)* 0.000034) + \
-     (abs(eta) >= 3.2000 && abs(eta) < 3.4000) * (pt >= 100.0000) * (0.030710/5.*pt/100.000000 + 4./5.*0.030710) + \
+     (abs(eta) >= 3.2000 && abs(eta) < 3.4000) * (pt >= 100.0000) * (0.030710/5.*pt/100.000000) + \
      (abs(eta) >= 3.4000 && abs(eta) < 3.6000) * (pt >= 0.0000 && pt < 1.0000) * (0.07682500) + \
      (abs(eta) >= 3.4000 && abs(eta) < 3.6000) * (pt >= 1.0000 && pt < 10.0000) * (0.076825 + (pt-1.000000)* -0.004510) + \
      (abs(eta) >= 3.4000 && abs(eta) < 3.6000) * (pt >= 10.0000 && pt < 100.0000) * (0.036234 + (pt-10.000000)* 0.000049) + \
-     (abs(eta) >= 3.4000 && abs(eta) < 3.6000) * (pt >= 100.0000) * (0.040629/5.*pt/100.000000 + 4./5.*0.040629) + \
+     (abs(eta) >= 3.4000 && abs(eta) < 3.6000) * (pt >= 100.0000) * (0.040629/5.*pt/100.000000) + \
      (abs(eta) >= 3.6000 && abs(eta) < 3.8000) * (pt >= 0.0000 && pt < 1.0000) * (0.09796358) + \
      (abs(eta) >= 3.6000 && abs(eta) < 3.8000) * (pt >= 1.0000 && pt < 10.0000) * (0.097964 + (pt-1.000000)* -0.005758) + \
      (abs(eta) >= 3.6000 && abs(eta) < 3.8000) * (pt >= 10.0000 && pt < 100.0000) * (0.046145 + (pt-10.000000)* 0.000069) + \
-     (abs(eta) >= 3.6000 && abs(eta) < 3.8000) * (pt >= 100.0000) * (0.052345/5.*pt/100.000000 + 4./5.*0.052345) + \
+     (abs(eta) >= 3.6000 && abs(eta) < 3.8000) * (pt >= 100.0000) * (0.052345/5.*pt/100.000000) + \
      (abs(eta) >= 3.8000 && abs(eta) < 4.0000) * (pt >= 0.0000 && pt < 1.0000) * (0.13415929) + \
      (abs(eta) >= 3.8000 && abs(eta) < 4.0000) * (pt >= 1.0000 && pt < 10.0000) * (0.134159 + (pt-1.000000)* -0.008283) + \
      (abs(eta) >= 3.8000 && abs(eta) < 4.0000) * (pt >= 10.0000 && pt < 100.0000) * (0.059612 + (pt-10.000000)* 0.000111) + \
-     (abs(eta) >= 3.8000 && abs(eta) < 4.0000) * (pt >= 100.0000) * (0.069617/5.*pt/100.000000 + 4./5.*0.069617))
+     (abs(eta) >= 3.8000 && abs(eta) < 4.0000) * (pt >= 100.0000) * (0.069617/5.*pt/100.000000))
   }
 
 }
-
-
 
 ##############
 # Track merger
 ##############
 
-module Merger TrackMerger {
+module Merger TrackMergerProp {
 # add InputArray InputArray
   add InputArray ChargedHadronMomentumSmearing/chargedHadrons
   add InputArray ElectronMomentumSmearing/electrons
   add InputArray MuonMomentumSmearing/muons
   set OutputArray tracks
+}
+
+
+#################################
+# Dense Track propagation
+#################################
+
+module ParticlePropagator DenseProp {
+  set InputArray Delphes/stableParticles
+
+  set OutputArray stableParticles
+  set NeutralOutputArray neutralParticles
+  set ChargedHadronOutputArray chargedHadrons
+  set ElectronOutputArray electrons
+  set MuonOutputArray muons
+
+  # radius of the magnetic field coverage, in m
+  set Radius 0.3
+  set RadiusMax 1.2
+  # half-length of the magnetic field coverage, in m
+  set HalfLength 0.7
+  set HalfLengthMax 3.25
+
+  # magnetic field
+  set Bz 3.0
+}
+
+
+####################
+# Dense Track merger
+###################
+
+module Merger DenseMergeTracks {
+# add InputArray InputArray
+  add InputArray DenseProp/chargedHadrons
+  add InputArray DenseProp/electrons
+  add InputArray DenseProp/muons
+  set OutputArray tracks
+}
+
+
+######################
+#   Dense Track Filter
+######################
+
+module DenseTrackFilter TrackMerger {
+  set TrackInputArray TrackMergerProp/tracks
+  set DenseChargedInputArray DenseMergeTracks/tracks
+
+  set TrackOutputArray tracks
+
+  set EtaPhiRes 0.003
+  set EtaMax 4.0
+
+  set pi [expr {acos(-1)}]
+
+  set nbins_phi [expr {$pi/$EtaPhiRes} ]
+  set nbins_phi [expr {int($nbins_phi)} ]
+
+  set PhiBins {}
+  for {set i -$nbins_phi} {$i <= $nbins_phi} {incr i} {
+    add PhiBins [expr {$i * $pi/$nbins_phi}]
+  }
+
+  set nbins_eta [expr {$EtaMax/$EtaPhiRes} ]
+  set nbins_eta [expr {int($nbins_eta)} ]
+
+  for {set i -$nbins_eta} {$i <= $nbins_eta} {incr i} {
+    set eta [expr {$i * $EtaPhiRes}]
+    add EtaPhiBins $eta $PhiBins
+  }
 }
 
 
@@ -651,10 +619,10 @@ module SimpleCalorimeter ECal {
   # for the ECAL barrel (|eta| < 1.5), see hep-ex/1306.2016 and 1502.02701
   # for the endcaps (1.5 < |eta| < 3.0), we take HGCAL  see LHCC-P-008, Fig. 3.39, p.117
 
-  set ResolutionFormula {  2*((abs(eta) <= 1.50)                    * sqrt(energy^2*0.009^2 + energy*0.12^2 + 0.45^2) +
+  set ResolutionFormula {  (abs(eta) <= 1.50)                    * sqrt(energy^2*0.009^2 + energy*0.12^2 + 0.45^2) +
                            (abs(eta) > 1.50 && abs(eta) <= 1.75) * sqrt(energy^2*0.006^2 + energy*0.20^2) + \
                            (abs(eta) > 1.75 && abs(eta) <= 2.15) * sqrt(energy^2*0.007^2 + energy*0.21^2) + \
-                           (abs(eta) > 2.15 && abs(eta) <= 3.00) * sqrt(energy^2*0.008^2 + energy*0.24^2)) + \
+                           (abs(eta) > 2.15 && abs(eta) <= 3.00) * sqrt(energy^2*0.008^2 + energy*0.24^2) + \
                            (abs(eta) >= 3.0 && abs(eta) <= 5.0)  * sqrt(energy^2*0.08^2 + energy*1.98^2)}
   
 
@@ -726,8 +694,8 @@ module SimpleCalorimeter HCal {
   # http://arxiv.org/pdf/hep-ex/0004009v1
   # http://villaolmo.mib.infn.it/ICATPP9th_2005/Calorimetry/Schram.p.pdf
   # set HCalResolutionFormula {resolution formula as a function of eta and energy}
-  set ResolutionFormula {                      2*((abs(eta) <= 1.7) * sqrt(energy^2*0.0302^2 + energy*0.5205^2 + 1.59^2) +
-                             (abs(eta) > 1.7 && abs(eta) <= 3.2) * sqrt(energy^2*0.0500^2 + energy*0.706^2)) +
+  set ResolutionFormula {                      (abs(eta) <= 1.7) * sqrt(energy^2*0.0302^2 + energy*0.5205^2 + 1.59^2) +
+                             (abs(eta) > 1.7 && abs(eta) <= 3.2) * sqrt(energy^2*0.0500^2 + energy*0.706^2) +
                              (abs(eta) > 3.2 && abs(eta) <= 4.9) * sqrt(energy^2*0.09420^2 + energy*1.00^2)}
 }
 
@@ -766,12 +734,9 @@ module PdgCodeFilter ChargedHadronFilter {
 
 module Merger Calorimeter {
 # add InputArray InputArray
-
   add InputArray ECal/ecalTowers
   add InputArray HCal/hcalTowers
-  add InputArray MuonMomentumSmearing/muons
   set OutputArray towers
-
 }
 
 ####################
@@ -872,47 +837,16 @@ module Merger GenMissingET {
 }
 
 
+############
+# Jet finder
+############
 
-#####################
-# MC truth jet finder
-#####################
-
-# TBC: is jet radius fine?
-
-module FastJetFinder GenJetFinder02 {
-  set InputArray NeutrinoFilter/filteredParticles
+module FastJetFinder FastJetFinder {
+#  set InputArray Calorimeter/towers
+  set InputArray EFlowMerger/eflow
 
   set OutputArray jets
 
-  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
-  set JetAlgorithm 6
-  set ParameterR 0.2
-
-  set ComputeNsubjettiness 1
-  set Beta 1.0
-  set AxisMode 4
-
-  set ComputeSoftDrop 1
-  set BetaSoftDrop 0.0
-  set SymmetryCutSoftDrop 0.1
-  set R0SoftDrop 0.2
-
-  set JetPTMin 25.0
-}
-
-
-#####################
-# MC truth jet finder
-#####################
-
-# TBC: is jet radius fine?
-
-module FastJetFinder GenJetFinder04 {
-  set InputArray NeutrinoFilter/filteredParticles
-
-  set OutputArray jets
-
-  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
   set JetAlgorithm 6
   set ParameterR 0.4
 
@@ -925,119 +859,14 @@ module FastJetFinder GenJetFinder04 {
   set SymmetryCutSoftDrop 0.1
   set R0SoftDrop 0.4
 
-  set JetPTMin 25.0
-}
-#####################
-# MC truth jet finder
-#####################
-
-# TBC: is jet radius fine?
-
-module FastJetFinder GenJetFinder08 {
-  set InputArray NeutrinoFilter/filteredParticles
-
-  set OutputArray jets
-
-  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
-  set JetAlgorithm 6
-  set ParameterR 0.8
-
-  set ComputeNsubjettiness 1
-  set Beta 1.0
-  set AxisMode 4
-
-  set ComputeSoftDrop 1
-  set BetaSoftDrop 0.0
-  set SymmetryCutSoftDrop 0.1
-  set R0SoftDrop 0.8
-
-  set JetPTMin 25.0
-}
-
-#####################
-# MC truth jet finder
-#####################
-
-# TBC: is jet radius fine?
-
-module FastJetFinder GenJetFinder15 {
-  set InputArray NeutrinoFilter/filteredParticles
-
-  set OutputArray jets
-
-  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
-  set JetAlgorithm 6
-  set ParameterR 1.5
-
-  set ComputeNsubjettiness 1
-  set Beta 1.0
-  set AxisMode 4
-
-  set ComputeSoftDrop 1
-  set BetaSoftDrop 0.0
-  set SymmetryCutSoftDrop 0.1
-  set R0SoftDrop 1.5
-
-  set JetPTMin 25.0
-}
-
-
-##################
-# Fast Jet finder
-##################
-
-module FastJetFinder FastJetFinder02 {
-  set InputArray EFlowMerger/eflow
-
-  set OutputArray jets
-
-  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
-  set JetAlgorithm 6
-  set ParameterR 0.2
-
-  set ComputeNsubjettiness 1
-  set Beta 1.0
-  set AxisMode 4
-
-  set ComputeSoftDrop 1
-  set BetaSoftDrop 0.0
-  set SymmetryCutSoftDrop 0.1
-  set R0SoftDrop 0.2
-
-  set JetPTMin 25.0
+  set JetPTMin 30.0
 }
 
 ##################
-# Fast Jet finder
+# Fat Jet finder
 ##################
 
-module FastJetFinder FastJetFinder04 {
-  set InputArray EFlowMerger/eflow
-
-  set OutputArray jets
-
-  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
-  set JetAlgorithm 6
-  set ParameterR 0.4
-
-  set ComputeNsubjettiness 1
-  set Beta 1.0
-  set AxisMode 4
-
-  set ComputeSoftDrop 1
-  set BetaSoftDrop 0.0
-  set SymmetryCutSoftDrop 0.1
-  set R0SoftDrop 0.4
-
-  set JetPTMin 25.0
-}
-
-
-##################
-# Fast Jet finder
-##################
-
-module FastJetFinder FastJetFinder08 {
+module FastJetFinder FatJetFinder {
   set InputArray EFlowMerger/eflow
 
   set OutputArray jets
@@ -1055,237 +884,9 @@ module FastJetFinder FastJetFinder08 {
   set SymmetryCutSoftDrop 0.1
   set R0SoftDrop 0.8
 
-  set JetPTMin 25.0
+  set JetPTMin 30.0
 }
 
-##################
-# Fast Jet finder
-##################
-
-module FastJetFinder FastJetFinder15 {
-  set InputArray EFlowMerger/eflow
-
-  set OutputArray jets
-
-  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
-  set JetAlgorithm 6
-  set ParameterR 1.5
-
-  set ComputeNsubjettiness 1
-  set Beta 1.0
-  set AxisMode 4
-
-  set ComputeSoftDrop 1
-  set BetaSoftDrop 0.0
-  set SymmetryCutSoftDrop 0.1
-  set R0SoftDrop 1.5
-
-  set JetPTMin 25.0
-}
-
-
-##################
-# Fast Jet finder
-##################
-
-module FastJetFinder CaloJetFinder02 {
-  set InputArray Calorimeter/towers
-
-  set OutputArray jets
-
-  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
-  set JetAlgorithm 6
-  set ParameterR 0.2
-
-  set ComputeNsubjettiness 1
-  set Beta 1.0
-  set AxisMode 4
-
-  set ComputeSoftDrop 1
-  set BetaSoftDrop 0.0
-  set SymmetryCutSoftDrop 0.1
-  set R0SoftDrop 0.2
-
-  set JetPTMin 25.0
-}
-
-##################
-# Fast Jet finder
-##################
-
-module FastJetFinder CaloJetFinder04 {
-  set InputArray Calorimeter/towers
-
-  set OutputArray jets
-
-  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
-  set JetAlgorithm 6
-  set ParameterR 0.4
-
-  set ComputeNsubjettiness 1
-  set Beta 1.0
-  set AxisMode 4
-
-  set ComputeSoftDrop 1
-  set BetaSoftDrop 0.0
-  set SymmetryCutSoftDrop 0.1
-  set R0SoftDrop 0.4
-
-  set JetPTMin 25.0
-}
-
-
-##################
-# Fast Jet finder
-##################
-
-module FastJetFinder CaloJetFinder08 {
-  set InputArray Calorimeter/towers
-
-  set OutputArray jets
-
-  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
-  set JetAlgorithm 6
-  set ParameterR 0.8
-
-  set ComputeNsubjettiness 1
-  set Beta 1.0
-  set AxisMode 4
-
-  set ComputeSoftDrop 1
-  set BetaSoftDrop 0.0
-  set SymmetryCutSoftDrop 0.1
-  set R0SoftDrop 0.8
-
-  set JetPTMin 25.0
-}
-
-##################
-# Fast Jet finder
-##################
-
-module FastJetFinder CaloJetFinder15 {
-  set InputArray Calorimeter/towers
-
-  set OutputArray jets
-
-  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
-  set JetAlgorithm 6
-  set ParameterR 1.5
-
-  set ComputeNsubjettiness 1
-  set Beta 1.0
-  set AxisMode 4
-
-  set ComputeSoftDrop 1
-  set BetaSoftDrop 0.0
-  set SymmetryCutSoftDrop 0.1
-  set R0SoftDrop 1.5
-
-  set JetPTMin 25.0
-}
-
-
-##################
-# Fast Jet finder
-##################
-
-module FastJetFinder TrackJetFinder02 {
-  set InputArray TrackMerger/tracks
-
-  set OutputArray jets
-
-  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
-  set JetAlgorithm 6
-  set ParameterR 0.2
-
-  set ComputeNsubjettiness 1
-  set Beta 1.0
-  set AxisMode 4
-
-  set ComputeSoftDrop 1
-  set BetaSoftDrop 0.0
-  set SymmetryCutSoftDrop 0.1
-  set R0SoftDrop 0.2
-
-  set JetPTMin 25.0
-}
-
-##################
-# Fast Jet finder
-##################
-
-module FastJetFinder TrackJetFinder04 {
-  set InputArray TrackMerger/tracks
-
-  set OutputArray jets
-
-  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
-  set JetAlgorithm 6
-  set ParameterR 0.4
-
-  set ComputeNsubjettiness 1
-  set Beta 1.0
-  set AxisMode 4
-
-  set ComputeSoftDrop 1
-  set BetaSoftDrop 0.0
-  set SymmetryCutSoftDrop 0.1
-  set R0SoftDrop 0.4
-
-  set JetPTMin 25.0
-}
-
-
-##################
-# Fast Jet finder
-##################
-
-module FastJetFinder TrackJetFinder08 {
-  set InputArray TrackMerger/tracks
-
-  set OutputArray jets
-
-  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
-  set JetAlgorithm 6
-  set ParameterR 0.8
-
-  set ComputeNsubjettiness 1
-  set Beta 1.0
-  set AxisMode 4
-
-  set ComputeSoftDrop 1
-  set BetaSoftDrop 0.0
-  set SymmetryCutSoftDrop 0.1
-  set R0SoftDrop 0.8
-
-  set JetPTMin 25.0
-}
-
-##################
-# Fast Jet finder
-##################
-
-module FastJetFinder TrackJetFinder15 {
-  set InputArray TrackMerger/tracks
-
-  set OutputArray jets
-
-  # algorithm: 1 CDFJetClu, 2 MidPoint, 3 SIScone, 4 kt, 5 Cambridge/Aachen, 6 antikt
-  set JetAlgorithm 6
-  set ParameterR 1.5
-
-  set ComputeNsubjettiness 1
-  set Beta 1.0
-  set AxisMode 4
-
-  set ComputeSoftDrop 1
-  set BetaSoftDrop 0.0
-  set SymmetryCutSoftDrop 0.1
-  set R0SoftDrop 1.5
-
-  set JetPTMin 25.0
-}
 
 
 ##################
@@ -1293,7 +894,7 @@ module FastJetFinder TrackJetFinder15 {
 ##################
 
 module EnergyScale JetEnergyScale {
-  set InputArray CaloJetFinder04/jets
+  set InputArray FastJetFinder/jets
   set OutputArray jets
 
  # scale formula for jets
@@ -1653,25 +1254,7 @@ module TreeWriter TreeWriter {
   add Branch UniqueObjectFinder/muons Muon Muon
   add Branch UniqueObjectFinder/jets Jet Jet
 
-  add Branch GenJetFinder02/jets GenJet02 Jet
-  add Branch GenJetFinder04/jets GenJet04 Jet
-  add Branch GenJetFinder08/jets GenJet08 Jet
-  add Branch GenJetFinder15/jets GenJet15 Jet
-
-  add Branch FastJetFinder02/jets ParticleFlowJet02 Jet
-  add Branch FastJetFinder04/jets ParticleFlowJet04 Jet
-  add Branch FastJetFinder08/jets ParticleFlowJet08 Jet
-  add Branch FastJetFinder15/jets ParticleFlowJet15 Jet
-
-  add Branch CaloJetFinder02/jets CaloJet02 Jet
-  add Branch CaloJetFinder04/jets CaloJet04 Jet
-  add Branch CaloJetFinder08/jets CaloJet08 Jet
-  add Branch CaloJetFinder15/jets CaloJet15 Jet
-
-  add Branch TrackJetFinder02/jets TrackJet02 Jet
-  add Branch TrackJetFinder04/jets TrackJet04 Jet
-  add Branch TrackJetFinder08/jets TrackJet08 Jet
-  add Branch TrackJetFinder15/jets TrackJet15 Jet
+  add Branch FatJetFinder/jets FatJet Jet
 
   add Branch MissingET/momentum MissingET MissingET
   add Branch ScalarHT/energy ScalarHT ScalarHT

@@ -160,7 +160,7 @@ if __name__ == '__main__':
                                     except:
                                         f.write("\n" + " :: ERROR :: Problems in the execution of *.lhe :: ")
                                     if lhe_log:
-                                        print(" :: Genera lhe :: ")
+                                        print(" :: genera lhe :: ")
                                         ite = 0
                                     else:
                                         print(" :: Not genera lhe :: ")
@@ -217,7 +217,7 @@ if __name__ == '__main__':
                                     except:
                                         f.write("\n" + " :: ERROR :: Problems in the execution of *.root :: ")
                                     if root_log:
-                                        print(" :: Genera root :: ")
+                                        print(" :: genera root :: ")
                                         ite = 0
                                     else:
                                         print(" :: No genera root :: ")

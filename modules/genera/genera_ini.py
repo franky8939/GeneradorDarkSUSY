@@ -1,7 +1,7 @@
-from modules.Genera.Madg_create import *
-from modules.Genera.genera_lhe import *
-from modules.Genera.genera_root import *
-from modules.Genera.genera_out import *
+from modules.genera.Madg_create import *
+from modules.genera.genera_lhe import *
+from modules.genera.genera_out import *
+from modules.genera.genera_root import *
 
 
 def genera_ini(Event,  # number of event simulate
@@ -53,14 +53,14 @@ def genera_ini(Event,  # number of event simulate
                       ):
             file_clear(DirOutput + "/lhe", "Tree", info)  # clear directory
             file_copy(DirMadgraph + "/MSSMD/Events", DirOutput + "/lhe", "tt", info)  # Copy the lhe
-            execute("gzip -d " + DirOutput + "/lhe/run_01_decayed_1/unweighted_events.lhe.gz", info)  # descomprime
+            execute("gzip -d " + DirOutput + "/lhe/run_01_decayed_1/unweighted_events.lhe.gz", info=info)  # descomprime
         else:
-            Mess(" :: Problem in the obtein of *.lhe file :: ")
+            printG(" :: Problem in the obtein of *.lhe file :: ")
 
         # *** || Borrar temporates Madgraph de previos calculos || *** #
         if Mode == "out":
             file_clear(DirMadgraph, "Tree", info)
-        return os.path.exists(DirOutput + "/lhe/run_01_decayed_1/unweighted_events.lhe", info)
+        return file_exists(DirOutput + "/lhe/run_01_decayed_1/unweighted_events.lhe", info)
 
     # CREATE ROOT FILE #
     elif tyout == "root":
@@ -69,7 +69,7 @@ def genera_ini(Event,  # number of event simulate
         file_clear(DirMadgraph + "/MSSMD/Events/*", "Tree", info)  # borrar resultados
 
         # *** || Copiar a Madgraph *.lhe || *** #
-        execute("gzip -d " + DirOutput + "/lhe/run_01_decayed_1/unweighted_events.lhe.gz", info)  # decompiler
+        execute("gzip -d " + DirOutput + "/lhe/run_01_decayed_1/unweighted_events.lhe.gz", info=info)  # decompiler
         file_copy(DirOutput + "/lhe/", DirMadgraph + "/MSSMD/Events", "tt", info)
 
         # *** || Change life time in lhe || *** #
@@ -77,12 +77,12 @@ def genera_ini(Event,  # number of event simulate
             lifetime(Tc_DPho,
                      input=DirOutput + "/lhe/run_01_decayed_1/unweighted_events.lhe",
                      output=DirMadgraph + "/MSSMD/Events/run_01_decayed_1/unweighted_events.lhe")  # change Tc
-            Mess(" :: Se cambio el life time por : " + str(Tc_DPho), info)
+            printG(" :: Se cambio el life time por : " + str(Tc_DPho), info)
         else:
-            Mess(" :: Se mantuvo el life time default : ", info)
+            printG(" :: Se mantuvo el life time default : ", info)
 
         # *** || Comprise *.lhe in Madg || *** #
-        execute("gzip -1 " + DirMadgraph + "/MSSMD/Events/run_01_decayed_1/unweighted_events.lhe", info)  # comprime
+        execute("gzip -1 " + DirMadgraph + "/MSSMD/Events/run_01_decayed_1/unweighted_events.lhe", info=info)  # comprime
 
         # *** || Obtein file root in Madg || *** #
         if genera_root(DirMadgraph,
@@ -107,9 +107,9 @@ def genera_ini(Event,  # number of event simulate
 
             return file_exists(DirOutput + "/" + NameOutput + ".root", info)
         else:
-            Mess(" ::  Execution problems in madevent :: ", info)
+            printG(" ::  Execution problems in madevent :: ", info)
             return False
 
     else:
-        Mess(" :: ERROR :: Tyout execution unknown :: ", info)
+        printG(" :: ERROR :: Tyout execution unknown :: ", info)
         return False
