@@ -1,12 +1,10 @@
-import sys
-import time
 import argparse
+import time
 
-# sys.path.insert(0, "/LUSTRE/home/fmsanchez/GDarkSUSY/")  # lib of Programs
-
-from modules.genera.genera_ini import *
-from modules.genera.var_default import *
 from modules.all.modification_files import *
+from modules.genera.variable_default import *
+from modules.genera.ALL_genera import *
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -24,12 +22,12 @@ if __name__ == '__main__':
     parser.add_argument("-Mode", type=str, help="condition using - in - or - out -",
                         default="out")
     parser.add_argument("-Card", type=str, help="Card using - CMS - or - HL - or - HL2 -",
-                        default="CMS")
-    parser.add_argument("-Name", type=str, help="Name of root file output",
+                        default="HL")
+    parser.add_argument("-Name", type=str, help="Name of root file out",
                         default="DarkSUSY")
 
     parser.add_argument("-Dir_Madg", type=str, help="Directory of Madgraph",
-                        default="/LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0")
+                        default="/LUSTRE/home/fmsanchez")
     parser.add_argument("-Dir_temp_Madg", type=str, help="Directory of temporal install Madgraph",
                         default="/LUSTRE/home/fmsanchez/GDarkSUSY/temp")
     parser.add_argument("-Dir_Source", type=str, help="Directory where source stay",
@@ -44,7 +42,7 @@ if __name__ == '__main__':
     Name = args.Name
     Card = args.Card
     count = True  # condition of loop
-    ite = 1  # max number of iteration try to obtein info
+    ite = 10  # max number of iteration try to obtein info
     while count:
         count = False  # condition of break looprm --r -f temp/*
         for Ma_LNeu in Matrix_Ma_LNeu:
@@ -52,7 +50,7 @@ if __name__ == '__main__':
                 for Ma_DPho in Matrix_Ma_DPho:
                     for Tc_DPho in Matrix_Tc_DPho:
 
-                        # Verificar que las masas se correspondan, en caso contrario no se generara archivo lhe
+                        # Verificar que las masas se correspondan, en caso contrario no se generara file lhe
                         if Ma_LNeu >= (Ma_DNeu + Ma_DPho):
 
                             print(" ************************* CORRIDA NUEVA ************************* ")
@@ -76,20 +74,20 @@ if __name__ == '__main__':
                             # File *.lhe verification
                             # Realizara el trabajo solo en 3 condiciones:
                             #  - cuando exista lhe
-                            #  - cuando exista el archivo txt acreditando que se intento lhe y no converge
-                            #  - cuando el archivo RUN_lhe este activo
+                            #  - cuando exista el file txt acreditando que se intento lhe y no converge
+                            #  - cuando el file RUN_lhe este activo
                             time.sleep(random.random())  # desincronizar los procesos
-                            if not file_exists(localization + "/lhe/run_01_decayed_1/unweighted_events.lhe") \
-                                    and not file_exists(localization + "/" + NameLHE + ".txt") \
-                                    and not file_exists(args.Dir_Out + "/" + "RUN_lhe_" + NameLHE + ".txt"):
+                            if not file_exists(localization + "/lhe/run_01_decayed_1/unweighted_events.lhe", local=True) \
+                                    and not file_exists(localization + "/" + NameLHE + ".txt", local=True) \
+                                    and not file_exists(args.Dir_Out + "/" + "RUN_lhe_" + NameLHE + ".txt", local=True):
                                 info = open(args.Dir_Out + "/" + "RUN_lhe_" + NameLHE + ".txt",
                                             "w+")  # declarar corrida
-                                printG(" :: Correr programa para obtener lhe", info)
+                                printG(" :: Correr programa para obtener lhe", info=info)
                                 lhe_log = False
                                 for i in range(ite):
-                                    # try:
-                                    lhe_log = \
-                                        genera_ini(Event=Event,  # number of event simulate
+                                    try:
+                                        lhe_log = \
+                                            genera(Event=Event,  # number of event simulate
                                                    Ma_DNeu=Ma_DNeu,  # value of mass of dark neutrino
                                                    Ma_LNeu=Ma_LNeu,  # value of mass of lightest neutrino
                                                    Ma_DPho=Ma_DPho,  # value of mass of dark photon
@@ -97,50 +95,51 @@ if __name__ == '__main__':
                                                    Dir_Madg=args.Dir_Madg,  # directory of install Madgraph
                                                    Dir_temp_Madg=args.Dir_temp_Madg,  # temp install Madgraph
                                                    Dir_Source=args.Dir_Source,  # directory where source stay
-                                                   Dir_Out=args.Dir_Out,  # directory of output resolution
+                                                   Dir_Out=args.Dir_Out,  # directory of out resolution
                                                    Card=args.Card,  # card using - CMS - or - HL -
                                                    Mode=args.Mode,  # condition using - in - or - out -
                                                    tyout="lhe",  # condition save files -lhe- or -root-
-                                                   Name=args.Name,  # name of root file output
+                                                   Name=args.Name,  # name of root file out
                                                    info=info  # info of process
                                                    )
-                                    # except:
-                                    #    f.write("\n" + " :: ERROR :: Problems in the execution of *.lhe :: ")
+                                    except:
+                                        lhe_log = False
+                                        printG("\n" + " :: ERROR :: Problems in the execution of *.lhe :: ", info=info)
                                     if lhe_log:
-                                        printG(" :: Se genera lhe :: ", info)
+                                        printG(" :: Se genera lhe :: ", info=info)
                                         break
                                     else:
-                                        printG(" :: Not genera lhe :: ", info)
+                                        printG(" :: Not genera lhe :: ", info=info)
 
                                 # *** || Save info of Error || *** #
                                 if not lhe_log:
                                     file_copy(args.Dir_Out + "/" + "RUN_lhe_" + NameLHE + ".txt",
-                                              localization + "/" + NameLHE + ".txt", "ff", info)  # declarar corrida
-                                    file_exists(localization + "/" + NameLHE + ".txt", info)
+                                              localization + "/" + NameLHE + ".txt", "ff", info=info, local=True)  # declarar corrida
+                                    file_exists(localization + "/" + NameLHE + ".txt", info=info, local=True)
                                 # Remove file of RUN
-                                file_clear(args.Dir_Out + "/" + "RUN_lhe_" + NameLHE + ".txt", "File", info)  # clear
+                                file_clear(args.Dir_Out + "/" + "RUN_lhe_" + NameLHE + ".txt", "File",
+                                           info=info, local=True)  # clear
                                 info.close()
                             else:
                                 printG(" :: File *.lhe exist or is running :: ")
 
                             # File *.lhe verification in process
-                            if file_exists(args.Dir_Out + "/" + "RUN_lhe_" + NameLHE + ".txt") or \
-                                    file_exists(args.Dir_Out + "/" + "RUN_lhe_" + NameLHE + ".root"):
-                                count = True  # ciclo se repetira para buscar archivos pasados
+                            if file_exists(args.Dir_Out + "/" + "RUN_lhe_" + NameLHE + ".txt"):
+                                count = True  # ciclo se repetira para find archivos pasados
 
                             # File *.root verification
-                            if file_exists(localization + "/lhe/run_01_decayed_1/unweighted_events.lhe") \
-                                    and not os.path.exists(localization + "/" + NameROOT + ".txt") \
-                                    and not os.path.exists(localization + "/" + NameROOT + ".root") \
-                                    and not os.path.exists(args.Dir_Out + "/" + "RUN_root_" + NameROOT + ".txt"):
+                            if file_exists(localization + "/lhe/run_01_decayed_1/unweighted_events.lhe", local=True) \
+                                    and not file_exists(localization + "/" + NameROOT + ".txt", local=True) \
+                                    and not file_exists(localization + "/" + NameROOT + ".root", local=True) \
+                                    and not file_exists(args.Dir_Out + "/" + "RUN_root_" + NameROOT + ".txt", local=True):
                                 # declarar corrida
                                 info = open(args.Dir_Out + "/" + "RUN_root_" + NameROOT + ".txt", "w+")
-                                printG(" :: Run the programs for obtein root file", info)
+                                printG(" :: Run the programs for obtein root file", info=info)
                                 root_log = False
                                 for i in range(ite):
-                                    # try:
-                                    root_log = \
-                                        genera_ini(Event=Event,  # number of event simulate
+                                    try:
+                                        root_log = \
+                                            genera(Event=Event,  # number of event simulate
                                                    Ma_DNeu=Ma_DNeu,  # value of mass of dark neutrino
                                                    Ma_LNeu=Ma_LNeu,  # value of mass of lightest neutrino
                                                    Ma_DPho=Ma_DPho,  # value of mass of dark photon
@@ -148,37 +147,45 @@ if __name__ == '__main__':
                                                    Dir_Madg=args.Dir_Madg,  # directory of install Madgraph
                                                    Dir_temp_Madg=args.Dir_temp_Madg,  # temp install Madgraph
                                                    Dir_Source=args.Dir_Source,  # directory where source stay
-                                                   Dir_Out=args.Dir_Out,  # directory of output solution
+                                                   Dir_Out=args.Dir_Out,  # directory of out solution
                                                    Card=args.Card,  # card using - CMS - or - HL -
                                                    Mode=args.Mode,  # condition using - in - or - out -
                                                    tyout="root",  # condition save files -lhe- or -root-
-                                                   Name=args.Name,  # name of root file output
+                                                   Name=args.Name,  # name of root file out
                                                    info=info  # info of process
                                                    )
+                                    except:
+                                        root_log = False
+                                        printG("\n" + " :: ERROR :: Problems in the execution of *.root :: ", info=info)
                                     if root_log:
-                                        printG(" :: genera root :: ", info)
+                                        printG(" :: genera root :: ", info=info)
                                         break
                                     else:
-                                        printG(" :: Not genera root :: ", info)
+                                        printG(" :: Not genera root :: ", info=info)
                                 if not root_log:
                                     file_copy(args.Dir_Out + "/" + "RUN_root_" + NameROOT + ".txt",
-                                              localization + "/" + NameROOT + ".txt", "ff", info)  # declarar corrida
-                                    file_exists(localization + "/" + NameROOT + ".txt", info)
+                                              localization + "/" + NameROOT + ".txt", "ff", info=info, local=True)  # declarar corrida
+                                    file_exists(localization + "/" + NameROOT + ".txt", info=info, local=True)
                                 # Remove file of RUN
-                                file_clear(args.Dir_Out + "/" + "RUN_root_" + NameROOT + ".txt", "File")  # borrar run
+                                file_clear(args.Dir_Out + "/" + "RUN_root_" + NameROOT + ".txt", "File", local=True)  # borrar run
                                 info.close()
                             else:
                                 printG(" :: File *.root exist or is runing :: ")
 
                             # *** || Convertir el root y seleccionar solo los eventos con 4 muones o mas || *** #
-                            if file_exists(localization + "/" + NameROOT + ".root") \
-                                    and not file_exists(localization + '/Mu_min4/Mu4_' + NameROOT + ".root"):
+                            if file_exists(localization + '/Mu_min4/Mu4_' + NameROOT + ".root", local=True):
+                                printG(" :: File Mu4*.root reduction exist :: ")
+                            elif file_exists(localization + "/" + NameROOT + ".root") \
+                                    and not file_exists(localization + '/Mu_min4/Mu4_' + NameROOT + ".root", local=True):
 
                                 command = 'root -l SelectDark3.C\'("' + \
                                           localization + '/' + NameROOT + '.root" , "' + \
                                           localization + '/Mu_min4/Mu4_' + NameROOT + '.root" , "' + \
                                           localization + '/Mu_min4/LOG_Mu4_' + NameROOT + '.txt")\' <<< 0'
-                                execute(command, position=args.Dir_Source)
-                                file_exists(localization + '/Mu_min4/Mu4_' + NameROOT + '.root')
+                                execute(command, position=args.Dir_Source, local=True)
+                                file_exists(localization + '/Mu_min4/Mu4_' + NameROOT + '.root', local=True)
+
+                            elif file_exists(args.Dir_Out + "/" + "RUN_lhe_" + NameLHE + ".txt", local=True):
+                                printG(" :: File *.lhe and *.root not exist :: running reduction not posible ::")
                             else:
-                                printG(" :: File *.root reduction exist :: ")
+                                printG(" :: File *.root is not running, general option no include :: ")

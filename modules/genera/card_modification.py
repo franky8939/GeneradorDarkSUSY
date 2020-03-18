@@ -4,24 +4,21 @@ from modules.all.messange_info import printG  # include in modules.modification_
 
 
 #  FUNCION PARA CAMBIAR UNA LINEA DE UN ARCHIVO POR OTRA #
-def modificarLinea(archivo, buscar, reemplazar):
-    with open(archivo, "r") as f:
+def changeLine(file, find, replace):
+    with open(file, "r") as f:
         lines = (line.rstrip() for line in f)
-        altered_lines = [reemplazar if line == buscar else line for line in lines]
+        altered_lines = [replace if line == find else line for line in lines]
 
-    with open(archivo, "w") as f:
+    with open(file, "w") as f:
         f.write('\n'.join(altered_lines) + '\n')
 
 
-def lifetime(ctau_mean_mm, input="unweighted_events.lhe", output="unweighted_events_new.lhe"):
-    '''
-    function using in replace_lifetime_in_LHE.py
-    necesita estar en la carpeta para que funcione
-    '''
-    # set input file name
+def lifetime(ct_mean_mm, inp="unweighted_events.lhe", out="unweighted_events_new.lhe"):
+    """ function using in replace_lifetime_in_LHE.py, need stay in the folder of inp to work correct """
+    # set inp file name
     # filename = "unweighted_events.lhe"
-    f = open(input, 'r')
-    g = open(output, 'w')
+    f = open(inp, 'r')
+    g = open(out, 'w')
     event_begin = False
     event_end = True
     for line in f:
@@ -39,10 +36,10 @@ def lifetime(ctau_mean_mm, input="unweighted_events.lhe", output="unweighted_eve
                     word_n = word_n + 1
                     if word_n < 13:
                         if word_n == 12:
-                            if ctau_mean_mm is not 0:
+                            if ct_mean_mm is not 0:
                                 ctau_mm = '%E' % random.expovariate(
-                                    1.0 / float(ctau_mean_mm))  # exponential distribution
-                                # print "ctau (mm) mean: ", ctau_mean_mm, " actual: ", ctau_mm
+                                    1.0 / float(ct_mean_mm))  # exponential distribution
+                                # print "ctau (mm) mean: ", ct_mean_mm, " actual: ", ctau_mm
                             else:
                                 ctau_mm = '%E' % float(0)
                             new_line = new_line + ctau_mm + '   '
@@ -64,25 +61,25 @@ def lifetime(ctau_mean_mm, input="unweighted_events.lhe", output="unweighted_eve
 def change(inp, var, num, info=None):
     try:
         if var == "Ma_DPho":
-            modificarLinea(inp, "  3000022 2.500000e-01 # MAD", "  3000022 " + str(num) + " # MAD ")
+            changeLine(inp, "  3000022 2.500000e-01 # MAD", "  3000022 " + str(num) + " # MAD ")
 
             printG(" :: Change mass of dark photon to :: " + str(num), info=info)
             return True
         elif var == "Ma_LNeu":
             # *** || Change the mass of lightest neutalino || *** #
-            modificarLinea(inp, "  1000022 1.000000e+01 # Mneu1", "  1000022 " + str(num) + " # Mneu1 ")
+            changeLine(inp, "  1000022 1.000000e+01 # Mneu1", "  1000022 " + str(num) + " # Mneu1 ")
 
             printG(" :: Change mass of lightest neutalino to :: " + str(num), info=info)
             return True
         elif var == "Ma_DNeu":
             # *** || Change the mass of dark neutalino || *** #
-            modificarLinea(inp, "  3000001 1.000000e+00 # MneuD", "  3000001 " + str(num) + " # MneuD ")
+            changeLine(inp, "  3000001 1.000000e+00 # MneuD", "  3000001 " + str(num) + " # MneuD ")
 
             printG(" :: Change mass of dark neutalino to :: " + str(num), info=info)
             return True
         elif var == "events" or var == "Events":
-            modificarLinea(inp, "  10000 = nevents ! Number of unweighted events requested",
-                           "  " + str(num) + "  = nevents ! Number of unweighted events requested ")
+            changeLine(inp, "  10000 = nevents ! Number of unweighted events requested",
+                       "  " + str(num) + "  = nevents ! Number of unweighted events requested ")
 
             printG(" :: Change Event to :: " + str(num), info=info)
             return True
@@ -90,11 +87,11 @@ def change(inp, var, num, info=None):
             printG(" :: ERROR :: var no incluide :: ", info=info)
             return False
     except:
-        printG(" :: ERROR :: Execution of :: " + var + "incorrect", info=info)
+        printG(" :: ERROR :: Execution of :: " + var + " incorrect", info=info)
         return False
 
 
-def activate(card, action, position_of_Card, position_of_Source=None, info=None, type=None):
+def activate(card, action, position_of_Card, position_of_Source=None, info=None, typ=None):
     if action in ["ON", "On", "oN", "on"]:
         if card == "Pythia" or card == "pythia" or card == "Pythia8" or card == "pythia8":
             if file_exists(position_of_Card + "/pythia8_card_default.dat", info=info):
@@ -110,13 +107,13 @@ def activate(card, action, position_of_Card, position_of_Source=None, info=None,
                 printG(" :: ERROR :: Incorrect pythia8_card_default.dat not exist :: ", info=info)
                 return False
         elif card == "Delphes" or card == "delphes":
-            if type == "CMS":
+            if typ == "CMS":
                 file_copy(position_of_Card + "/delphes_card_CMS.dat",
                           position_of_Card + "/delphes_card.dat", "ff", info=info)
 
                 printG(" :: Delphes CMS Activate :: ", info=info)
                 return True
-            elif type == "HL":
+            elif typ == "HL":
                 if file_copy(position_of_Card + "/delphes_card_HL.dat",
                              position_of_Card + "/delphes_card.dat", "ff", info=info, local=True):
 
@@ -141,7 +138,7 @@ def activate(card, action, position_of_Card, position_of_Source=None, info=None,
 
                     printG(" :: ERROR :: Incorrect delphes_card_HL*.dat not exist :: ", info=info)
                     return False
-            elif type == "HL2":
+            elif typ == "HL2":
                 if file_copy(position_of_Card + "/delphes_card_HL2.dat",
                              position_of_Card + "/delphes_card.dat", "ff", info=info, local=True):
 
@@ -168,7 +165,7 @@ def activate(card, action, position_of_Card, position_of_Source=None, info=None,
                     return False
             else:
 
-                printG(" :: ERROR :: Incorrect type of card not include in program :: ", info=info)
+                printG(" :: ERROR :: Incorrect typ of card not include in program :: ", info=info)
                 return False
         else:
 

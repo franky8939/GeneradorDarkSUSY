@@ -1,14 +1,16 @@
 # from modules.messange_info import *
 # from modules.modification_files import *
-from modules.genera.modification_bashrc import *
-from modules.genera.modification_card import *
+from modules.genera.bashrc_modification import *
+from modules.genera.card_modification import *
 
 
 def Madg_create(Dir_Madg,  # directory of install Madgraph
                 Dir_temp_Madg,  # directory of temporal install Madgraph
                 Mode,  # condicion using - in - or - out -
-                info=None  # output of info for the process
+                info=None  # out of info for the process
                 ):
+    printG(" :: ********** Create Folder of Madgraph for using Dark Susy ********** :: ", info=info)
+
     # *** | MODE USING FOR SIMULATION | *** #
     if Mode == "out":
         # noinspection PyBroadException
@@ -51,5 +53,7 @@ def Madg_create(Dir_Madg,  # directory of install Madgraph
     # *** | INCLUDE BASH | *** #
     Mad_bashrc(DirMadgraph, info=info, local=True)
     printG(" :: Complete copy of Madgraph programs ::", info=info)
+
+    printG(" :: ********** Finally creation of Folder of Madgraph for using Dark Susy ********** :: ", info=info)
 
     return DirMadgraph, Folder_DirMadgraph

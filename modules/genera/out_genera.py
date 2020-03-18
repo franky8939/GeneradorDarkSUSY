@@ -1,13 +1,15 @@
-from modules.genera.modification_card import *
+from modules.genera.card_modification import *
 
 
 def genera_out(Event,  # number of event simulate
                Ma_DNeu,  # value of mass of dark neutalino
                Ma_LNeu,  # value of mass of lightest neutalino
                Ma_DPho,  # value of mass of dark photon
-               Dir_Out,  # directory of output resolution
-               info=None  # output of info for the process
+               Dir_Out,  # directory of out resolution
+               info=None  # out of info for the process
                ):
+    printG(" :: ********** Modification out resolution of Madgraph for using Dark Susy ********** :: ", info=info)
+
     # *** || Create /Events_###/MneuL_###/MneuD_###/MphoD_###/Mu_min4 || ***
     file_set(Dir_Out + "/Events_" + str(Event), info=info, local=True)
 
@@ -28,4 +30,6 @@ def genera_out(Event,  # number of event simulate
 
     # *** || Create /Events_###/MneuL_###/MneuD_###/MphoD_###/Bad_log || ***
     # file_set(DirOutput + "/Bad_log", info=info)  # crea carpeta
+
+    printG(" :: ********** Finally modification out resolution of Madgraph for using Dark Susy ********** :: ", info=info)
     return True

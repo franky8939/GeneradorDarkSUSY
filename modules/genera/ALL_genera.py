@@ -1,7 +1,7 @@
-from modules.genera.genera_Madg import *
-from modules.genera.genera_lhe import *
-from modules.genera.genera_out import *
-from modules.genera.genera_root import *
+from modules.genera.Madg_genera import *
+from modules.genera.lhe_genera import *
+from modules.genera.out_genera import *
+from modules.genera.root_genera import *
 
 
 def genera(Event,  # number of event simulate
@@ -12,18 +12,18 @@ def genera(Event,  # number of event simulate
            Dir_Madg,  # directory of install Madgraph
            Dir_temp_Madg,  # directory of temporal install Madgraph
            Dir_Source,  # directory where source stay
-           Dir_Out,  # directory of output resolution
+           Dir_Out,  # directory of out resolution
            Mode,  # condicion using - in - or - out -
            Card,  # card using - CMS - or - HL -
-           Name="DarkSUSY",  # name of root file output
-           info=None,  # output of info for the process
+           Name="DarkSUSY",  # name of root file out
+           info=None,  # out of info for the process
            tyout="lhe"  # condicion if save files -lhe- or -root-
            ):
     # *** | COPY Madgraph in the place of work | *** #
     DirMadgraph, Folder = Madg_create(Dir_Madg,  # directory of install Madgraph
                                       Dir_temp_Madg,  # directory of temporal install Madgraph
                                       Mode,  # condition using - in - or - out -
-                                      info  # output of info for the process
+                                      info  # out of info for the process
                                       )
 
     DirOutput = Dir_Out + "/Events_" + str(Event) + "/MneuL_" + str(Ma_LNeu) + \
@@ -31,6 +31,7 @@ def genera(Event,  # number of event simulate
 
     NameOutput = Name + "_" + Card + "_Event_" + str(Event) + "_MNeuL_" + str(Ma_LNeu) + \
                  "_MNeuD_" + str(Ma_DNeu) + "_MPhoD_" + str(Ma_DPho) + "_TcPhoD_" + str(Tc_DPho) + "_"
+
 
     printG(" :: ************** DARKSUSY METHODOLOGY ************** ", info=info)
     try:
@@ -40,7 +41,7 @@ def genera(Event,  # number of event simulate
                           Ma_DPho,  # value of mass of dark photon
                           DirMadgraph,  # directory of install Madgraph
                           Dir_Source,  # directory where source stay
-                          info=info  # output of info for the process
+                          info=info  # out of info for the process
                           )
 
         # *** || Create /Events_###/MneuL_###/MneuD_###/MphoD_###/Mu_min4 || ***
@@ -48,32 +49,38 @@ def genera(Event,  # number of event simulate
                    Ma_DNeu,  # value of mass of dark neutalino
                    Ma_LNeu,  # value of mass of lightest neutalino
                    Ma_DPho,  # value of mass of dark photon
-                   Dir_Out,  # directory of output resolution
-                   info  # output of info for the process
+                   Dir_Out,  # directory of out resolution
+                   info  # out of info for the process
                    )
 
         # CREATE LHE FILE#
         if tyout == "lhe":
-            if genera_lhe(DirMadgraph,  # directory of install Madgraph
-                          info  # output of info for the process
+            printG(" :: ************** DARKSUSY METHODOLOGY, GENERA LHE ************** ", info=info)
+
+            if lhe_genera(DirMadgraph,  # directory of install Madgraph
+                          info  # out of info for the process
                           ):
-                file_clear(DirOutput + "/lhe", "Tree", info=info, local=True)  # clear directory
-                file_set(DirOutput + "/lhe", info=info, local=True)
-                file_copy(DirMadgraph + "/MSSMD/Events", DirOutput + "/lhe", "tt", info=info, local=True)  # Copy the lhe
+                printG(" :: Generate *.lhe file :: ", info=info)
+                file_clear(DirOutput + "/lhe", "Tree", info=info)  # clear directory
+                file_set(DirOutput + "/lhe", info=info)
+                file_copy(DirMadgraph + "/MSSMD/Events", DirOutput + "/lhe", "tt", info=info)  # Copy the
+                # lhe
                 execute("gzip -d " + DirOutput + "/lhe/run_01_decayed_1/unweighted_events.lhe.gz",
                         info=info,
-                        position=None,
-                        local=True)  # descomprime
+                        position=None)  # descomprime
             else:
-                printG(" :: Problem in the obtein of *.lhe file :: ")
+                printG(" :: Problem in the obtein of *.lhe file :: ", info=info)
 
-            # *** || Borrar temporates Madgraph de previos calculos || *** #
+            '''# *** || Borrar temporates Madgraph de previos calculos || *** #
             if Mode == "out":
                 file_clear(DirMadgraph, "Tree", info=info)
-            return file_exists(DirOutput + "/lhe/run_01_decayed_1/unweighted_events.lhe", info=info, local=True)
+
+            printG(" :: ************** FINALLY DARKSUSY METHODOLOGY ************** ", info=info)
+            return file_exists(DirOutput + "/lhe/run_01_decayed_1/unweighted_events.lhe", info=info, local=True)'''
 
         # CREATE ROOT FILE #
         elif tyout == "root":
+            printG(" :: ************** DARKSUSY METHODOLOGY, GENERA ROOT ************** ", info=info)
 
             # *** || Preparando Madgraph de previos calculos || *** #
             file_clear(DirMadgraph + "/MSSMD/Events", "Tree", info=info, local=True)  # borrar resultados
@@ -82,42 +89,43 @@ def genera(Event,  # number of event simulate
             # *** || Copiar a Madgraph *.lhe || *** #
             execute("gzip -d " + DirOutput + "/lhe/run_01_decayed_1/unweighted_events.lhe.gz",
                     info=info,
-                    position=None,
-                    local=True)  # decompiler
+                    position=None)  # decompiler
             file_copy(DirOutput + "/lhe", DirMadgraph + "/MSSMD/Events", "tt", info=info)
 
             # *** || Change life time in lhe || *** #
             if Tc_DPho is not 0:
                 lifetime(Tc_DPho,
-                         input=DirOutput + "/lhe/run_01_decayed_1/unweighted_events.lhe",
-                         output=DirMadgraph + "/MSSMD/Events/run_01_decayed_1/unweighted_events.lhe")  # change Tc
-                printG(" :: Se cambio el life time por : " + str(Tc_DPho), info=info)
+                         inp=DirOutput + "/lhe/run_01_decayed_1/unweighted_events.lhe",
+                         out=DirMadgraph + "/MSSMD/Events/run_01_decayed_1/unweighted_events.lhe")  # change Tc
+                printG(" :: Change the life time in : " + str(Tc_DPho), info=info)
             else:
-                printG(" :: Se mantuvo el life time default : ", info=info)
+                printG(" :: Not posible change the life time in, using default : ", info=info)
 
             # *** || Comprise *.lhe in Madg || *** #
             execute("gzip -1 " + DirMadgraph + "/MSSMD/Events/run_01_decayed_1/unweighted_events.lhe",
                     info=info,
-                    position=None,
-                    local=True)  # comprime
+                    position=None)  # comprime
 
             # *** || Obtein file root in Madg || *** #
+            printG(" :: Generate *.root file :: ", info=info)
+
             if genera_root(DirMadgraph,
                            Dir_Source,  # directory where source stay
                            Card,  # card using - CMS - or - HL -
-                           info  # output of info for the process
+                           info  # out of info for the process
                            ):
-                # *** || Encuentra archivo *.root creado || *** #
+                # *** || Encuentra file *.root creado || *** #
                 outROOT = []
                 for i in os.listdir(DirMadgraph + "/MSSMD/Events/run_01_decayed_1/"):
                     if i.find(".root") != -1:
                         outROOT = i
 
                 file_copy(DirMadgraph + "/MSSMD/Events/run_01_decayed_1/" + outROOT,
-                          DirOutput + "/" + NameOutput + ".root", "ff", info=info, local=True)
+                          DirOutput + "/" + NameOutput + ".root", "ff", info=info)
                 printG(' :: Generate correct the *.root :: ', info=info)
             else:
                 printG(' :: Not generate correct the *.root :: ', info=info)
+
         else:
             printG(" :: ERROR :: Tyout execution unknown :: ", info=info)
 
@@ -127,9 +135,11 @@ def genera(Event,  # number of event simulate
     # *** || Borrar temporates Madgraph de previos calculos || *** #
     if Mode == "out":
         file_clear(Folder, "Tree", info=info, local=True)
+        printG(' :: Mode "out" using :: clear Folder :: ', info=info)
     else:
         printG(' :: Mode "in" using :: No clear :: ', info=info)
 
+    printG(" :: ************** FINALLY DARKSUSY METHODOLOGY ************** ", info=info)
     if tyout == "lhe":
         return file_exists(DirOutput + "/lhe/run_01_decayed_1/unweighted_events.lhe", info=info, local=True)
     elif tyout == "root":
