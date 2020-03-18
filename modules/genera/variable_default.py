@@ -4,10 +4,10 @@ def var_default(Event, Ma_LNeu, Ma_DNeu, Ma_DPho, Tc_DPho):
         Ma_LNeu = [10]
 
     if Ma_DNeu is None:
-        Ma_DNeu = [.25] #[.25, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        Ma_DNeu = [.25, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
     if Ma_DPho is None:
-        Ma_DPho = [.25, 1, 2] #[.25, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        Ma_DPho = [.25, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     else:
         Ma_DPho = Ma_DPho
 

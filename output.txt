@@ -1,0 +1,3324 @@
+/LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC/models/MSSMD_UFO/particles.py
+write ./param_card.dat
+/LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC/models/MSSMD_UFO/particles.py
+write ./param_card.dat
+/LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC/models/MSSMD_UFO/particles.py
+write ./param_card.dat
+/LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC/models/MSSMD_UFO/particles.py
+write ./param_card.dat
+/LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC/models/MSSMD_UFO/particles.py
+write ./param_card.dat
+/LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC/models/MSSMD_UFO/particles.py
+write ./param_card.dat
+/LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC/models/MSSMD_UFO/particles.py
+write ./param_card.dat
+/LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC/models/MSSMD_UFO/particles.py
+write ./param_card.dat
+/LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC/models/MSSMD_UFO/particles.py
+write ./param_card.dat
+/LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC/models/MSSMD_UFO/particles.py
+write ./param_card.dat
+************************************************************
+*                                                          *
+*                     W E L C O M E to                     *
+*              M A D G R A P H 5 _ a M C @ N L O           *
+*                                                          *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.7.0                 2020-01-20         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                            and                           *
+*            http://amcatnlo.web.cern.ch/amcatnlo/         *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*           Type 'tutorial' to learn how MG5 works         *
+*    Type 'tutorial aMCatNLO' to learn how aMC@NLO works   *
+*    Type 'tutorial MadLoop' to learn how MadLoop works    *
+*                                                          *
+************************************************************
+load MG5 configuration from input/mg5_configuration.txt 
+fastjet-config does not seem to correspond to a valid fastjet-config executable (v3+). We will use fjcore instead.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/fastjet-config (including fastjet-config).
+ MG5_aMC> set fastjet /PATH/TO/fastjet-config
+
+set lhapdf to /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0/HEPTools/lhapdf6/bin/lhapdf-config
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+import /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC/proc_card.dat
+The import format was not given, so we guess it as command
+set group_subprocesses Auto
+Set group_subprocesses to Auto
+Note that you need to regenerate all processes
+set ignore_six_quark_processes False
+set loop_optimized_output True
+set loop optimized output to True
+set loop_color_flows False
+set loop color flows to False
+set gauge unitary
+Passing to gauge unitary.
+set complex_mass_scheme False
+Complex mass already desactivated.
+set max_npoint_for_channel 0
+import model sm
+************************************************************
+*                                                          *
+*                     W E L C O M E to                     *
+*              M A D G R A P H 5 _ a M C @ N L O           *
+*                                                          *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.7.0                 2020-01-20         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                            and                           *
+*            http://amcatnlo.web.cern.ch/amcatnlo/         *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*           Type 'tutorial' to learn how MG5 works         *
+*    Type 'tutorial aMCatNLO' to learn how aMC@NLO works   *
+*    Type 'tutorial MadLoop' to learn how MadLoop works    *
+*                                                          *
+************************************************************
+load MG5 configuration from input/mg5_configuration.txt 
+fastjet-config does not seem to correspond to a valid fastjet-config executable (v3+). We will use fjcore instead.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/fastjet-config (including fastjet-config).
+ MG5_aMC> set fastjet /PATH/TO/fastjet-config
+
+************************************************************
+*                                                          *
+*                     W E L C O M E to                     *
+*              M A D G R A P H 5 _ a M C @ N L O           *
+*                                                          *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.7.0                 2020-01-20         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                            and                           *
+*            http://amcatnlo.web.cern.ch/amcatnlo/         *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*           Type 'tutorial' to learn how MG5 works         *
+*    Type 'tutorial aMCatNLO' to learn how aMC@NLO works   *
+*    Type 'tutorial MadLoop' to learn how MadLoop works    *
+*                                                          *
+************************************************************
+load MG5 configuration from input/mg5_configuration.txt 
+fastjet-config does not seem to correspond to a valid fastjet-config executable (v3+). We will use fjcore instead.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/fastjet-config (including fastjet-config).
+ MG5_aMC> set fastjet /PATH/TO/fastjet-config
+
+************************************************************
+*                                                          *
+*                     W E L C O M E to                     *
+*              M A D G R A P H 5 _ a M C @ N L O           *
+*                                                          *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.7.0                 2020-01-20         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                            and                           *
+*            http://amcatnlo.web.cern.ch/amcatnlo/         *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*           Type 'tutorial' to learn how MG5 works         *
+*    Type 'tutorial aMCatNLO' to learn how aMC@NLO works   *
+*    Type 'tutorial MadLoop' to learn how MadLoop works    *
+*                                                          *
+************************************************************
+load MG5 configuration from input/mg5_configuration.txt 
+************************************************************
+*                                                          *
+*                     W E L C O M E to                     *
+*              M A D G R A P H 5 _ a M C @ N L O           *
+*                                                          *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.7.0                 2020-01-20         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                            and                           *
+*            http://amcatnlo.web.cern.ch/amcatnlo/         *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*           Type 'tutorial' to learn how MG5 works         *
+*    Type 'tutorial aMCatNLO' to learn how aMC@NLO works   *
+*    Type 'tutorial MadLoop' to learn how MadLoop works    *
+*                                                          *
+************************************************************
+load MG5 configuration from input/mg5_configuration.txt 
+INFO: reload from .py file 
+INFO: load particles 
+************************************************************
+*                                                          *
+*                     W E L C O M E to                     *
+*              M A D G R A P H 5 _ a M C @ N L O           *
+*                                                          *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.7.0                 2020-01-20         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                            and                           *
+*            http://amcatnlo.web.cern.ch/amcatnlo/         *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*           Type 'tutorial' to learn how MG5 works         *
+*    Type 'tutorial aMCatNLO' to learn how aMC@NLO works   *
+*    Type 'tutorial MadLoop' to learn how MadLoop works    *
+*                                                          *
+************************************************************
+INFO: load vertices 
+set lhapdf to /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0/HEPTools/lhapdf6/bin/lhapdf-config
+load MG5 configuration from input/mg5_configuration.txt 
+fastjet-config does not seem to correspond to a valid fastjet-config executable (v3+). We will use fjcore instead.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/fastjet-config (including fastjet-config).
+ MG5_aMC> set fastjet /PATH/TO/fastjet-config
+
+fastjet-config does not seem to correspond to a valid fastjet-config executable (v3+). We will use fjcore instead.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/fastjet-config (including fastjet-config).
+ MG5_aMC> set fastjet /PATH/TO/fastjet-config
+
+************************************************************
+*                                                          *
+*                     W E L C O M E to                     *
+*              M A D G R A P H 5 _ a M C @ N L O           *
+*                                                          *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.7.0                 2020-01-20         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                            and                           *
+*            http://amcatnlo.web.cern.ch/amcatnlo/         *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*           Type 'tutorial' to learn how MG5 works         *
+*    Type 'tutorial aMCatNLO' to learn how aMC@NLO works   *
+*    Type 'tutorial MadLoop' to learn how MadLoop works    *
+*                                                          *
+************************************************************
+load MG5 configuration from input/mg5_configuration.txt 
+fastjet-config does not seem to correspond to a valid fastjet-config executable (v3+). We will use fjcore instead.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/fastjet-config (including fastjet-config).
+ MG5_aMC> set fastjet /PATH/TO/fastjet-config
+
+set lhapdf to /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0/HEPTools/lhapdf6/bin/lhapdf-config
+fastjet-config does not seem to correspond to a valid fastjet-config executable (v3+). We will use fjcore instead.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/fastjet-config (including fastjet-config).
+ MG5_aMC> set fastjet /PATH/TO/fastjet-config
+
+************************************************************
+*                                                          *
+*                     W E L C O M E to                     *
+*              M A D G R A P H 5 _ a M C @ N L O           *
+*                                                          *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.7.0                 2020-01-20         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                            and                           *
+*            http://amcatnlo.web.cern.ch/amcatnlo/         *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*           Type 'tutorial' to learn how MG5 works         *
+*    Type 'tutorial aMCatNLO' to learn how aMC@NLO works   *
+*    Type 'tutorial MadLoop' to learn how MadLoop works    *
+*                                                          *
+************************************************************
+load MG5 configuration from input/mg5_configuration.txt 
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+import /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC/proc_card.dat
+INFO: Restrict model sm with file models/sm/restrict_default.dat . 
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+The import format was not given, so we guess it as command
+fastjet-config does not seem to correspond to a valid fastjet-config executable (v3+). We will use fjcore instead.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/fastjet-config (including fastjet-config).
+ MG5_aMC> set fastjet /PATH/TO/fastjet-config
+
+set group_subprocesses Auto
+Set group_subprocesses to Auto
+Note that you need to regenerate all processes
+set ignore_six_quark_processes False
+set loop_optimized_output True
+set loop optimized output to True
+set loop_color_flows False
+set loop color flows to False
+set gauge unitary
+Passing to gauge unitary.
+set complex_mass_scheme False
+Complex mass already desactivated.
+set max_npoint_for_channel 0
+import model sm
+set lhapdf to /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0/HEPTools/lhapdf6/bin/lhapdf-config
+set lhapdf to /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0/HEPTools/lhapdf6/bin/lhapdf-config
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+import /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC/proc_card.dat
+The import format was not given, so we guess it as command
+set lhapdf to /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0/HEPTools/lhapdf6/bin/lhapdf-config
+set group_subprocesses Auto
+Set group_subprocesses to Auto
+Note that you need to regenerate all processes
+set ignore_six_quark_processes False
+set loop_optimized_output True
+set loop optimized output to True
+set loop_color_flows False
+set loop color flows to False
+set gauge unitary
+Passing to gauge unitary.
+set complex_mass_scheme False
+Complex mass already desactivated.
+set max_npoint_for_channel 0
+import model sm
+set lhapdf to /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0/HEPTools/lhapdf6/bin/lhapdf-config
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+import /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC/proc_card.dat
+import /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC/proc_card.dat
+set lhapdf to /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0/HEPTools/lhapdf6/bin/lhapdf-config
+The import format was not given, so we guess it as command
+The import format was not given, so we guess it as command
+set group_subprocesses Auto
+Set group_subprocesses to Auto
+Note that you need to regenerate all processes
+set group_subprocesses Auto
+set ignore_six_quark_processes False
+Set group_subprocesses to Auto
+Note that you need to regenerate all processes
+set loop_optimized_output True
+set loop optimized output to True
+set ignore_six_quark_processes False
+set loop_color_flows False
+set loop_optimized_output True
+set loop color flows to False
+set loop optimized output to True
+set gauge unitary
+set loop_color_flows False
+Passing to gauge unitary.
+set loop color flows to False
+set complex_mass_scheme False
+set gauge unitary
+Complex mass already desactivated.
+Passing to gauge unitary.
+set max_npoint_for_channel 0
+set complex_mass_scheme False
+import model sm
+Complex mass already desactivated.
+set max_npoint_for_channel 0
+import model sm
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+import /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC/proc_card.dat
+The import format was not given, so we guess it as command
+set group_subprocesses Auto
+Set group_subprocesses to Auto
+Note that you need to regenerate all processes
+set ignore_six_quark_processes False
+set loop_optimized_output True
+set loop optimized output to True
+set loop_color_flows False
+set loop color flows to False
+set gauge unitary
+Passing to gauge unitary.
+set complex_mass_scheme False
+Complex mass already desactivated.
+set max_npoint_for_channel 0
+import model sm
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+import /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC/proc_card.dat
+************************************************************
+*                                                          *
+*                     W E L C O M E to                     *
+*              M A D G R A P H 5 _ a M C @ N L O           *
+*                                                          *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.7.0                 2020-01-20         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                            and                           *
+*            http://amcatnlo.web.cern.ch/amcatnlo/         *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*           Type 'tutorial' to learn how MG5 works         *
+*    Type 'tutorial aMCatNLO' to learn how aMC@NLO works   *
+*    Type 'tutorial MadLoop' to learn how MadLoop works    *
+*                                                          *
+************************************************************
+The import format was not given, so we guess it as command
+load MG5 configuration from input/mg5_configuration.txt 
+set group_subprocesses Auto
+Set group_subprocesses to Auto
+Note that you need to regenerate all processes
+set ignore_six_quark_processes False
+set loop_optimized_output True
+set loop optimized output to True
+set loop_color_flows False
+set loop color flows to False
+set gauge unitary
+Passing to gauge unitary.
+set complex_mass_scheme False
+Complex mass already desactivated.
+set max_npoint_for_channel 0
+import model sm
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+************************************************************
+*                                                          *
+*                     W E L C O M E to                     *
+*              M A D G R A P H 5 _ a M C @ N L O           *
+*                                                          *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.7.0                 2020-01-20         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                            and                           *
+*            http://amcatnlo.web.cern.ch/amcatnlo/         *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*           Type 'tutorial' to learn how MG5 works         *
+*    Type 'tutorial aMCatNLO' to learn how aMC@NLO works   *
+*    Type 'tutorial MadLoop' to learn how MadLoop works    *
+*                                                          *
+************************************************************
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+import /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC/proc_card.dat
+load MG5 configuration from input/mg5_configuration.txt 
+The import format was not given, so we guess it as command
+fastjet-config does not seem to correspond to a valid fastjet-config executable (v3+). We will use fjcore instead.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/fastjet-config (including fastjet-config).
+ MG5_aMC> set fastjet /PATH/TO/fastjet-config
+
+set group_subprocesses Auto
+Set group_subprocesses to Auto
+Note that you need to regenerate all processes
+set ignore_six_quark_processes False
+set loop_optimized_output True
+set loop optimized output to True
+set loop_color_flows False
+set loop color flows to False
+set gauge unitary
+Passing to gauge unitary.
+set complex_mass_scheme False
+Complex mass already desactivated.
+set max_npoint_for_channel 0
+import model sm
+fastjet-config does not seem to correspond to a valid fastjet-config executable (v3+). We will use fjcore instead.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/fastjet-config (including fastjet-config).
+ MG5_aMC> set fastjet /PATH/TO/fastjet-config
+
+INFO: reload from .py file 
+INFO: load particles 
+INFO: load vertices 
+INFO: Change particles name to pass to MG5 convention 
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+set lhapdf to /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0/HEPTools/lhapdf6/bin/lhapdf-config
+Defined multiparticle l+ = e+ mu+
+Defined multiparticle l- = e- mu-
+Defined multiparticle vl = ve vm vt
+Defined multiparticle vl~ = ve~ vm~ vt~
+Defined multiparticle all = g u c d s u~ c~ d~ s~ a ve vm vt e- mu- ve~ vm~ vt~ e+ mu+ t b t~ b~ z w+ h w- ta- ta+
+define p = g u c d s u~ c~ d~ s~
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+define j = g u c d s u~ c~ d~ s~
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+define l+ = e+ mu+
+Defined multiparticle l+ = e+ mu+
+INFO: reload from .py file 
+define l- = e- mu-
+set lhapdf to /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0/HEPTools/lhapdf6/bin/lhapdf-config
+Defined multiparticle l- = e- mu-
+INFO: load particles 
+define vl = ve vm vt
+Defined multiparticle vl = ve vm vt
+define vl~ = ve~ vm~ vt~
+Defined multiparticle vl~ = ve~ vm~ vt~
+import model heft
+INFO: load vertices 
+INFO: Restrict model sm with file models/sm/restrict_default.dat . 
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+INFO: reload from .py file 
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+INFO: load particles 
+import /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC/proc_card.dat
+INFO: reload from .py file 
+INFO: load particles 
+INFO: load vertices 
+The import format was not given, so we guess it as command
+set group_subprocesses Auto
+Set group_subprocesses to Auto
+INFO: load vertices 
+Note that you need to regenerate all processes
+set ignore_six_quark_processes False
+set loop_optimized_output True
+set loop optimized output to True
+set loop_color_flows False
+set loop color flows to False
+set gauge unitary
+Passing to gauge unitary.
+set complex_mass_scheme False
+Complex mass already desactivated.
+set max_npoint_for_channel 0
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+import model sm
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+import /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC/proc_card.dat
+INFO: reload from .py file 
+INFO: load particles 
+The import format was not given, so we guess it as command
+set group_subprocesses Auto
+INFO: load vertices 
+Set group_subprocesses to Auto
+Note that you need to regenerate all processes
+set ignore_six_quark_processes False
+set loop_optimized_output True
+set loop optimized output to True
+set loop_color_flows False
+set loop color flows to False
+INFO: Restrict model sm with file models/sm/restrict_default.dat . 
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+set gauge unitary
+Passing to gauge unitary.
+set complex_mass_scheme False
+Complex mass already desactivated.
+set max_npoint_for_channel 0
+import model sm
+INFO: reload from .py file 
+INFO: load particles 
+INFO: load vertices 
+INFO: reload from .py file 
+INFO: load particles 
+INFO: load vertices 
+INFO: Restrict model sm with file models/sm/restrict_default.dat . 
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+INFO: Restrict model sm with file models/sm/restrict_default.dat . 
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+INFO: Restrict model sm with file models/sm/restrict_default.dat . 
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+INFO: Restrict model sm with file models/sm/restrict_default.dat . 
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+INFO: Restrict model sm with file models/sm/restrict_default.dat . 
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+INFO: reload from .py file 
+INFO: load particles 
+INFO: load vertices 
+INFO: reload from .py file 
+INFO: load particles 
+INFO: load vertices 
+INFO: Change particles name to pass to MG5 convention 
+INFO: reload from .py file 
+INFO: load particles 
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+INFO: load vertices 
+Defined multiparticle l+ = e+ mu+
+Defined multiparticle l- = e- mu-
+INFO: Restrict model heft with file models/heft/restrict_default.dat . 
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+Defined multiparticle vl = ve vm vt
+Defined multiparticle vl~ = ve~ vm~ vt~
+Defined multiparticle all = g u c d s u~ c~ d~ s~ a ve vm vt e- mu- ve~ vm~ vt~ e+ mu+ t b t~ b~ z w+ h w- ta- ta+
+define p = g u c d s u~ c~ d~ s~
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+define j = g u c d s u~ c~ d~ s~
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+define l+ = e+ mu+
+Defined multiparticle l+ = e+ mu+
+define l- = e- mu-
+Defined multiparticle l- = e- mu-
+define vl = ve vm vt
+Defined multiparticle vl = ve vm vt
+define vl~ = ve~ vm~ vt~
+Defined multiparticle vl~ = ve~ vm~ vt~
+import model heft
+INFO: Change particles name to pass to MG5 convention 
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+Defined multiparticle l+ = e+ mu+
+Defined multiparticle l- = e- mu-
+Defined multiparticle vl = ve vm vt
+Defined multiparticle vl~ = ve~ vm~ vt~
+Defined multiparticle all = g u c d s u~ c~ d~ s~ a ve vm vt e- mu- ve~ vm~ vt~ e+ mu+ t b t~ b~ z w+ h w- ta- ta+
+define p = g u c d s u~ c~ d~ s~
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+define j = g u c d s u~ c~ d~ s~
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+define l+ = e+ mu+
+Defined multiparticle l+ = e+ mu+
+define l- = e- mu-
+Defined multiparticle l- = e- mu-
+define vl = ve vm vt
+Defined multiparticle vl = ve vm vt
+define vl~ = ve~ vm~ vt~
+Defined multiparticle vl~ = ve~ vm~ vt~
+import model heft
+INFO: Restrict model sm with file models/sm/restrict_default.dat . 
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+INFO: Restrict model sm with file models/sm/restrict_default.dat . 
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+INFO: Change particles name to pass to MG5 convention 
+INFO: Change particles name to pass to MG5 convention 
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+Defined multiparticle l+ = e+ mu+
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+Defined multiparticle l- = e- mu-
+Defined multiparticle l+ = e+ mu+
+Defined multiparticle vl = ve vm vt
+Defined multiparticle l- = e- mu-
+Defined multiparticle vl~ = ve~ vm~ vt~
+Defined multiparticle vl = ve vm vt
+Defined multiparticle vl~ = ve~ vm~ vt~
+INFO: Change particles name to pass to MG5 convention 
+Defined multiparticle all = g u c d s u~ c~ d~ s~ a ve vm vt e- mu- ve~ vm~ vt~ e+ mu+ t b t~ b~ z w+ h w- ta- ta+
+define p = g u c d s u~ c~ d~ s~
+Defined multiparticle all = g u c d s u~ c~ d~ s~ a ve vm vt e- mu- ve~ vm~ vt~ e+ mu+ t b t~ b~ z w+ h w- ta- ta+
+define p = g u c d s u~ c~ d~ s~
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+define j = g u c d s u~ c~ d~ s~
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+define j = g u c d s u~ c~ d~ s~
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+define l+ = e+ mu+
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+Defined multiparticle l+ = e+ mu+
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+define l- = e- mu-
+define l+ = e+ mu+
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+Defined multiparticle l- = e- mu-
+Defined multiparticle l+ = e+ mu+
+define vl = ve vm vt
+define l- = e- mu-
+Defined multiparticle l+ = e+ mu+
+Defined multiparticle vl = ve vm vt
+Defined multiparticle l- = e- mu-
+define vl~ = ve~ vm~ vt~
+define vl = ve vm vt
+Defined multiparticle l- = e- mu-
+Defined multiparticle vl = ve vm vt
+Defined multiparticle vl~ = ve~ vm~ vt~
+Defined multiparticle vl = ve vm vt
+define vl~ = ve~ vm~ vt~
+import model heft
+Defined multiparticle vl~ = ve~ vm~ vt~
+Defined multiparticle vl~ = ve~ vm~ vt~
+import model heft
+Defined multiparticle all = g u c d s u~ c~ d~ s~ a ve vm vt e- mu- ve~ vm~ vt~ e+ mu+ t b t~ b~ z w+ h w- ta- ta+
+define p = g u c d s u~ c~ d~ s~
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+define j = g u c d s u~ c~ d~ s~
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+define l+ = e+ mu+
+Defined multiparticle l+ = e+ mu+
+define l- = e- mu-
+Defined multiparticle l- = e- mu-
+define vl = ve vm vt
+Defined multiparticle vl = ve vm vt
+define vl~ = ve~ vm~ vt~
+Defined multiparticle vl~ = ve~ vm~ vt~
+import model heft
+INFO: Change particles name to pass to MG5 convention 
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+Defined multiparticle l+ = e+ mu+
+Defined multiparticle l- = e- mu-
+Defined multiparticle vl = ve vm vt
+Defined multiparticle vl~ = ve~ vm~ vt~
+Defined multiparticle all = g u c d s u~ c~ d~ s~ a ve vm vt e- mu- ve~ vm~ vt~ e+ mu+ t b t~ b~ z w+ h w- ta- ta+
+define p = g u c d s u~ c~ d~ s~
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+define j = g u c d s u~ c~ d~ s~
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+define l+ = e+ mu+
+Defined multiparticle l+ = e+ mu+
+define l- = e- mu-
+Defined multiparticle l- = e- mu-
+define vl = ve vm vt
+Defined multiparticle vl = ve vm vt
+define vl~ = ve~ vm~ vt~
+Defined multiparticle vl~ = ve~ vm~ vt~
+import model heft
+INFO: Change particles name to pass to MG5 convention 
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+Defined multiparticle l+ = e+ mu+
+Defined multiparticle l- = e- mu-
+Defined multiparticle vl = ve vm vt
+Defined multiparticle vl~ = ve~ vm~ vt~
+Defined multiparticle all = g u c d s u~ c~ d~ s~ a ve vm vt e- mu- ve~ vm~ vt~ e+ mu+ t b t~ b~ z w+ h w- ta- ta+
+define p = g u c d s u~ c~ d~ s~
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+define j = g u c d s u~ c~ d~ s~
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+define l+ = e+ mu+
+Defined multiparticle l+ = e+ mu+
+define l- = e- mu-
+Defined multiparticle l- = e- mu-
+define vl = ve vm vt
+Defined multiparticle vl = ve vm vt
+define vl~ = ve~ vm~ vt~
+Defined multiparticle vl~ = ve~ vm~ vt~
+import model heft
+INFO: reload from .py file 
+INFO: load particles 
+INFO: load vertices 
+INFO: Change particles name to pass to MG5 convention 
+Kept definitions of multiparticles l- / j / vl / l+ / p / vl~ unchanged
+Defined multiparticle all = g u c d s u~ c~ d~ s~ a ve vm vt e- mu- ve~ vm~ vt~ e+ mu+ t b t~ b~ z w+ h h1 w- ta- ta+
+generate g g > h
+INFO: Checking for minimal orders which gives processes. 
+INFO: Please specify coupling orders to bypass this step. 
+INFO: reload from .py file 
+INFO: load particles 
+INFO: Trying process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1  
+INFO: load vertices 
+INFO: Process has 1 diagrams 
+1 processes with 1 diagrams generated in 0.008 s
+Total: 1 processes with 1 diagrams
+output MSSMD -nojpeg
+INFO: directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC/MSSMD already exists.
+If you continue this directory will be deleted and replaced.
+Do you want to continue? [[4my[0m, n]
+[1mThe answer to the previous question is not set in your input file[0m
+[1mUse y value[0m
+INFO: Restrict model heft with file models/heft/restrict_default.dat . 
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+INFO: Change particles name to pass to MG5 convention 
+INFO: reload from .py file 
+INFO: load particles 
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+INFO: reload from .py file 
+INFO: load particles 
+INFO: load vertices 
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+Defined multiparticle l+ = e+ mu+
+Defined multiparticle l- = e- mu-
+INFO: load vertices 
+Defined multiparticle vl = ve vm vt
+Defined multiparticle vl~ = ve~ vm~ vt~
+INFO: Change particles name to pass to MG5 convention 
+Defined multiparticle all = g u c d s u~ c~ d~ s~ a ve vm vt e- mu- ve~ vm~ vt~ e+ mu+ t b t~ b~ z w+ h w- ta- ta+
+INFO: reload from .py file 
+define p = g u c d s u~ c~ d~ s~
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+INFO: load particles 
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+define j = g u c d s u~ c~ d~ s~
+Defined multiparticle l+ = e+ mu+
+INFO: load vertices 
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+Defined multiparticle l- = e- mu-
+define l+ = e+ mu+
+Defined multiparticle vl = ve vm vt
+Defined multiparticle l+ = e+ mu+
+define l- = e- mu-
+Defined multiparticle vl~ = ve~ vm~ vt~
+Defined multiparticle l- = e- mu-
+define vl = ve vm vt
+Defined multiparticle vl = ve vm vt
+INFO: Restrict model heft with file models/heft/restrict_default.dat . 
+define vl~ = ve~ vm~ vt~
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+Defined multiparticle vl~ = ve~ vm~ vt~
+import model heft
+Defined multiparticle all = g u c d s u~ c~ d~ s~ a ve vm vt e- mu- ve~ vm~ vt~ e+ mu+ t b t~ b~ z w+ h w- ta- ta+
+define p = g u c d s u~ c~ d~ s~
+Defined multiparticle p = g u c d s u~ c~ d~ s~
+define j = g u c d s u~ c~ d~ s~
+Defined multiparticle j = g u c d s u~ c~ d~ s~
+define l+ = e+ mu+
+Defined multiparticle l+ = e+ mu+
+define l- = e- mu-
+Defined multiparticle l- = e- mu-
+define vl = ve vm vt
+Defined multiparticle vl = ve vm vt
+define vl~ = ve~ vm~ vt~
+Defined multiparticle vl~ = ve~ vm~ vt~
+import model heft
+INFO: reload from .py file 
+INFO: load particles 
+INFO: load vertices 
+INFO: Restrict model heft with file models/heft/restrict_default.dat . 
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+INFO: Restrict model heft with file models/heft/restrict_default.dat . 
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+INFO: Restrict model heft with file models/heft/restrict_default.dat . 
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+INFO: reload from .py file 
+INFO: load particles 
+INFO: load vertices 
+INFO: Restrict model heft with file models/heft/restrict_default.dat . 
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+INFO: Restrict model heft with file models/heft/restrict_default.dat . 
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+INFO: Change particles name to pass to MG5 convention 
+Kept definitions of multiparticles l- / j / vl / l+ / p / vl~ unchanged
+INFO: reload from .py file 
+INFO: load particles 
+Defined multiparticle all = g u c d s u~ c~ d~ s~ a ve vm vt e- mu- ve~ vm~ vt~ e+ mu+ t b t~ b~ z w+ h h1 w- ta- ta+
+generate g g > h
+INFO: load vertices 
+INFO: reload from .py file 
+INFO: load particles 
+INFO: Checking for minimal orders which gives processes. 
+INFO: Please specify coupling orders to bypass this step. 
+INFO: load vertices 
+INFO: Trying process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1  
+INFO: Change particles name to pass to MG5 convention 
+Kept definitions of multiparticles l- / j / vl / l+ / p / vl~ unchanged
+INFO: Process has 1 diagrams 
+Defined multiparticle all = g u c d s u~ c~ d~ s~ a ve vm vt e- mu- ve~ vm~ vt~ e+ mu+ t b t~ b~ z w+ h h1 w- ta- ta+
+generate g g > h
+1 processes with 1 diagrams generated in 0.008 s
+Total: 1 processes with 1 diagrams
+output MSSMD -nojpeg
+INFO: directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC/MSSMD already exists.
+If you continue this directory will be deleted and replaced.
+Do you want to continue? [[4my[0m, n]
+[1mThe answer to the previous question is not set in your input file[0m
+[1mUse y value[0m
+INFO: Checking for minimal orders which gives processes. 
+INFO: Please specify coupling orders to bypass this step. 
+INFO: Trying process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1  
+INFO: Process has 1 diagrams 
+1 processes with 1 diagrams generated in 0.008 s
+Total: 1 processes with 1 diagrams
+output MSSMD -nojpeg
+INFO: directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC/MSSMD already exists.
+If you continue this directory will be deleted and replaced.
+Do you want to continue? [[4my[0m, n]
+[1mThe answer to the previous question is not set in your input file[0m
+[1mUse y value[0m
+INFO: Restrict model heft with file models/heft/restrict_default.dat . 
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+INFO: Change particles name to pass to MG5 convention 
+INFO: Change particles name to pass to MG5 convention 
+Kept definitions of multiparticles l- / j / vl / l+ / p / vl~ unchanged
+Kept definitions of multiparticles l- / j / vl / l+ / p / vl~ unchanged
+INFO: Restrict model heft with file models/heft/restrict_default.dat . 
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+Defined multiparticle all = g u c d s u~ c~ d~ s~ a ve vm vt e- mu- ve~ vm~ vt~ e+ mu+ t b t~ b~ z w+ h h1 w- ta- ta+
+Defined multiparticle all = g u c d s u~ c~ d~ s~ a ve vm vt e- mu- ve~ vm~ vt~ e+ mu+ t b t~ b~ z w+ h h1 w- ta- ta+
+generate g g > h
+INFO: Change particles name to pass to MG5 convention 
+generate g g > h
+Kept definitions of multiparticles l- / j / vl / l+ / p / vl~ unchanged
+INFO: Checking for minimal orders which gives processes. 
+INFO: Checking for minimal orders which gives processes. 
+INFO: Please specify coupling orders to bypass this step. 
+INFO: Please specify coupling orders to bypass this step. 
+Defined multiparticle all = g u c d s u~ c~ d~ s~ a ve vm vt e- mu- ve~ vm~ vt~ e+ mu+ t b t~ b~ z w+ h h1 w- ta- ta+
+generate g g > h
+INFO: Trying process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1  
+INFO: Trying process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1  
+INFO: Checking for minimal orders which gives processes. 
+INFO: Please specify coupling orders to bypass this step. 
+INFO: Process has 1 diagrams 
+INFO: Process has 1 diagrams 
+INFO: Trying process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1  
+1 processes with 1 diagrams generated in 0.008 s
+1 processes with 1 diagrams generated in 0.008 s
+Total: 1 processes with 1 diagrams
+Total: 1 processes with 1 diagrams
+output MSSMD -nojpeg
+output MSSMD -nojpeg
+INFO: Change particles name to pass to MG5 convention 
+INFO: directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC/MSSMD already exists.
+INFO: directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC/MSSMD already exists.
+If you continue this directory will be deleted and replaced.
+If you continue this directory will be deleted and replaced.
+Do you want to continue? [[4my[0m, n]
+Do you want to continue? [[4my[0m, n]
+[1mThe answer to the previous question is not set in your input file[0m
+[1mThe answer to the previous question is not set in your input file[0m
+[1mUse y value[0m
+[1mUse y value[0m
+Kept definitions of multiparticles l- / j / vl / l+ / p / vl~ unchanged
+INFO: Process has 1 diagrams 
+1 processes with 1 diagrams generated in 0.008 s
+Total: 1 processes with 1 diagrams
+Defined multiparticle all = g u c d s u~ c~ d~ s~ a ve vm vt e- mu- ve~ vm~ vt~ e+ mu+ t b t~ b~ z w+ h h1 w- ta- ta+
+output MSSMD -nojpeg
+generate g g > h
+INFO: directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC/MSSMD already exists.
+If you continue this directory will be deleted and replaced.
+Do you want to continue? [[4my[0m, n]
+[1mThe answer to the previous question is not set in your input file[0m
+[1mUse y value[0m
+INFO: Checking for minimal orders which gives processes. 
+INFO: Please specify coupling orders to bypass this step. 
+INFO: Trying process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1  
+INFO: Process has 1 diagrams 
+1 processes with 1 diagrams generated in 0.008 s
+Total: 1 processes with 1 diagrams
+output MSSMD -nojpeg
+INFO: directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC/MSSMD already exists.
+If you continue this directory will be deleted and replaced.
+Do you want to continue? [[4my[0m, n]
+[1mThe answer to the previous question is not set in your input file[0m
+[1mUse y value[0m
+INFO: Change particles name to pass to MG5 convention 
+Kept definitions of multiparticles l- / j / vl / l+ / p / vl~ unchanged
+Defined multiparticle all = g u c d s u~ c~ d~ s~ a ve vm vt e- mu- ve~ vm~ vt~ e+ mu+ t b t~ b~ z w+ h h1 w- ta- ta+
+generate g g > h
+INFO: Checking for minimal orders which gives processes. 
+INFO: Please specify coupling orders to bypass this step. 
+INFO: Trying process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1  
+INFO: Process has 1 diagrams 
+1 processes with 1 diagrams generated in 0.008 s
+Total: 1 processes with 1 diagrams
+output MSSMD -nojpeg
+INFO: directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC/MSSMD already exists.
+If you continue this directory will be deleted and replaced.
+Do you want to continue? [[4my[0m, n]
+[1mThe answer to the previous question is not set in your input file[0m
+[1mUse y value[0m
+INFO: Change particles name to pass to MG5 convention 
+Kept definitions of multiparticles l- / j / vl / l+ / p / vl~ unchanged
+INFO: Change particles name to pass to MG5 convention 
+Defined multiparticle all = g u c d s u~ c~ d~ s~ a ve vm vt e- mu- ve~ vm~ vt~ e+ mu+ t b t~ b~ z w+ h h1 w- ta- ta+
+generate g g > h
+Kept definitions of multiparticles l- / j / vl / l+ / p / vl~ unchanged
+Defined multiparticle all = g u c d s u~ c~ d~ s~ a ve vm vt e- mu- ve~ vm~ vt~ e+ mu+ t b t~ b~ z w+ h h1 w- ta- ta+
+generate g g > h
+INFO: Checking for minimal orders which gives processes. 
+INFO: Please specify coupling orders to bypass this step. 
+INFO: Checking for minimal orders which gives processes. 
+INFO: Please specify coupling orders to bypass this step. 
+INFO: Trying process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1  
+INFO: Trying process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1  
+INFO: Process has 1 diagrams 
+1 processes with 1 diagrams generated in 0.008 s
+Total: 1 processes with 1 diagrams
+output MSSMD -nojpeg
+INFO: directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC/MSSMD already exists.
+If you continue this directory will be deleted and replaced.
+Do you want to continue? [[4my[0m, n]
+[1mThe answer to the previous question is not set in your input file[0m
+INFO: Process has 1 diagrams 
+[1mUse y value[0m
+1 processes with 1 diagrams generated in 0.008 s
+Total: 1 processes with 1 diagrams
+output MSSMD -nojpeg
+INFO: directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC/MSSMD already exists.
+If you continue this directory will be deleted and replaced.
+Do you want to continue? [[4my[0m, n]
+[1mThe answer to the previous question is not set in your input file[0m
+[1mUse y value[0m
+INFO: initialize a new directory: MSSMD 
+INFO: initialize a new directory: MSSMD 
+INFO: initialize a new directory: MSSMD 
+INFO: initialize a new directory: MSSMD 
+INFO: initialize a new directory: MSSMD 
+INFO: initialize a new directory: MSSMD 
+INFO: initialize a new directory: MSSMD 
+INFO: initialize a new directory: MSSMD 
+INFO: initialize a new directory: MSSMD 
+INFO: initialize a new directory: MSSMD 
+INFO: remove old information in MSSMD 
+INFO: Organizing processes into subprocess groups 
+INFO: Generating Helas calls for process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1 
+INFO: Processing color information for process: g g > h HIG<=1 HIW<=1 @1 
+INFO: Creating files in directory P1_gg_h 
+INFO: Generating Feynman diagrams for Process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1 
+INFO: Finding symmetric diagrams for subprocess group gg_h 
+Generated helas calls for 1 subprocesses (1 diagrams) in 0.004 s
+Wrote files for 4 helas calls in 0.113 s
+INFO: remove old information in MSSMD 
+INFO: remove old information in MSSMD 
+INFO: remove old information in MSSMD 
+INFO: remove old information in MSSMD 
+INFO: remove old information in MSSMD 
+INFO: remove old information in MSSMD 
+INFO: remove old information in MSSMD 
+INFO: remove old information in MSSMD 
+INFO: remove old information in MSSMD 
+ALOHA: aloha creates VVS3 routines
+INFO: Organizing processes into subprocess groups 
+INFO: Generating Helas calls for process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1 
+INFO: Processing color information for process: g g > h HIG<=1 HIW<=1 @1 
+INFO: Creating files in directory P1_gg_h 
+INFO: Generating Feynman diagrams for Process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1 
+INFO: Organizing processes into subprocess groups 
+INFO: Generating Helas calls for process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1 
+INFO: Processing color information for process: g g > h HIG<=1 HIW<=1 @1 
+INFO: Creating files in directory P1_gg_h 
+INFO: Organizing processes into subprocess groups 
+INFO: Generating Helas calls for process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1 
+INFO: Processing color information for process: g g > h HIG<=1 HIW<=1 @1 
+INFO: Creating files in directory P1_gg_h 
+INFO: Generating Feynman diagrams for Process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1 
+INFO: Organizing processes into subprocess groups 
+INFO: Generating Helas calls for process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1 
+INFO: Processing color information for process: g g > h HIG<=1 HIW<=1 @1 
+INFO: Creating files in directory P1_gg_h 
+INFO: Generating Feynman diagrams for Process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1 
+INFO: Organizing processes into subprocess groups 
+INFO: Generating Helas calls for process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1 
+INFO: Finding symmetric diagrams for subprocess group gg_h 
+INFO: Organizing processes into subprocess groups 
+INFO: Generating Helas calls for process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1 
+INFO: Processing color information for process: g g > h HIG<=1 HIW<=1 @1 
+INFO: Creating files in directory P1_gg_h 
+INFO: Processing color information for process: g g > h HIG<=1 HIW<=1 @1 
+INFO: Creating files in directory P1_gg_h 
+INFO: Organizing processes into subprocess groups 
+INFO: Generating Helas calls for process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1 
+INFO: Generating Feynman diagrams for Process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1 
+INFO: Processing color information for process: g g > h HIG<=1 HIW<=1 @1 
+INFO: Creating files in directory P1_gg_h 
+INFO: Generating Feynman diagrams for Process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1 
+Generated helas calls for 1 subprocesses (1 diagrams) in 0.004 s
+Wrote files for 4 helas calls in 0.119 s
+INFO: Generating Feynman diagrams for Process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1 
+INFO: Organizing processes into subprocess groups 
+INFO: Generating Helas calls for process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1 
+INFO: Processing color information for process: g g > h HIG<=1 HIW<=1 @1 
+INFO: Creating files in directory P1_gg_h 
+INFO: Finding symmetric diagrams for subprocess group gg_h 
+INFO: Generating Feynman diagrams for Process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1 
+INFO: Organizing processes into subprocess groups 
+INFO: Generating Helas calls for process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1 
+INFO: Finding symmetric diagrams for subprocess group gg_h 
+INFO: Processing color information for process: g g > h HIG<=1 HIW<=1 @1 
+INFO: Creating files in directory P1_gg_h 
+INFO: Generating Feynman diagrams for Process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1 
+Generated helas calls for 1 subprocesses (1 diagrams) in 0.004 s
+Wrote files for 4 helas calls in 0.098 s
+INFO: Finding symmetric diagrams for subprocess group gg_h 
+INFO: Generating Feynman diagrams for Process: g g > h HIG<=1 HIW<=1 WEIGHTED<=2 @1 
+Generated helas calls for 1 subprocesses (1 diagrams) in 0.004 s
+Wrote files for 4 helas calls in 0.097 s
+INFO: Finding symmetric diagrams for subprocess group gg_h 
+INFO: Finding symmetric diagrams for subprocess group gg_h 
+Generated helas calls for 1 subprocesses (1 diagrams) in 0.004 s
+Wrote files for 4 helas calls in 0.094 s
+INFO: Finding symmetric diagrams for subprocess group gg_h 
+Generated helas calls for 1 subprocesses (1 diagrams) in 0.004 s
+Wrote files for 4 helas calls in 0.093 s
+Generated helas calls for 1 subprocesses (1 diagrams) in 0.004 s
+Wrote files for 4 helas calls in 0.091 s
+INFO: Finding symmetric diagrams for subprocess group gg_h 
+save configuration file to /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC/MSSMD/Cards/me5_configuration.txt
+INFO: Finding symmetric diagrams for subprocess group gg_h 
+Generated helas calls for 1 subprocesses (1 diagrams) in 0.004 s
+Wrote files for 4 helas calls in 0.087 s
+INFO: Use Fortran compiler gfortran 
+Generated helas calls for 1 subprocesses (1 diagrams) in 0.004 s
+Wrote files for 4 helas calls in 0.082 s
+INFO: Use c++ compiler g++ 
+Generated helas calls for 1 subprocesses (1 diagrams) in 0.004 s
+Wrote files for 4 helas calls in 0.079 s
+INFO: Generate web pages 
+ALOHA: aloha creates VVS3 routines
+ALOHA: aloha creates VVS3 routines
+ALOHA: aloha creates VVS3 routines
+ALOHA: aloha creates VVS3 routines
+ALOHA: aloha creates VVS3 routines
+ALOHA: aloha creates VVS3 routines
+ALOHA: aloha creates VVS3 routines
+ALOHA: aloha creates VVS3 routines
+ALOHA: aloha creates VVS3 routines
+Output to directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC/MSSMD done.
+Type "launch" to generate events from this process, or see
+/LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC/MSSMD/README
+Run "open index.html" to see more information about this process.
+quit
+Checking if MG5 is up-to-date... (takes up to 5s)
+save configuration file to /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC/MSSMD/Cards/me5_configuration.txt
+INFO: Use Fortran compiler gfortran 
+INFO: Use c++ compiler g++ 
+INFO: Generate web pages 
+New Version of MG5 available! Do you want to update your current version? [[4mn[0m, y][60s to answer] 
+>Update bypassed.
+The next check for a new version will be performed in 7 days
+In order to change this delay. Enter the command:
+set auto_update X
+Putting X to zero will prevent this check at anytime.
+You can upgrade your version at any time by typing:
+install update
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 0.25 :: TcPhoD :: 0
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: ERROR :: Unknown error using file_exist
+ :: File does not exist :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: File does not exist :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: Correr programa para obtener lhe
+ :: ERROR :: Directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp already exists. Directory not created  
+ :: File does not exist :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647
+ :: Directory created :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647
+ :: ERROR :: Unknown error using file_exist
+ :: Directory created :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC
+ :: ERROR :: Unknown error using file_exist
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: Copy success folder :: /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0 :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC
+ :: ERROR :: Incorrect bash execution :: 
+ :: Complete copy of Madgraph programs ::
+ :: ** Modification of Madgraph for using Dark Susy ** :: 
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC/models/MSSMD_UFO/
+ :: ERROR :: Unknown error using file_exist
+ :: ERROR :: Unknown mode using file_clear
+ :: ERROR :: Directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC/models/MSSMD_UFO already exists. Directory not created  
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: Copy success folder :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/MSSMD_UFO :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC/models/MSSMD_UFO
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Unknown error using file_exist
+ :: Relocate directory to :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC/models/MSSMD_UFO
+ :: Nos encontramos en  :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC/models/MSSMD_UFO
+ :: Execute correct :: 0 :: python write_param_card.py
+ :: Change mass of dark photon to :: 0.25
+ :: Change mass of lightest neutalino to :: 10
+ :: Change mass of dark neutalino to :: 0.25
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC/proc_card.dat
+ :: ERROR :: Unknown error using file_exist
+ :: ERROR :: Unknown mode using file_clear
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/proc_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC
+ :: Relocate directory to :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC
+ :: Nos encontramos en  :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC
+ :: Execute correct :: 0 :: ./bin/mg5_aMC proc_card.dat
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/madspin_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC/MSSMD/Cards
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/madspin_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC/MSSMD/Cards
+save configuration file to /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC/MSSMD/Cards/me5_configuration.txt
+save configuration file to /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC/MSSMD/Cards/me5_configuration.txt
+INFO: Use Fortran compiler gfortran 
+INFO: Use c++ compiler g++ 
+INFO: Generate web pages 
+INFO: Use Fortran compiler gfortran 
+INFO: Use c++ compiler g++ 
+INFO: Generate web pages 
+save configuration file to /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC/MSSMD/Cards/me5_configuration.txt
+INFO: Use Fortran compiler gfortran 
+INFO: Use c++ compiler g++ 
+save configuration file to /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC/MSSMD/Cards/me5_configuration.txt
+save configuration file to /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC/MSSMD/Cards/me5_configuration.txt
+INFO: Generate web pages 
+INFO: Use Fortran compiler gfortran 
+save configuration file to /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC/MSSMD/Cards/me5_configuration.txt
+INFO: Use Fortran compiler gfortran 
+save configuration file to /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC/MSSMD/Cards/me5_configuration.txt
+INFO: Use c++ compiler g++ 
+INFO: Use c++ compiler g++ 
+save configuration file to /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC/MSSMD/Cards/me5_configuration.txt
+INFO: Generate web pages 
+INFO: Generate web pages 
+INFO: Use Fortran compiler gfortran 
+INFO: Use Fortran compiler gfortran 
+INFO: Use c++ compiler g++ 
+INFO: Use c++ compiler g++ 
+INFO: Use Fortran compiler gfortran 
+INFO: Use c++ compiler g++ 
+INFO: Generate web pages 
+INFO: Generate web pages 
+INFO: Generate web pages 
+Output to directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC/MSSMD done.
+Type "launch" to generate events from this process, or see
+/LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC/MSSMD/README
+Run "open index.html" to see more information about this process.
+quit
+Checking if MG5 is up-to-date... (takes up to 5s)
+New Version of MG5 available! Do you want to update your current version? [[4mn[0m, y][60s to answer] 
+>Update bypassed.
+The next check for a new version will be performed in 7 days
+In order to change this delay. Enter the command:
+set auto_update X
+Putting X to zero will prevent this check at anytime.
+You can upgrade your version at any time by typing:
+install update
+ :: Copy file :: /LUSTRE/home/fmsanch************************************************************
+*                                                          *
+*                      W E L C O M E to                    *
+*             M A D G R A P H 5 _ a M C @ N L O            *
+*                      M A D E V E N T                     *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.7.0                 20xx-xx-xx         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*                                                          *
+************************************************************
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC/MSSMD/Cards/me5_configuration.txt  
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC/input/mg5_configuration.txt  
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC/MSSMD/Cards/me5_configuration.txt  
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+generate_events 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 0.25 :: TcPhoD :: 0
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: ERROR :: Unknown error using file_exist
+ :: File does not exist :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: ERROR :: Unknown error using file_exist
+ :: Correr programa para obtener lhe
+ :: ERROR :: Directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp already exists. Directory not created  
+ :: File does not exist :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620
+ :: Directory created :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620
+ :: ERROR :: Unknown error using file_exist
+ :: Directory created :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC
+ :: ERROR :: Unknown error using file_exist
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: Copy success folder :: /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0 :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC
+ :: ERROR :: Incorrect bash execution :: 
+ :: Complete copy of Madgraph programs ::
+ :: ** Modification of Madgraph for using Dark Susy ** :: 
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC/models/MSSMD_UFO/
+ :: ERROR :: Unknown error using file_exist
+ :: ERROR :: Unknown mode using file_clear
+ :: ERROR :: Directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC/models/MSSMD_UFO already exists. Directory not created  
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: Copy success folder :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/MSSMD_UFO :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC/models/MSSMD_UFO
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Unknown error using file_exist
+ :: Relocate directory to :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC/models/MSSMD_UFO
+ :: Nos encontramos en  :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC/models/MSSMD_UFO
+ :: Execute correct :: 0 :: python write_param_card.py
+ :: Change mass of dark photon to :: 0.25
+ :: Change mass of lightest neutalino to :: 10
+ :: Change mass of dark neutalino to :: 0.25
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC/proc_card.dat
+ :: ERROR :: Unknown error using file_exist
+ :: ERROR :: Unknown mode using file_clear
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/proc_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC
+ :: Relocate directory to :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC
+ :: Nos encontramos en  :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC
+ :: Execute correct :: 0 :: ./bin/mg5_aMC proc_card.dat
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/madspin_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC/MSSMD/Cards
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/madspin_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC/MSSMD/Cards
+stty: entrada estándar: Función ioctl no apropiada para el dispositivo
+stty: entrada estándar: Función ioctl no apropiada para el dispositivo
+The following switches determine which programs are run:
+/==============================================================================\
+| 1. Choose the shower/hadronization program   [1m  shower[0m = [31mOFF[0m                  |
+| 2. Choose the detector simulation program    [1mdetector[0m = [31mOFF[0m                  |
+| 3. Choose an analysis package (plot/convert) [1manalysis[0m = [32mMadAnalysis4[0m         |
+| 4. Decay onshell particles                   [1m madspin[0m = [32mON[0m                   |
+| 5. Add weights to events for new hypp.       [1mreweight[0m = [31mOFF[0m                  |
+\==============================================================================/
+Either type the switch number (1 to 5) to change its setting,
+Set any switch explicitly (e.g. type 'shower=Pythia8' at the prompt)
+Type 'help' for the list of all valid option
+Type '0', 'auto', 'done' or just press enter when you are done.[60s to answer] 
+>Do you want to edit a card (press enter to bypass editing)?
+/------------------------------------------------------------\
+|  [31m1[0m. param   : [32mparam_card.dat[0m                               |
+|  [31m2[0m. run     : [32mrun_card.dat[0m                                 |
+|  [31m3[0m. madspin : [32mmadspin_card.dat[0m                             |
+|  [31m4[0m. plot    : [32mplot_card.dat[0m                                |
+\------------------------------------------------------------/
+ you can also
+   - enter the path to a valid card or banner.
+   - use the 'set' command to modify a parameter directly.
+     The set option works only for param_card and run_card.
+     Type 'help set' for more information on this command.
+   - call an external program (ASperGE/MadWidth/...).
+     Type 'help' for the list of available command
+ [[4m0[0m, done, 1, param, 2, run, 3, madspin, 4, enter path, ... ][90s to answer] 
+>INFO: Update the dependent parameter of the param_card.dat 
+Output to directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC/MSSMD done.
+Type "launch" to generate events from this process, or see
+/LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC/MSSMD/README
+Run "open index.html" to see more information about this process.
+quit
+Checking if MG5 is up-to-date... (takes up to 5s)
+Output to directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC/MSSMD done.
+Type "launch" to generate events from this process, or see
+/LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC/MSSMD/README
+Run "open index.html" to see more information about this process.
+quit
+Checking if MG5 is up-to-date... (takes up to 5s)
+Generating 10000 events with run name run_01
+survey  run_01 
+INFO: compile directory 
+Unhandled exception in thread started by <function call at 0x1b46e60>
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/subprocess.py", line 524, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "/usr/lib64/python2.7/subprocess.py", line 711, in __init__
+    errread, errwrite)
+  File "/usr/lib64/python2.7/subprocess.py", line 1327, in _execute_child
+    raise child_exception
+OSError: [Errno 2] No such file or directory
+compile Source Directory
+New Version of MG5 available! Do you want to update your current version? [[4mn[0m, y][60s to answer] 
+>Update bypassed.
+The next check for a new version will be performed in 7 days
+In order to change this delay. Enter the command:
+set auto_update X
+Putting X to zero will prevent this check at anytime.
+You can upgrade your version at any time by typing:
+install update
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 0.25 :: TcPhoD :: 0
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: ERROR :: Unknown error using file_exist
+ :: File does not exist :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: ERROR :: Unknown error using file_exist
+ :: Correr programa para obtener lhe
+ :: ERROR :: Directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp already exists. Directory not created  
+ :: File does not exist :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603
+ :: Directory created :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603
+ :: ERROR :: Unknown error using file_exist
+ :: Directory created :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC
+ :: ERROR :: Unknown error using file_exist
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: Copy success folder :: /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0 :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC
+ :: ERROR :: Incorrect bash execution :: 
+ :: Complete copy of Madgraph programs ::
+ :: ** Modification of Madgraph for using Dark Susy ** :: 
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC/models/MSSMD_UFO/
+ :: ERROR :: Unknown error using file_exist
+ :: ERROR :: Unknown mode using file_clear
+ :: ERROR :: Directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC/models/MSSMD_UFO already exists. Directory not created  
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: Copy success folder :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/MSSMD_UFO :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC/models/MSSMD_UFO
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Unknown error using file_exist
+ :: Relocate directory to :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC/models/MSSMD_UFO
+ :: Nos encontramos en  :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC/models/MSSMD_UFO
+ :: Execute correct :: 0 :: python write_param_card.py
+ :: Change mass of dark photon to :: 0.25
+ :: Change mass of lightest neutalino to :: 10
+ :: Change mass of dark neutalino to :: 0.25
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC/proc_card.dat
+ :: ERROR :: Unknown error using file_exist
+ :: ERROR :: Unknown mode using file_clear
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/proc_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC
+ :: Relocate directory to :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC
+ :: Nos encontramos en  :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC
+ :: Execute correct :: 0 :: ./bin/mg5_aMC proc_card.dat
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/madspin_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC/MSSMD/Cards
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/madspin_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC/MSSMD/Cards
+ ************************************************************
+*                                                          *
+*                      W E L C O M E to                    *
+*             M A D G R A P H 5 _ a M C @ N L O            *
+*                      M A D E V E N T                     *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.7.0                 20xx-xx-xx         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*                                                          *
+************************************************************
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC/MSSMD/Cards/me5_configuration.txt  
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC/input/mg5_configuration.txt  
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC/MSSMD/Cards/me5_configuration.txt  
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+generate_events 
+stty: entrada estándar: Función ioctl no apropiada para el dispositivo
+stty: entrada estándar: Función ioctl no apropiada para el dispositivo
+The following switches determine which programs are run:
+/==============================================================================\
+| 1. Choose the shower/hadronization program   [1m  shower[0m = [31mOFF[0m                  |
+| 2. Choose the detector simulation program    [1mdetector[0m = [31mOFF[0m                  |
+| 3. Choose an analysis package (plot/convert) [1manalysis[0m = [32mMadAnalysis4[0m         |
+| 4. Decay onshell particles                   [1m madspin[0m = [32mON[0m                   |
+| 5. Add weights to events for new hypp.       [1mreweight[0m = [31mOFF[0m                  |
+\==============================================================================/
+Either type the switch number (1 to 5) to change its setting,
+Set any switch explicitly (e.g. type 'shower=Pythia8' at the prompt)
+Type 'help' for the list of all valid option
+Type '0', 'auto', 'done' or just press enter when you are done.[60s to answer] 
+>Do you want to edit a card (press enter to bypass editing)?
+/------------------------------------------------------------\
+|  [31m1[0m. param   : [32mparam_card.dat[0m                               |
+|  [31m2[0m. run     : [32mrun_card.dat[0m                                 |
+|  [31m3[0m. madspin : [32mmadspin_card.dat[0m                             |
+|  [31m4[0m. plot    : [32mplot_card.dat[0m                                |
+\------------------------------------------------------------/
+ you can also
+   - enter the path to a valid card or banner.
+   - use the 'set' command to modify a parameter directly.
+     The set option works only for param_card and run_card.
+     Type 'help set' for more information on this command.
+   - call an external program (ASperGE/MadWidth/...).
+     Type 'help' for the list of available command
+ [[4m0[0m, done, 1, param, 2, run, 3, madspin, 4, enter path, ... ][90s to answer] 
+>INFO: Update the dependent parameter of the param_card.dat 
+Output to directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC/MSSMD done.
+Type "launch" to generate events from this process, or see
+/LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC/MSSMD/README
+Output to directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC/MSSMD done.
+Run "open index.html" to see more information about this process.
+Type "launch" to generate events from this process, or see
+/LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC/MSSMD/README
+Run "open index.html" to see more information about this process.
+quit
+quit
+Checking if MG5 is up-to-date... (takes up to 5s)
+Checking if MG5 is up-to-date... (takes up to 5s)
+Output to directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC/MSSMD done.
+Type "launch" to generate events from this process, or see
+/LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC/MSSMD/README
+Run "open index.html" to see more information about this process.
+quit
+Checking if MG5 is up-to-date... (takes up to 5s)
+Output to directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC/MSSMD done.
+Type "launch" to generate events from this process, or see
+/LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC/MSSMD/README
+Run "open index.html" to see more information about this process.
+quit
+Checking if MG5 is up-to-date... (takes up to 5s)
+Output to directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC/MSSMD done.
+Type "launch" to generate events from this process, or see
+/LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC/MSSMD/README
+Run "open index.html" to see more information about this process.
+quit
+Checking if MG5 is up-to-date... (takes up to 5s)
+New Version of MG5 available! Do you want to update your current version? [[4mn[0m, y][60s to answer] 
+>Update bypassed.
+The next check for a new version will be performed in 7 days
+In order to change this delay. Enter the command:
+set auto_update X
+Putting X to zero will prevent this check at anytime.
+You can upgrade your version at any time by typing:
+install update
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 0.25 :: TcPhoD :: 0
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: ERROR :: Unknown error using file_exist
+ :: File does not exist :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: ERROR :: Unknown error using file_exist
+ :: Correr programa para obtener lhe
+ :: ERROR :: Directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp already exists. Directory not created  
+ :: File does not exist :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397
+ :: Directory created :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397
+ :: ERROR :: Unknown error using file_exist
+ :: Directory created :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC
+ :: ERROR :: Unknown error using file_exist
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: Copy success folder :: /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0 :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC
+ :: ERROR :: Incorrect bash execution :: 
+ :: Complete copy of Madgraph programs ::
+ :: ** Modification of Madgraph for using Dark Susy ** :: 
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC/models/MSSMD_UFO/
+ :: ERROR :: Unknown error using file_exist
+ :: ERROR :: Unknown mode using file_clear
+ :: ERROR :: Directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC/models/MSSMD_UFO already exists. Directory not created  
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: Copy success folder :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/MSSMD_UFO :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC/models/MSSMD_UFO
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Unknown error using file_exist
+ :: Relocate directory to :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC/models/MSSMD_UFO
+ :: Nos encontramos en  :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC/models/MSSMD_UFO
+ :: Execute correct :: 0 :: python write_param_card.py
+ :: Change mass of dark photon to :: 0.25
+ :: Change mass of lightest neutalino to :: 10
+ :: Change mass of dark neutalino to :: 0.25
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC/proc_card.dat
+ :: ERROR :: Unknown error using file_exist
+ :: ERROR :: Unknown mode using file_clear
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/proc_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC
+ :: Relocate directory to :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC
+ :: Nos encontramos en  :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC
+ :: Execute correct :: 0 :: ./bin/mg5_aMC proc_card.dat
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/madspin_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC/MSSMD/Cards
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/madspin_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC/MSSMD/Cards
+Output to directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC/MSSMD done.
+Type "launch" to generate events from this process, or see
+/LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC/MSSMD/README
+Run "open index.html" to see more information about this process.
+quit
+Checking if MG5 is up-to-date... (takes up to 5s)
+Generating 10000 events with run name run_01
+survey  run_01 
+INFO: compile directory 
+Unhandled exception in thread started by <function call at 0x115ce60>
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/subprocess.py", line 524, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "/usr/lib64/python2.7/subprocess.py", line 711, in __init__
+    errread, errwrite)
+  File "/usr/lib64/python2.7/subprocess.py", line 1327, in _execute_child
+    raise child_exception
+OSError: [Errno 2] No such file or directory
+compile Source Directory
+New Version of MG5 available! Do you want to update your current version? [[4mn[0m, y][60s to answer] 
+>Update bypassed.
+The next check for a new version will be performed in 7 days
+In order to change this delay. Enter the command:
+set auto_update X
+Putting X to zero will prevent this check at anytime.
+You can upgrade your version at any time by typing:
+install update
+New Version of MG5 available! Do you want to update your current version? [[4mn[0m, y][60s to answer] 
+>Update bypassed.
+The next check for a new version will be performed in 7 days
+In order to change this delay. Enter the command:
+set auto_update X
+Putting X to zero will prevent this check at anytime.
+You can upgrade your version at any time by typing:
+install update
+New Version of MG5 available! Do you want to update your current version? [[4mn[0m, y][60s to answer] 
+>Update bypassed.
+The next check for a new version will be performed in 7 days
+In order to change this delay. Enter the command:
+set auto_update X
+Putting X to zero will prevent this check at anytime.
+You can upgrade your version at any time by typing:
+install update
+New Version of MG5 available! Do you want to update your current version? [[4mn[0m, y][60s to answer] 
+>Update bypassed.
+The next check for a new version will be performed in 7 days
+In order to change this delay. Enter the command:
+set auto_update X
+Putting X to zero will prevent this check at anytime.
+You can upgrade your version at any time by typing:
+install update
+New Version of MG5 available! Do you want to update your current version? [[4mn[0m, y][60s to answer] 
+>Update bypassed.
+The next check for a new version will be performed in 7 days
+In order to change this delay. Enter the command:
+set auto_update X
+Putting X to zero will prevent this check at anytime.
+You can upgrade your version at any time by typing:
+install update
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 0.25 :: TcPhoD :: 0
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: ERROR :: Unknown error using file_exist
+ :: File does not exist :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: ERROR :: Unknown error using file_exist
+ :: Correr programa para obtener lhe
+ :: ERROR :: Directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp already exists. Directory not created  
+ :: File does not exist :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915
+ :: Directory created :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915
+ :: ERROR :: Unknown error using file_exist
+ :: Directory created :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC
+ :: ERROR :: Unknown error using file_exist
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: Copy success folder :: /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0 :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC
+ :: ERROR :: Incorrect bash execution :: 
+ :: Complete copy of Madgraph programs ::
+ :: ** Modification of Madgraph for using Dark Susy ** :: 
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC/models/MSSMD_UFO/
+ :: ERROR :: Unknown error using file_exist
+ :: ERROR :: Unknown mode using file_clear
+ :: ERROR :: Directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC/models/MSSMD_UFO already exists. Directory not created  
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: Copy success folder :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/MSSMD_UFO :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC/models/MSSMD_UFO
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Unknown error using file_exist
+ :: Relocate directory to :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC/models/MSSMD_UFO
+ :: Nos encontramos en  :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC/models/MSSMD_UFO
+ :: Execute correct :: 0 :: python write_param_card.py
+ :: Change mass of dark photon to :: 0.25
+ :: Change mass of lightest neutalino to :: 10
+ :: Change mass of dark neutalino to :: 0.25
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC/proc_card.dat
+ :: ERROR :: Unknown error using file_exist
+ :: ERROR :: Unknown mode using file_clear
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/proc_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC
+ :: Relocate directory to :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC
+ :: Nos encontramos en  :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC
+ :: Execute correct :: 0 :: ./bin/mg5_aMC proc_card.dat
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/madspin_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC/MSSMD/Cards
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/madspin_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC/MSSMD/Cards
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 0.25 :: TcPhoD :: 0
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: ERROR :: Unknown error using file_exist
+ :: File does not exist :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: ERROR :: Unknown error using file_exist
+ :: Correr programa para obtener lhe
+ :: ERROR :: Directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp already exists. Directory not created  
+ :: File does not exist :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281
+ :: Directory created :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281
+ :: ERROR :: Unknown error using file_exist
+ :: Directory created :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC
+ :: ERROR :: Unknown error using file_exist
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: Copy success folder :: /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0 :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC
+ :: ERROR :: Incorrect bash execution :: 
+ :: Complete copy of Madgraph programs ::
+ :: ** Modification of Madgraph for using Dark Susy ** :: 
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC/models/MSSMD_UFO/
+ :: ERROR :: Unknown error using file_exist
+ :: ERROR :: Unknown mode using file_clear
+ :: ERROR :: Directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC/models/MSSMD_UFO already exists. Directory not created  
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: Copy success folder :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/MSSMD_UFO :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC/models/MSSMD_UFO
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Unknown error using file_exist
+ :: Relocate directory to :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC/models/MSSMD_UFO
+ :: Nos encontramos en  :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC/models/MSSMD_UFO
+ :: Execute correct :: 0 :: python write_param_card.py
+ :: Change mass of dark photon to :: 0.25
+ :: Change mass of lightest neutalino to :: 10
+ :: Change mass of dark neutalino to :: 0.25
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC/proc_card.dat
+ :: ERROR :: Unknown error using file_exist
+ :: ERROR :: Unknown mode using file_clear
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/proc_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC
+ :: Relocate directory to :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC
+ :: Nos encontramos en  :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC
+ :: Execute correct :: 0 :: ./bin/mg5_aMC proc_card.dat
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/madspin_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC/MSSMD/Cards
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/madspin_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC/MSSMD/Cards
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 0.25 :: TcPhoD :: 0
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: ERROR :: Unknown error using file_exist
+ :: File does not exist :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: ERROR :: Unknown error using file_exist
+ :: Correr programa para obtener lhe
+ :: ERROR :: Directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp already exists. Directory not created  
+ :: File does not exist :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094
+ :: Directory created :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094
+ :: ERROR :: Unknown error using file_exist
+ :: Directory created :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC
+ :: ERROR :: Unknown error using file_exist
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: Copy success folder :: /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0 :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC
+ :: ERROR :: Incorrect bash execution :: 
+ :: Complete copy of Madgraph programs ::
+ :: ** Modification of Madgraph for using Dark Susy ** :: 
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC/models/MSSMD_UFO/
+ :: ERROR :: Unknown error using file_exist
+ :: ERROR :: Unknown mode using file_clear
+ :: ERROR :: Directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC/models/MSSMD_UFO already exists. Directory not created  
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: Copy success folder :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/MSSMD_UFO :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC/models/MSSMD_UFO
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Unknown error using file_exist
+ :: Relocate directory to :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC/models/MSSMD_UFO
+ :: Nos encontramos en  :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC/models/MSSMD_UFO
+ :: Execute correct :: 0 :: python write_param_card.py
+ :: Change mass of dark photon to :: 0.25
+ :: Change mass of lightest neutalino to :: 10
+ :: Change mass of dark neutalino to :: 0.25
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC/proc_card.dat
+ :: ERROR :: Unknown error using file_exist
+ :: ERROR :: Unknown mode using file_clear
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/proc_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC
+ :: Relocate directory to :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC
+ :: Nos encontramos en  :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC
+ :: Execute correct :: 0 :: ./bin/mg5_aMC proc_card.dat
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/madspin_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC/MSSMD/Cards
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/madspin_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC/MSSMD/Cards
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 0.25 :: TcPhoD :: 0
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: ERROR :: Unknown error using file_exist
+ :: File does not exist :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: ERROR :: Unknown error using file_exist
+ :: Correr programa para obtener lhe
+ :: ERROR :: Directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp already exists. Directory not created  
+ :: File does not exist :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528
+ :: Directory created :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528
+ :: ERROR :: Unknown error using file_exist
+ :: Directory created :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC
+ :: ERROR :: Unknown error using file_exist
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: Copy success folder :: /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0 :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC
+ :: ERROR :: Incorrect bash execution :: 
+ :: Complete copy of Madgraph programs ::
+ :: ** Modification of Madgraph for using Dark Susy ** :: 
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC/models/MSSMD_UFO/
+ :: ERROR :: Unknown error using file_exist
+ :: ERROR :: Unknown mode using file_clear
+ :: ERROR :: Directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC/models/MSSMD_UFO already exists. Directory not created  
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: Copy success folder :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/MSSMD_UFO :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC/models/MSSMD_UFO
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Unknown error using file_exist
+ :: Relocate directory to :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC/models/MSSMD_UFO
+ :: Nos encontramos en  :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC/models/MSSMD_UFO
+ :: Execute correct :: 0 :: python write_param_card.py
+ :: Change mass of dark photon to :: 0.25
+ :: Change mass of lightest neutalino to :: 10
+ :: Change mass of dark neutalino to :: 0.25
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC/proc_card.dat
+ :: ERROR :: Unknown error using file_exist
+ :: ERROR :: Unknown mode using file_clear
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/proc_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC
+ :: Relocate directory to :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC
+ :: Nos encontramos en  :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC
+ :: Execute correct :: 0 :: ./bin/mg5_aMC proc_card.dat
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/madspin_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC/MSSMD/Cards
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/madspin_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC/MSSMD/Cards
+ ************************************************************
+*                                                          *
+*                      W E L C O M E to                    *
+*             M A D G R A P H 5 _ a M C @ N L O            *
+*                      M A D E V E N T                     *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.7.0                 20xx-xx-xx         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*                                                          *
+************************************************************
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC/MSSMD/Cards/me5_configuration.txt  
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC/input/mg5_configuration.txt  
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC/MSSMD/Cards/me5_configuration.txt  
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 0.25 :: TcPhoD :: 0
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: ERROR :: Unknown error using file_exist
+ :: File does not exist :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: ERROR :: Unknown error using file_exist
+ :: Correr programa para obtener lhe
+ :: ERROR :: Directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp already exists. Directory not created  
+ :: File does not exist :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919
+ :: Directory created :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919
+ :: ERROR :: Unknown error using file_exist
+ :: Directory created :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC
+ :: ERROR :: Unknown error using file_exist
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: Copy success folder :: /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0 :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC
+ :: ERROR :: Incorrect bash execution :: 
+ :: Complete copy of Madgraph programs ::
+ :: ** Modification of Madgraph for using Dark Susy ** :: 
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC/models/MSSMD_UFO/
+ :: ERROR :: Unknown error using file_exist
+ :: ERROR :: Unknown mode using file_clear
+ :: ERROR :: Directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC/models/MSSMD_UFO already exists. Directory not created  
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: Copy success folder :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/MSSMD_UFO :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC/models/MSSMD_UFO
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Unknown error using file_exist
+ :: Relocate directory to :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC/models/MSSMD_UFO
+ :: Nos encontramos en  :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC/models/MSSMD_UFO
+ :: Execute correct :: 0 :: python write_param_card.py
+ :: Change mass of dark photon to :: 0.25
+ :: Change mass of lightest neutalino to :: 10
+ :: Change mass of dark neutalino to :: 0.25
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC/proc_card.dat
+ :: ERROR :: Unknown error using file_exist
+ :: ERROR :: Unknown mode using file_clear
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/proc_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC
+ :: Relocate directory to :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC
+ :: Nos encontramos en  :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC
+ :: Execute correct :: 0 :: ./bin/mg5_aMC proc_card.dat
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/madspin_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC/MSSMD/Cards
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/madspin_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC/MSSMD/Cards
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+generate_events 
+stty: entrada estándar: Función ioctl no apropiada para el dispositivo
+stty: entrada estándar: Función ioctl no apropiada para el dispositivo
+The following switches determine which programs are run:
+/==============================================================================\
+| 1. Choose the shower/hadronization program   [1m  shower[0m = [31mOFF[0m                  |
+| 2. Choose the detector simulation program    [1mdetector[0m = [31mOFF[0m                  |
+| 3. Choose an analysis package (plot/convert) [1manalysis[0m = [32mMadAnalysis4[0m         |
+| 4. Decay onshell particles                   [1m madspin[0m = [32mON[0m                   |
+| 5. Add weights to events for new hypp.       [1mreweight[0m = [31mOFF[0m                  |
+\==============================================================================/
+Either type the switch number (1 to 5) to change its setting,
+Set any switch explicitly (e.g. type 'shower=Pythia8' at the prompt)
+Type 'help' for the list of all valid option
+Type '0', 'auto', 'done' or just press enter when you are done.[60s to answer] 
+>Do you want to edit a card (press enter to bypass editing)?
+/------------------------------------------------------------\
+|  [31m1[0m. param   : [32mparam_card.dat[0m                               |
+|  [31m2[0m. run     : [32mrun_card.dat[0m                                 |
+|  [31m3[0m. madspin : [32mmadspin_card.dat[0m                             |
+|  [31m4[0m. plot    : [32mplot_card.dat[0m                                |
+\------------------------------------------------------------/
+ you can also
+   - enter the path to a valid card or banner.
+   - use the 'set' command to modify a parameter directly.
+     The set option works only for param_card and run_card.
+     Type 'help set' for more information on this command.
+   - call an external program (ASperGE/MadWidth/...).
+     Type 'help' for the list of available command
+ [[4m0[0m, done, 1, param, 2, run, 3, madspin, 4, enter path, ... ][90s to answer] 
+>INFO: Update the dependent parameter of the param_card.dat 
+New Version of MG5 available! Do you want to update your current version? [[4mn[0m, y][60s to answer] 
+>Update bypassed.
+The next check for a new version will be performed in 7 days
+In order to change this delay. Enter the command:
+set auto_update X
+Putting X to zero will prevent this check at anytime.
+You can upgrade your version at any time by typing:
+install update
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 0.25 :: TcPhoD :: 0
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: ERROR :: Unknown error using file_exist
+ :: File does not exist :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: ERROR :: Unknown error using file_exist
+ :: Correr programa para obtener lhe
+ :: ERROR :: Directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp already exists. Directory not created  
+ :: File does not exist :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899
+ :: Directory created :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899
+ :: ERROR :: Unknown error using file_exist
+ :: Directory created :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC
+ :: ERROR :: Unknown error using file_exist
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: Copy success folder :: /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0 :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC
+ :: ERROR :: Incorrect bash execution :: 
+ :: Complete copy of Madgraph programs ::
+ :: ** Modification of Madgraph for using Dark Susy ** :: 
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC/models/MSSMD_UFO/
+ :: ERROR :: Unknown error using file_exist
+ :: ERROR :: Unknown mode using file_clear
+ :: ERROR :: Directory /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC/models/MSSMD_UFO already exists. Directory not created  
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Input mode must be empty or None. Cannot check.
+ :: Copy success folder :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/MSSMD_UFO :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC/models/MSSMD_UFO
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC/models/MSSMD_UFO
+ :: ERROR :: Unknown error using file_exist
+ :: Relocate directory to :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC/models/MSSMD_UFO
+ :: Nos encontramos en  :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC/models/MSSMD_UFO
+ :: Execute correct :: 0 :: python write_param_card.py
+ :: Change mass of dark photon to :: 0.25
+ :: Change mass of lightest neutalino to :: 10
+ :: Change mass of dark neutalino to :: 0.25
+ :: File exists :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC/proc_card.dat
+ :: ERROR :: Unknown error using file_exist
+ :: ERROR :: Unknown mode using file_clear
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/proc_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC
+ :: Relocate directory to :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC
+ :: Nos encontramos en  :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC
+ :: Execute correct :: 0 :: ./bin/mg5_aMC proc_card.dat
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/madspin_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC/MSSMD/Cards
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/madspin_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC/MSSMD/Cards
+ ************************************************************
+*                                                          *
+*                      W E L C O M E to                    *
+*             M A D G R A P H 5 _ a M C @ N L O            *
+*                      M A D E V E N T                     *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.7.0                 20xx-xx-xx         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*                                                          *
+************************************************************
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC/MSSMD/Cards/me5_configuration.txt  
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC/input/mg5_configuration.txt  
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC/MSSMD/Cards/me5_configuration.txt  
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+generate_events 
+stty: entrada estándar: Función ioctl no apropiada para el dispositivo
+stty: entrada estándar: Función ioctl no apropiada para el dispositivo
+The following switches determine which programs are run:
+/==============================================================================\
+| 1. Choose the shower/hadronization program   [1m  shower[0m = [31mOFF[0m                  |
+| 2. Choose the detector simulation program    [1mdetector[0m = [31mOFF[0m                  |
+| 3. Choose an analysis package (plot/convert) [1manalysis[0m = [32mMadAnalysis4[0m         |
+| 4. Decay onshell particles                   [1m madspin[0m = [32mON[0m                   |
+| 5. Add weights to events for new hypp.       [1mreweight[0m = [31mOFF[0m                  |
+\==============================================================================/
+Either type the switch number (1 to 5) to change its setting,
+Set any switch explicitly (e.g. type 'shower=Pythia8' at the prompt)
+Type 'help' for the list of all valid option
+Type '0', 'auto', 'done' or just press enter when you are done.[60s to answer] 
+>Do you want to edit a card (press enter to bypass editing)?
+/------------------------------------------------------------\
+|  [31m1[0m. param   : [32mparam_card.dat[0m                               |
+|  [31m2[0m. run     : [32mrun_card.dat[0m                                 |
+|  [31m3[0m. madspin : [32mmadspin_card.dat[0m                             |
+|  [31m4[0m. plot    : [32mplot_card.dat[0m                                |
+\------------------------------------------------------------/
+ you can also
+   - enter the path to a valid card or banner.
+   - use the 'set' command to modify a parameter directly.
+     The set option works only for param_card and run_card.
+     Type 'help set' for more information on this command.
+   - call an external program (ASperGE/MadWidth/...).
+     Type 'help' for the list of available command
+ [[4m0[0m, done, 1, param, 2, run, 3, madspin, 4, enter path, ... ][90s to answer] 
+>INFO: Update the dependent parameter of the param_card.dat 
+Generating 10000 events with run name run_01
+survey  run_01 
+INFO: compile directory 
+Unhandled exception in thread started by <function call at 0x193ee60>
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/subprocess.py", line 524, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "/usr/lib64/python2.7/subprocess.py", line 711, in __init__
+    errread, errwrite)
+  File "/usr/lib64/python2.7/subprocess.py", line 1327, in _execute_child
+    raise child_exception
+OSError: [Errno 2] No such file or directory
+compile Source Directory
+ :: Copy file :: /LUSTR************************************************************
+*                                                          *
+*                      W E L C O M E to                    *
+*             M A D G R A P H 5 _ a M C @ N L O            *
+*                      M A D E V E N T                     *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.7.0                 20xx-xx-xx         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*                                                          *
+************************************************************
+ ************************************************************
+*                                                          *
+*                      W E L C O M E to                    *
+*             M A D G R A P H 5 _ a M C @ N L O            *
+*                      M A D E V E N T                     *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.7.0                 20xx-xx-xx         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*                                                          *
+************************************************************
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC/MSSMD/Cards/me5_configuration.txt  
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC/MSSMD/Cards/me5_configuration.txt  
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC/input/mg5_configuration.txt  
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC/input/mg5_configuration.txt  
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC/MSSMD/Cards/me5_configuration.txt  
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC/MSSMD/Cards/me5_configuration.txt  
+ ************************************************************
+*                                                          *
+*                      W E L C O M E to                    *
+*             M A D G R A P H 5 _ a M C @ N L O            *
+*                      M A D E V E N T                     *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.7.0                 20xx-xx-xx         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*                                                          *
+************************************************************
+ ************************************************************
+*                                                          *
+*                      W E L C O M E to                    *
+*             M A D G R A P H 5 _ a M C @ N L O            *
+*                      M A D E V E N T                     *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.7.0                 20xx-xx-xx         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*                                                          *
+************************************************************
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC/MSSMD/Cards/me5_configuration.txt  
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC/MSSMD/Cards/me5_configuration.txt  
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC/input/mg5_configuration.txt  
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC/input/mg5_configuration.txt  
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC/MSSMD/Cards/me5_configuration.txt  
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC/MSSMD/Cards/me5_configuration.txt  
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+Generating 10000 events with run name run_01
+survey  run_01 
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+INFO: compile directory 
+generate_events 
+ ************************************************************
+*                                                          *
+*                      W E L C O M E to                    *
+*             M A D G R A P H 5 _ a M C @ N L O            *
+*                      M A D E V E N T                     *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.7.0                 20xx-xx-xx         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*                                                          *
+************************************************************
+generate_events 
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC/MSSMD/Cards/me5_configuration.txt  
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC/input/mg5_configuration.txt  
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC/MSSMD/Cards/me5_configuration.txt  
+stty: entrada estándar: Función ioctl no apropiada para el dispositivo
+generate_events 
+generate_events 
+stty: entrada estándar: Función ioctl no apropiada para el dispositivo
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+stty: entrada estándar: Función ioctl no apropiada para el dispositivo
+Unhandled exception in thread started by <function call at 0x20d7e60>
+stty: entrada estándar: Función ioctl no apropiada para el dispositivo
+stty: entrada estándar: Función ioctl no apropiada para el dispositivo
+stty: entrada estándar: Función ioctl no apropiada para el dispositivo
+generate_events 
+stty: entrada estándar: Función ioctl no apropiada para el dispositivo
+stty: entrada estándar: Función ioctl no apropiada para el dispositivo
+The following switches determine which programs are run:
+/==============================================================================\
+| 1. Choose the shower/hadronization program   [1m  shower[0m = [31mOFF[0m                  |
+| 2. Choose the detector simulation program    [1mdetector[0m = [31mOFF[0m                  |
+| 3. Choose an analysis package (plot/convert) [1manalysis[0m = [32mMadAnalysis4[0m         |
+| 4. Decay onshell particles                   [1m madspin[0m = [32mON[0m                   |
+| 5. Add weights to events for new hypp.       [1mreweight[0m = [31mOFF[0m                  |
+\==============================================================================/
+Either type the switch number (1 to 5) to change its setting,
+Set any switch explicitly (e.g. type 'shower=Pythia8' at the prompt)
+Type 'help' for the list of all valid option
+Type '0', 'auto', 'done' or just press enter when you are done.[60s to answer] 
+>Do you want to edit a card (press enter to bypass editing)?
+/------------------------------------------------------------\
+|  [31m1[0m. param   : [32mparam_card.dat[0m                               |
+|  [31m2[0m. run     : [32mrun_card.dat[0m                                 |
+|  [31m3[0m. madspin : [32mmadspin_card.dat[0m                             |
+|  [31m4[0m. plot    : [32mplot_card.dat[0m                                |
+\------------------------------------------------------------/
+ you can also
+   - enter the path to a valid card or banner.
+   - use the 'set' command to modify a parameter directly.
+     The set option works only for param_card and run_card.
+     Type 'help set' for more information on this command.
+   - call an external program (ASperGE/MadWidth/...).
+     Type 'help' for the list of available command
+ [[4m0[0m, done, 1, param, 2, run, 3, madspin, 4, enter path, ... ][90s to answer] 
+>INFO: Update the dependent parameter of the param_card.dat 
+The following switches determine which programs are run:
+/==============================================================================\
+| 1. Choose the shower/hadronization program   [1m  shower[0m = [31mOFF[0m                  |
+| 2. Choose the detector simulation program    [1mdetector[0m = [31mOFF[0m                  |
+| 3. Choose an analysis package (plot/convert) [1manalysis[0m = [32mMadAnalysis4[0m         |
+| 4. Decay onshell particles                   [1m madspin[0m = [32mON[0m                   |
+| 5. Add weights to events for new hypp.       [1mreweight[0m = [31mOFF[0m                  |
+\==============================================================================/
+Either type the switch number (1 to 5) to change its setting,
+Set any switch explicitly (e.g. type 'shower=Pythia8' at the prompt)
+Type 'help' for the list of all valid option
+Type '0', 'auto', 'done' or just press enter when you are done.[60s to answer] 
+>Do you want to edit a card (press enter to bypass editing)?
+/------------------------------------------------------------\
+|  [31m1[0m. param   : [32mparam_card.dat[0m                               |
+|  [31m2[0m. run     : [32mrun_card.dat[0m                                 |
+|  [31m3[0m. madspin : [32mmadspin_card.dat[0m                             |
+|  [31m4[0m. plot    : [32mplot_card.dat[0m                                |
+\------------------------------------------------------------/
+ you can also
+   - enter the path to a valid card or banner.
+   - use the 'set' command to modify a parameter directly.
+     The set option works only for param_card and run_card.
+     Type 'help set' for more information on this command.
+   - call an external program (ASperGE/MadWidth/...).
+     Type 'help' for the list of available command
+ [[4m0[0m, done, 1, param, 2, run, 3, madspin, 4, enter path, ... ][90s to answer] 
+>INFO: Update the dependent parameter of the param_card.dat 
+stty: entrada estándar: Función ioctl no apropiada para el dispositivo
+The following switches determine which programs are run:
+/==============================================================================\
+| 1. Choose the shower/hadronization program   [1m  shower[0m = [31mOFF[0m                  |
+| 2. Choose the detector simulation program    [1mdetector[0m = [31mOFF[0m                  |
+| 3. Choose an analysis package (plot/convert) [1manalysis[0m = [32mMadAnalysis4[0m         |
+| 4. Decay onshell particles                   [1m madspin[0m = [32mON[0m                   |
+| 5. Add weights to events for new hypp.       [1mreweight[0m = [31mOFF[0m                  |
+\==============================================================================/
+Either type the switch number (1 to 5) to change its setting,
+Set any switch explicitly (e.g. type 'shower=Pythia8' at the prompt)
+Type 'help' for the list of all valid option
+Type '0', 'auto', 'done' or just press enter when you are done.[60s to answer] 
+>Do you want to edit a card (press enter to bypass editing)?
+/------------------------------------------------------------\
+|  [31m1[0m. param   : [32mparam_card.dat[0m                               |
+|  [31m2[0m. run     : [32mrun_card.dat[0m                                 |
+|  [31m3[0m. madspin : [32mmadspin_card.dat[0m                             |
+|  [31m4[0m. plot    : [32mplot_card.dat[0m                                |
+\------------------------------------------------------------/
+ you can also
+   - enter the path to a valid card or banner.
+   - use the 'set' command to modify a parameter directly.
+     The set option works only for param_card and run_card.
+     Type 'help set' for more information on this command.
+   - call an external program (ASperGE/MadWidth/...).
+     Type 'help' for the list of available command
+ [[4m0[0m, done, 1, param, 2, run, 3, madspin, 4, enter path, ... ][90s to answer] 
+>INFO: Update the dependent parameter of the param_card.dat 
+The following switches determine which programs are run:
+/==============================================================================\
+| 1. Choose the shower/hadronization program   [1m  shower[0m = [31mOFF[0m                  |
+| 2. Choose the detector simulation program    [1mdetector[0m = [31mOFF[0m                  |
+| 3. Choose an analysis package (plot/convert) [1manalysis[0m = [32mMadAnalysis4[0m         |
+| 4. Decay onshell particles                   [1m madspin[0m = [32mON[0m                   |
+| 5. Add weights to events for new hypp.       [1mreweight[0m = [31mOFF[0m                  |
+\==============================================================================/
+Either type the switch number (1 to 5) to change its setting,
+Set any switch explicitly (e.g. type 'shower=Pythia8' at the prompt)
+Type 'help' for the list of all valid option
+Type '0', 'auto', 'done' or just press enter when you are done.[60s to answer] 
+>Do you want to edit a card (press enter to bypass editing)?
+/------------------------------------------------------------\
+|  [31m1[0m. param   : [32mparam_card.dat[0m                               |
+|  [31m2[0m. run     : [32mrun_card.dat[0m                                 |
+|  [31m3[0m. madspin : [32mmadspin_card.dat[0m                             |
+|  [31m4[0m. plot    : [32mplot_card.dat[0m                                |
+\------------------------------------------------------------/
+ you can also
+   - enter the path to a valid card or banner.
+   - use the 'set' command to modify a parameter directly.
+     The set option works only for param_card and run_card.
+     Type 'help set' for more information on this command.
+   - call an external program (ASperGE/MadWidth/...).
+     Type 'help' for the list of available command
+ [[4m0[0m, done, 1, param, 2, run, 3, madspin, 4, enter path, ... ][90s to answer] 
+>INFO: Update the dependent parameter of the param_card.dat 
+stty: entrada estándar: Función ioctl no apropiada para el dispositivo
+The following switches determine which programs are run:
+/==============================================================================\
+| 1. Choose the shower/hadronization program   [1m  shower[0m = [31mOFF[0m                  |
+| 2. Choose the detector simulation program    [1mdetector[0m = [31mOFF[0m                  |
+| 3. Choose an analysis package (plot/convert) [1manalysis[0m = [32mMadAnalysis4[0m         |
+| 4. Decay onshell particles                   [1m madspin[0m = [32mON[0m                   |
+| 5. Add weights to events for new hypp.       [1mreweight[0m = [31mOFF[0m                  |
+\==============================================================================/
+Either type the switch number (1 to 5) to change its setting,
+Set any switch explicitly (e.g. type 'shower=Pythia8' at the prompt)
+Type 'help' for the list of all valid option
+Type '0', 'auto', 'done' or just press enter when you are done.[60s to answer] 
+>Do you want to edit a card (press enter to bypass editing)?
+/------------------------------------------------------------\
+|  [31m1[0m. param   : [32mparam_card.dat[0m                               |
+|  [31m2[0m. run     : [32mrun_card.dat[0m                                 |
+|  [31m3[0m. madspin : [32mmadspin_card.dat[0m                             |
+|  [31m4[0m. plot    : [32mplot_card.dat[0m                                |
+\------------------------------------------------------------/
+ you can also
+   - enter the path to a valid card or banner.
+   - use the 'set' command to modify a parameter directly.
+     The set option works only for param_card and run_card.
+     Type 'help set' for more information on this command.
+   - call an external program (ASperGE/MadWidth/...).
+     Type 'help' for the list of available command
+ [[4m0[0m, done, 1, param, 2, run, 3, madspin, 4, enter path, ... ][90s to answer] 
+>INFO: Update the dependent parameter of the param_card.dat 
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/subprocess.py", line 524, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "/usr/lib64/python2.7/subprocess.py", line 711, in __init__
+    errread, errwrite)
+  File "/usr/lib64/python2.7/subprocess.py", line 1327, in _execute_child
+    raise child_exception
+OSError: [Errno 2] No such file or directory
+compile Source Directory
+ ************************************************************
+*                                                          *
+*                      W E L C O M E to                    *
+*             M A D G R A P H 5 _ a M C @ N L O            *
+*                      M A D E V E N T                     *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 2.7.0                 20xx-xx-xx         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*                                                          *
+************************************************************
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC/MSSMD/Cards/me5_configuration.txt  
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC/input/mg5_configuration.txt  
+INFO: load configuration from /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC/MSSMD/Cards/me5_configuration.txt  
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+No valid eps viewer found. Please set in ./input/mg5_configuration.txt
+generate_events 
+stty: entrada estándar: Función ioctl no apropiada para el dispositivo
+stty: entrada estándar: Función ioctl no apropiada para el dispositivo
+The following switches determine which programs are run:
+/==============================================================================\
+| 1. Choose the shower/hadronization program   [1m  shower[0m = [31mOFF[0m                  |
+| 2. Choose the detector simulation program    [1mdetector[0m = [31mOFF[0m                  |
+| 3. Choose an analysis package (plot/convert) [1manalysis[0m = [32mMadAnalysis4[0m         |
+| 4. Decay onshell particles                   [1m madspin[0m = [32mON[0m                   |
+| 5. Add weights to events for new hypp.       [1mreweight[0m = [31mOFF[0m                  |
+\==============================================================================/
+Either type the switch number (1 to 5) to change its setting,
+Set any switch explicitly (e.g. type 'shower=Pythia8' at the prompt)
+Type 'help' for the list of all valid option
+Type '0', 'auto', 'done' or just press enter when you are done.[60s to answer] 
+>Do you want to edit a card (press enter to bypass editing)?
+/------------------------------------------------------------\
+|  [31m1[0m. param   : [32mparam_card.dat[0m                               |
+|  [31m2[0m. run     : [32mrun_card.dat[0m                                 |
+|  [31m3[0m. madspin : [32mmadspin_card.dat[0m                             |
+|  [31m4[0m. plot    : [32mplot_card.dat[0m                                |
+\------------------------------------------------------------/
+ you can also
+   - enter the path to a valid card or banner.
+   - use the 'set' command to modify a parameter directly.
+     The set option works only for param_card and run_card.
+     Type 'help set' for more information on this command.
+   - call an external program (ASperGE/MadWidth/...).
+     Type 'help' for the list of available command
+ [[4m0[0m, done, 1, param, 2, run, 3, madspin, 4, enter path, ... ][90s to answer] 
+>INFO: Update the dependent parameter of the param_card.dat 
+Generating 10000 events with run name run_01
+survey  run_01 
+Generating 10000 events with run name run_01
+survey  run_01 
+INFO: compile directory 
+INFO: compile directory 
+Generating 10000 events with run name run_01
+survey  run_01 
+Generating 10000 events with run name run_01
+survey  run_01 
+INFO: compile directory 
+INFO: compile directory 
+Unhandled exception in thread started by <function call at 0x1a02e60>
+Unhandled exception in thread started by <function call at 0x1b2ce60>
+Unhandled exception in thread started by <function call at 0x1eeae60>
+Generating 10000 events with run name run_01
+survey  run_01 
+Unhandled exception in thread started by <function call at 0x2362e60>
+INFO: compile directory 
+Unhandled exception in thread started by <function call at 0x273be60>
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/subprocess.py", line 524, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "/usr/lib64/python2.7/subprocess.py", line 711, in __init__
+    errread, errwrite)
+  File "/usr/lib64/python2.7/subprocess.py", line 1327, in _execute_child
+    raise child_exception
+OSError: [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/subprocess.py", line 524, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "/usr/lib64/python2.7/subprocess.py", line 711, in __init__
+    errread, errwrite)
+  File "/usr/lib64/python2.7/subprocess.py", line 1327, in _execute_child
+    raise child_exception
+OSError: [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/subprocess.py", line 524, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "/usr/lib64/python2.7/subprocess.py", line 711, in __init__
+    errread, errwrite)
+  File "/usr/lib64/python2.7/subprocess.py", line 1327, in _execute_child
+    raise child_exception
+OSError: [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/subprocess.py", line 524, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "/usr/lib64/python2.7/subprocess.py", line 711, in __init__
+    errread, errwrite)
+  File "/usr/lib64/python2.7/subprocess.py", line 1327, in _execute_child
+    raise child_exception
+OSError: [Errno 2] No such file or directory
+compile Source Directory
+compile Source Directory
+compile Source Directory
+compile Source Directory
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/subprocess.py", line 524, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "/usr/lib64/python2.7/subprocess.py", line 711, in __init__
+    errread, errwrite)
+  File "/usr/lib64/python2.7/subprocess.py", line 1327, in _execute_child
+    raise child_exception
+OSError: [Errno 2] No such file or directory
+compile Source Directory
+Generating 10000 events with run name run_01
+survey  run_01 
+INFO: compile directory 
+Unhandled exception in thread started by <function call at 0x23f4e60>
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/subprocess.py", line 524, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "/usr/lib64/python2.7/subprocess.py", line 711, in __init__
+    errread, errwrite)
+  File "/usr/lib64/python2.7/subprocess.py", line 1327, in _execute_child
+    raise child_exception
+OSError: [Errno 2] No such file or directory
+compile Source Directory
+Using random number seed offset = 21
+INFO: Running Survey 
+Creating Jobs
+Working on SubProcesses
+INFO:     P1_gg_h  
+Using random number seed offset = 21
+INFO: Running Survey 
+Creating Jobs
+Working on SubProcesses
+INFO:     P1_gg_h  
+Using random number seed offset = 21
+INFO: Running Survey 
+Creating Jobs
+Working on SubProcesses
+INFO:     P1_gg_h  
+Using random number seed offset = 21
+INFO: Running Survey 
+Creating Jobs
+Working on SubProcesses
+INFO:     P1_gg_h  
+Using random number seed offset = 21
+Using random number seed offset = 21
+INFO: Running Survey 
+INFO: Running Survey 
+Creating Jobs
+Working on SubProcesses
+Using random number seed offset = 21
+Creating Jobs
+Working on SubProcesses
+INFO: Running Survey 
+INFO:     P1_gg_h  
+INFO:     P1_gg_h  
+Creating Jobs
+Working on SubProcesses
+INFO:     P1_gg_h  
+Using random number seed offset = 21
+INFO: Running Survey 
+Creating Jobs
+Working on SubProcesses
+INFO:     P1_gg_h  
+Using random number seed offset = 21
+INFO: Running Survey 
+Creating Jobs
+Working on SubProcesses
+INFO:     P1_gg_h  
+Using random number seed offset = 21
+INFO: Running Survey 
+Creating Jobs
+Working on SubProcesses
+INFO:     P1_gg_h  
+INFO:  Idle: 1,  Running: 0,  Completed: 0 [ current time: 14h31 ] 
+INFO:  Idle: 1,  Running: 0,  Completed: 0 [ current time: 14h31 ] 
+INFO:  Idle: 0,  Running: 0,  Completed: 1 [  0.37s  ] 
+INFO:  Idle: 0,  Running: 0,  Completed: 1 [  0.37s  ] 
+INFO: End survey 
+refine 10000
+Creating Jobs
+INFO: Refine results to 10000 
+INFO: Generating 10000.0 unweighted events. 
+INFO: Effective Luminosity 683.526999316 pb^-1 
+INFO: need to improve 1 channels 
+Current estimate of cross-section: 17.556 +- 0.070096
+    P1_gg_h 
+INFO:  Idle: 0,  Running: 0,  Completed: 1 [  0.37s  ] 
+INFO:  Idle: 0,  Running: 0,  Completed: 1 [  0.37s  ] 
+INFO: End survey 
+refine 10000
+Creating Jobs
+INFO: Refine results to 10000 
+INFO: Generating 10000.0 unweighted events. 
+INFO: Effective Luminosity 683.526999316 pb^-1 
+INFO: need to improve 1 channels 
+Current estimate of cross-section: 17.556 +- 0.070096
+    P1_gg_h 
+INFO:  Idle: 1,  Running: 11,  Completed: 0 [ current time: 14h31 ] 
+INFO:  Idle: 1,  Running: 0,  Completed: 0 [ current time: 14h31 ] 
+INFO:  Idle: 1,  Running: 11,  Completed: 0 [ current time: 14h31 ] 
+INFO:  Idle: 1,  Running: 0,  Completed: 0 [ current time: 14h31 ] 
+INFO:  Idle: 0,  Running: 0,  Completed: 1 [  0.38s  ] 
+INFO:  Idle: 0,  Running: 0,  Completed: 1 [  0.38s  ] 
+INFO: End survey 
+refine 10000
+Creating Jobs
+INFO: Refine results to 10000 
+INFO: Generating 10000.0 unweighted events. 
+INFO: Effective Luminosity 683.526999316 pb^-1 
+INFO: need to improve 1 channels 
+INFO:  Idle: 1,  Running: 0,  Completed: 0 [ current time: 14h31 ] 
+INFO:  Idle: 1,  Running: 0,  Completed: 0 [ current time: 14h31 ] 
+INFO:  Idle: 1,  Running: 0,  Completed: 0 [ current time: 14h31 ] 
+Current estimate of cross-section: 17.556 +- 0.070096
+    P1_gg_h 
+INFO:  Idle: 1,  Running: 0,  Completed: 0 [ current time: 14h31 ] 
+INFO:  Idle: 1,  Running: 0,  Completed: 0 [ current time: 14h31 ] 
+INFO:  Idle: 1,  Running: 0,  Completed: 0 [ current time: 14h31 ] 
+INFO:  Idle: 0,  Running: 0,  Completed: 1 [  0.32s  ] 
+INFO:  Idle: 0,  Running: 0,  Completed: 1 [  0.32s  ] 
+INFO: End survey 
+refine 10000
+Creating Jobs
+INFO: Refine results to 10000 
+INFO: Generating 10000.0 unweighted events. 
+INFO: Effective Luminosity 683.526999316 pb^-1 
+INFO: need to improve 1 channels 
+INFO:  Idle: 0,  Running: 0,  Completed: 1 [  0.32s  ] 
+INFO:  Idle: 0,  Running: 0,  Completed: 1 [  0.32s  ] 
+INFO: End survey 
+refine 10000
+Creating Jobs
+INFO: Refine results to 10000 
+INFO: Generating 10000.0 unweighted events. 
+INFO:  Idle: 0,  Running: 0,  Completed: 1 [  0.37s  ] 
+INFO: Effective Luminosity 683.526999316 pb^-1 
+INFO: need to improve 1 channels 
+INFO:  Idle: 0,  Running: 0,  Completed: 1 [  0.37s  ] 
+INFO: End survey 
+refine 10000
+Creating Jobs
+INFO: Refine results to 10000 
+Current estimate of cross-section: 17.556 +- 0.070096
+    P1_gg_h 
+INFO: Generating 10000.0 unweighted events. 
+INFO:  Idle: 0,  Running: 0,  Completed: 1 [  0.32s  ] 
+INFO: Effective Luminosity 683.526999316 pb^-1 
+INFO: need to improve 1 channels 
+INFO:  Idle: 0,  Running: 0,  Completed: 1 [  0.32s  ] 
+INFO: End survey 
+refine 10000
+Creating Jobs
+INFO: Refine results to 10000 
+INFO: Generating 10000.0 unweighted events. 
+INFO: Effective Luminosity 683.526999316 pb^-1 
+INFO: need to improve 1 channels 
+Current estimate of cross-section: 17.556 +- 0.070096
+    P1_gg_h 
+Current estimate of cross-section: 17.556 +- 0.070096
+    P1_gg_h 
+INFO:  Idle: 0,  Running: 0,  Completed: 1 [  0.37s  ] 
+INFO:  Idle: 0,  Running: 0,  Completed: 1 [  0.37s  ] 
+INFO: End survey 
+Current estimate of cross-section: 17.556 +- 0.070096
+    P1_gg_h 
+refine 10000
+Creating Jobs
+INFO: Refine results to 10000 
+INFO: Generating 10000.0 unweighted events. 
+INFO: Effective Luminosity 683.526999316 pb^-1 
+INFO: need to improve 1 channels 
+INFO:  Idle: 0,  Running: 0,  Completed: 1 [  0.37s  ] 
+INFO:  Idle: 0,  Running: 0,  Completed: 1 [  0.37s  ] 
+INFO: End survey 
+refine 10000
+Creating Jobs
+INFO: Refine results to 10000 
+INFO: Generating 10000.0 unweighted events. 
+INFO: Effective Luminosity 683.526999316 pb^-1 
+INFO: need to improve 1 channels 
+Current estimate of cross-section: 17.556 +- 0.070096
+    P1_gg_h 
+Current estimate of cross-section: 17.556 +- 0.070096
+    P1_gg_h 
+INFO:  Idle: 0,  Running: 0,  Completed: 1 [  0.37s  ] 
+INFO:  Idle: 0,  Running: 0,  Completed: 1 [  0.37s  ] 
+INFO: End survey 
+refine 10000
+Creating Jobs
+INFO: Refine results to 10000 
+INFO: Generating 10000.0 unweighted events. 
+INFO: Effective Luminosity 683.526999316 pb^-1 
+INFO: need to improve 1 channels 
+Current estimate of cross-section: 17.556 +- 0.070096
+    P1_gg_h 
+INFO:  Idle: 1,  Running: 11,  Completed: 0 [ current time: 14h31 ] 
+INFO:  Idle: 1,  Running: 11,  Completed: 0 [ current time: 14h31 ] 
+INFO:  Idle: 1,  Running: 11,  Completed: 0 [ current time: 14h31 ] 
+INFO:  Idle: 1,  Running: 11,  Completed: 0 [ current time: 14h31 ] 
+INFO:  Idle: 1,  Running: 11,  Completed: 0 [ current time: 14h31 ] 
+INFO:  Idle: 1,  Running: 11,  Completed: 0 [ current time: 14h31 ] 
+INFO:  Idle: 1,  Running: 11,  Completed: 0 [ current time: 14h31 ] 
+INFO:  Idle: 1,  Running: 11,  Completed: 0 [ current time: 14h31 ] 
+INFO:  Idle: 0,  Running: 11,  Completed: 1 [  5.2s  ] 
+INFO:  Idle: 0,  Running: 9,  Completed: 3 [  5.6s  ] 
+INFO:  Idle: 0,  Running: 0,  Completed: 12 [  6.1s  ] 
+INFO: Combining runs 
+INFO: finish refine 
+refine 10000
+Creating Jobs
+INFO: Refine results to 10000 
+INFO: Generating 10000.0 unweighted events. 
+INFO: Effective Luminosity 681.044267877 pb^-1 
+INFO: need to improve 0 channels 
+Current estimate of cross-section: 17.62 +- 0.015306
+    P1_gg_h 
+INFO:  Idle: 0,  Running: 0,  Completed: 0 [ current time: 14h31 ] 
+INFO: Combining runs 
+INFO:  Idle: 0,  Running: 0,  Completed: 12 [  6s  ] 
+INFO: Combining runs 
+INFO: finish refine 
+INFO: Combining Events 
+INFO:  Idle: 0,  Running: 11,  Completed: 1 [  5.1s  ] 
+INFO:  Idle: 0,  Running: 11,  Completed: 1 [  4.6s  ] 
+INFO: finish refine 
+refine 10000
+Creating Jobs
+INFO: Refine results to 10000 
+INFO: Generating 10000.0 unweighted events. 
+INFO: Effective Luminosity 681.044267877 pb^-1 
+INFO: need to improve 0 channels 
+Current estimate of cross-section: 17.62 +- 0.015306
+    P1_gg_h 
+INFO:  Idle: 0,  Running: 0,  Completed: 0 [ current time: 14h31 ] 
+INFO: Combining runs 
+INFO: finish refine 
+INFO: Combining Events 
+INFO:  Idle: 0,  Running: 11,  Completed: 1 [  4.7s  ] 
+INFO:  Idle: 0,  Running: 11,  Completed: 1 [  4.8s  ] 
+INFO:  Idle: 0,  Running: 11,  Completed: 1 [  4.9s  ] 
+INFO:  Idle: 0,  Running: 11,  Completed: 1 [  4.9s  ] 
+INFO:  Idle: 0,  Running: 11,  Completed: 1 [  5.1s  ] 
+INFO:  Idle: 0,  Running: 11,  Completed: 1 [  5.4s  ] 
+INFO:  Idle: 0,  Running: 0,  Completed: 12 [  6.3s  ] 
+INFO: Combining runs 
+INFO:  Idle: 0,  Running: 0,  Completed: 12 [  6s  ] 
+INFO: Combining runs 
+INFO:  Idle: 0,  Running: 0,  Completed: 12 [  5.9s  ] 
+INFO: Combining runs 
+INFO: finish refine 
+refine 10000
+Creating Jobs
+INFO: Refine results to 10000 
+INFO: Generating 10000.0 unweighted events. 
+INFO: Effective Luminosity 681.044267877 pb^-1 
+INFO: need to improve 0 channels 
+Current estimate of cross-section: 17.62 +- 0.015306
+    P1_gg_h 
+INFO:  Idle: 0,  Running: 0,  Completed: 0 [ current time: 14h31 ] 
+INFO: Combining runs 
+INFO: finish refine 
+INFO: Combining Events 
+INFO: finish refine 
+refine 10000
+Creating Jobs
+INFO: Refine results to 10000 
+INFO: Generating 10000.0 unweighted events. 
+INFO: Effective Luminosity 681.044267877 pb^-1 
+INFO: need to improve 0 channels 
+Current estimate of cross-section: 17.62 +- 0.015306
+    P1_gg_h 
+INFO:  Idle: 0,  Running: 0,  Completed: 0 [ current time: 14h31 ] 
+INFO: Combining runs 
+INFO: finish refine 
+refine 10000
+INFO: finish refine 
+INFO: Combining Events 
+Creating Jobs
+INFO: Refine results to 10000 
+INFO: Generating 10000.0 unweighted events. 
+INFO: Effective Luminosity 681.044267877 pb^-1 
+INFO: need to improve 0 channels 
+Current estimate of cross-section: 17.62 +- 0.015306
+INFO:  Idle: 0,  Running: 0,  Completed: 12 [  6.1s  ] 
+    P1_gg_h 
+INFO:  Idle: 0,  Running: 0,  Completed: 0 [ current time: 14h31 ] 
+INFO: Combining runs 
+INFO: Combining runs 
+INFO:  Idle: 0,  Running: 0,  Completed: 12 [  6.1s  ] 
+INFO: Combining runs 
+INFO: finish refine 
+INFO: Combining Events 
+INFO:  Idle: 0,  Running: 0,  Completed: 12 [  6.3s  ] 
+INFO: Combining runs 
+INFO:  Idle: 0,  Running: 0,  Completed: 12 [  6.2s  ] 
+INFO: Combining runs 
+INFO:  Idle: 0,  Running: 0,  Completed: 12 [  6.2s  ] 
+INFO: Combining runs 
+INFO: finish refine 
+refine 10000
+Creating Jobs
+INFO: Refine results to 10000 
+INFO: Generating 10000.0 unweighted events. 
+INFO: Effective Luminosity 681.044267877 pb^-1 
+INFO: finish refine 
+INFO: need to improve 0 channels 
+refine 10000
+Creating Jobs
+INFO: Refine results to 10000 
+INFO: Generating 10000.0 unweighted events. 
+INFO: Effective Luminosity 681.044267877 pb^-1 
+INFO: need to improve 0 channels 
+Current estimate of cross-section: 17.62 +- 0.015306
+    P1_gg_h 
+INFO:  Idle: 0,  Running: 0,  Completed: 0 [ current time: 14h31 ] 
+INFO: Combining runs 
+INFO: finish refine 
+Current estimate of cross-section: 17.62 +- 0.015306
+    P1_gg_h 
+INFO:  Idle: 0,  Running: 0,  Completed: 0 [ current time: 14h31 ] 
+INFO: Combining Events 
+INFO: Combining runs 
+INFO: finish refine 
+INFO: Combining Events 
+INFO: finish refine 
+refine 10000
+Creating Jobs
+INFO: Refine results to 10000 
+INFO: Generating 10000.0 unweighted events. 
+INFO: finish refine 
+refine 10000
+INFO: Effective Luminosity 681.044267877 pb^-1 
+INFO: need to improve 0 channels 
+Creating Jobs
+INFO: Refine results to 10000 
+INFO: Generating 10000.0 unweighted events. 
+INFO: Effective Luminosity 681.044267877 pb^-1 
+INFO: need to improve 0 channels 
+Current estimate of cross-section: 17.62 +- 0.015306
+    P1_gg_h 
+INFO:  Idle: 0,  Running: 0,  Completed: 0 [ current time: 14h31 ] 
+INFO: Combining runs 
+Current estimate of cross-section: 17.62 +- 0.015306
+    P1_gg_h 
+INFO:  Idle: 0,  Running: 0,  Completed: 0 [ current time: 14h31 ] 
+INFO: finish refine 
+INFO: finish refine 
+refine 10000
+INFO: Combining Events 
+INFO: Combining runs 
+Creating Jobs
+INFO: Refine results to 10000 
+INFO: Generating 10000.0 unweighted events. 
+INFO: Effective Luminosity 681.044267877 pb^-1 
+INFO: need to improve 0 channels 
+INFO: finish refine 
+INFO: Combining Events 
+Current estimate of cross-section: 17.62 +- 0.015306
+    P1_gg_h 
+INFO:  Idle: 0,  Running: 0,  Completed: 0 [ current time: 14h31 ] 
+INFO: Combining runs 
+INFO: finish refine 
+INFO: Combining Events 
+  === Results Summary for run: run_01 tag: tag_1 ===
+
+     Cross-section :   17.62 +- 0.01531 pb
+     Nb of events :  10000
+ 
+INFO: Running Systematics computation 
+INFO:  Idle: 0,  Running: 4,  Completed: 0 [ current time: 14h31 ] 
+  === Results Summary for run: run_01 tag: tag_1 ===
+
+     Cross-section :   17.62 +- 0.01531 pb
+     Nb of events :  10000
+ 
+INFO: Running Systematics computation 
+INFO:  Idle: 0,  Running: 4,  Completed: 0 [ current time: 14h31 ] 
+  === Results Summary for run: run_01 tag: tag_1 ===
+
+     Cross-section :   17.62 +- 0.01531 pb
+     Nb of events :  10000
+ 
+  === Results Summary for run: run_01 tag: tag_1 ===
+
+     Cross-section :   17.62 +- 0.01531 pb
+     Nb of events :  10000
+ 
+INFO: Running Systematics computation 
+INFO: Running Systematics computation 
+  === Results Summary for run: run_01 tag: tag_1 ===
+
+     Cross-section :   17.62 +- 0.01531 pb
+     Nb of events :  10000
+ 
+INFO:  Idle: 0,  Running: 4,  Completed: 0 [ current time: 14h31 ] 
+INFO: Running Systematics computation 
+INFO:  Idle: 0,  Running: 4,  Completed: 0 [ current time: 14h31 ] 
+  === Results Summary for run: run_01 tag: tag_1 ===
+
+     Cross-section :   17.62 +- 0.01531 pb
+     Nb of events :  10000
+ 
+INFO:  Idle: 0,  Running: 4,  Completed: 0 [ current time: 14h31 ] 
+  === Results Summary for run: run_01 tag: tag_1 ===
+
+     Cross-section :   17.62 +- 0.01531 pb
+     Nb of events :  10000
+ 
+  === Results Summary for run: run_01 tag: tag_1 ===
+
+     Cross-section :   17.62 +- 0.01531 pb
+     Nb of events :  10000
+ 
+  === Results Summary for run: run_01 tag: tag_1 ===
+
+     Cross-section :   17.62 +- 0.01531 pb
+     Nb of events :  10000
+ 
+  === Results Summary for run: run_01 tag: tag_1 ===
+
+     Cross-section :   17.62 +- 0.01531 pb
+     Nb of events :  10000
+ 
+INFO: Running Systematics computation 
+INFO: Running Systematics computation 
+INFO: Running Systematics computation 
+INFO: Running Systematics computation 
+INFO: Running Systematics computation 
+INFO:  Idle: 0,  Running: 4,  Completed: 0 [ current time: 14h31 ] 
+INFO:  Idle: 0,  Running: 4,  Completed: 0 [ current time: 14h31 ] 
+INFO:  Idle: 0,  Running: 4,  Completed: 0 [ current time: 14h31 ] 
+INFO:  Idle: 0,  Running: 4,  Completed: 0 [ current time: 14h31 ] 
+INFO:  Idle: 0,  Running: 4,  Completed: 0 [ current time: 14h31 ] 
+INFO:  Idle: 0,  Running: 3,  Completed: 1 [  59.7s  ] 
+INFO:  Idle: 0,  Running: 3,  Completed: 1 [  59.7s  ] 
+INFO:  Idle: 0,  Running: 3,  Completed: 1 [  59.5s  ] 
+INFO:  Idle: 0,  Running: 3,  Completed: 1 [  59.7s  ] 
+INFO:  Idle: 0,  Running: 3,  Completed: 1 [  1m 0s  ] 
+INFO:  Idle: 0,  Running: 2,  Completed: 2 [  59.9s  ] 
+INFO:  Idle: 0,  Running: 3,  Completed: 1 [  60s  ] 
+INFO:  Idle: 0,  Running: 3,  Completed: 1 [  60s  ] 
+INFO:  Idle: 0,  Running: 3,  Completed: 1 [  1m 0s  ] 
+INFO:  Idle: 0,  Running: 3,  Completed: 1 [  1m 0s  ] 
+INFO: # events generated with PDF: NNPDF23_lo_as_0130_qed (247000) 
+INFO: #Will Compute 145 weights per event. 
+INFO: #***************************************************************************
+#
+# original cross-section: 17.6147161136
+#     scale variation: +1.34% -3.76%
+#     central scheme variation: + 0% -100%
+# PDF variation: +2.44% -2.44%
+#
+# dynamical scheme # 2 : 17.6147 +1.34% -3.76% # \sum\sqrt{m^2+pt^2}
+# dynamical scheme # 3 : 16.9532 +3.9% -6.11% # 0.5 \sum\sqrt{m^2+pt^2}
+# dynamical scheme # 4 : 17.6147 +1.34% -3.76% # \sqrt{\hat s}
+#***************************************************************************
+ 
+INFO: End of systematics computation 
+INFO: # events generated with PDF: NNPDF23_lo_as_0130_qed (247000) 
+INFO: #Will Compute 145 weights per event. 
+INFO: #***************************************************************************
+#
+# original cross-section: 17.6147161136
+#     scale variation: +1.34% -3.76%
+#     central scheme variation: + 0% -100%
+# PDF variation: +2.44% -2.44%
+#
+# dynamical scheme # 2 : 17.6147 +1.34% -3.76% # \sum\sqrt{m^2+pt^2}
+# dynamical scheme # 3 : 16.9532 +3.9% -6.11% # 0.5 \sum\sqrt{m^2+pt^2}
+# dynamical scheme # 4 : 17.6147 +1.34% -3.76% # \sqrt{\hat s}
+#***************************************************************************
+ 
+INFO: End of systematics computation 
+INFO: Creating Plots for parton level 
+INFO: Creating Plots for parton level 
+INFO: # events generated with PDF: NNPDF23_lo_as_0130_qed (247000) 
+INFO: #Will Compute 145 weights per event. 
+INFO: #***************************************************************************
+#
+# original cross-section: 17.6147161136
+#     scale variation: +1.34% -3.76%
+#     central scheme variation: + 0% -100%
+# PDF variation: +2.44% -2.44%
+#
+# dynamical scheme # 2 : 17.6147 +1.34% -3.76% # \sum\sqrt{m^2+pt^2}
+# dynamical scheme # 3 : 16.9532 +3.9% -6.11% # 0.5 \sum\sqrt{m^2+pt^2}
+# dynamical scheme # 4 : 17.6147 +1.34% -3.76% # \sqrt{\hat s}
+#***************************************************************************
+ 
+INFO: End of systematics computation 
+INFO: # events generated with PDF: NNPDF23_lo_as_0130_qed (247000) 
+INFO: #Will Compute 145 weights per event. 
+INFO: #***************************************************************************
+#
+# original cross-section: 17.6147161136
+#     scale variation: +1.34% -3.76%
+#     central scheme variation: + 0% -100%
+# PDF variation: +2.44% -2.44%
+#
+# dynamical scheme # 2 : 17.6147 +1.34% -3.76% # \sum\sqrt{m^2+pt^2}
+# dynamical scheme # 3 : 16.9532 +3.9% -6.11% # 0.5 \sum\sqrt{m^2+pt^2}
+# dynamical scheme # 4 : 17.6147 +1.34% -3.76% # \sqrt{\hat s}
+#***************************************************************************
+ 
+INFO: End of systematics computation 
+INFO: # events generated with PDF: NNPDF23_lo_as_0130_qed (247000) 
+INFO: #Will Compute 145 weights per event. 
+INFO: #***************************************************************************
+#
+# original cross-section: 17.6147161136
+#     scale variation: +1.34% -3.76%
+#     central scheme variation: + 0% -100%
+# PDF variation: +2.44% -2.44%
+#
+# dynamical scheme # 2 : 17.6147 +1.34% -3.76% # \sum\sqrt{m^2+pt^2}
+# dynamical scheme # 3 : 16.9532 +3.9% -6.11% # 0.5 \sum\sqrt{m^2+pt^2}
+# dynamical scheme # 4 : 17.6147 +1.34% -3.76% # \sqrt{\hat s}
+#***************************************************************************
+ 
+INFO: End of systematics computation 
+INFO: Creating Plots for parton level 
+INFO: # events generated with PDF: NNPDF23_lo_as_0130_qed (247000) 
+INFO: #Will Compute 145 weights per event. 
+INFO: #***************************************************************************
+#
+# original cross-section: 17.6147161136
+#     scale variation: +1.34% -3.76%
+#     central scheme variation: + 0% -100%
+# PDF variation: +2.44% -2.44%
+#
+# dynamical scheme # 2 : 17.6147 +1.34% -3.76% # \sum\sqrt{m^2+pt^2}
+# dynamical scheme # 3 : 16.9532 +3.9% -6.11% # 0.5 \sum\sqrt{m^2+pt^2}
+# dynamical scheme # 4 : 17.6147 +1.34% -3.76% # \sqrt{\hat s}
+#***************************************************************************
+ 
+INFO: End of systematics computation 
+INFO: Creating Plots for parton level 
+INFO: Creating Plots for parton level 
+INFO: # events generated with PDF: NNPDF23_lo_as_0130_qed (247000) 
+INFO: # events generated with PDF: NNPDF23_lo_as_0130_qed (247000) 
+INFO: # events generated with PDF: NNPDF23_lo_as_0130_qed (247000) 
+INFO: #Will Compute 145 weights per event. 
+INFO: #Will Compute 145 weights per event. 
+INFO: #Will Compute 145 weights per event. 
+INFO: #***************************************************************************
+#
+# original cross-section: 17.6147161136
+#     scale variation: +1.34% -3.76%
+#     central scheme variation: + 0% -100%
+# PDF variation: +2.44% -2.44%
+#
+# dynamical scheme # 2 : 17.6147 +1.34% -3.76% # \sum\sqrt{m^2+pt^2}
+# dynamical scheme # 3 : 16.9532 +3.9% -6.11% # 0.5 \sum\sqrt{m^2+pt^2}
+# dynamical scheme # 4 : 17.6147 +1.34% -3.76% # \sqrt{\hat s}
+#***************************************************************************
+ 
+INFO: #***************************************************************************
+#
+# original cross-section: 17.6147161136
+#     scale variation: +1.34% -3.76%
+#     central scheme variation: + 0% -100%
+# PDF variation: +2.44% -2.44%
+#
+# dynamical scheme # 2 : 17.6147 +1.34% -3.76% # \sum\sqrt{m^2+pt^2}
+# dynamical scheme # 3 : 16.9532 +3.9% -6.11% # 0.5 \sum\sqrt{m^2+pt^2}
+# dynamical scheme # 4 : 17.6147 +1.34% -3.76% # \sqrt{\hat s}
+#***************************************************************************
+ 
+INFO: #***************************************************************************
+#
+# original cross-section: 17.6147161136
+#     scale variation: +1.34% -3.76%
+#     central scheme variation: + 0% -100%
+# PDF variation: +2.44% -2.44%
+#
+# dynamical scheme # 2 : 17.6147 +1.34% -3.76% # \sum\sqrt{m^2+pt^2}
+# dynamical scheme # 3 : 16.9532 +3.9% -6.11% # 0.5 \sum\sqrt{m^2+pt^2}
+# dynamical scheme # 4 : 17.6147 +1.34% -3.76% # \sqrt{\hat s}
+#***************************************************************************
+ 
+INFO: End of systematics computation 
+INFO: End of systematics computation 
+INFO: End of systematics computation 
+INFO: Creating Plots for parton level 
+INFO: # events generated with PDF: NNPDF23_lo_as_0130_qed (247000) 
+INFO: #Will Compute 145 weights per event. 
+INFO: #***************************************************************************
+#
+# original cross-section: 17.6147161136
+#     scale variation: +1.34% -3.76%
+#     central scheme variation: + 0% -100%
+# PDF variation: +2.44% -2.44%
+#
+# dynamical scheme # 2 : 17.6147 +1.34% -3.76% # \sum\sqrt{m^2+pt^2}
+# dynamical scheme # 3 : 16.9532 +3.9% -6.11% # 0.5 \sum\sqrt{m^2+pt^2}
+# dynamical scheme # 4 : 17.6147 +1.34% -3.76% # \sqrt{\hat s}
+#***************************************************************************
+ 
+INFO: End of systematics computation 
+INFO: Creating Plots for parton level 
+INFO: Creating Plots for parton level 
+INFO: Creating Plots for parton level 
+INFO: Creating Plots for parton level 
+INFO: Plots for parton level generated, see /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_3620/MG5_aMC/MSSMD/HTML/run_01/plots_parton.html 
+INFO: Plots for parton level generated, see /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_7647/MG5_aMC/MSSMD/HTML/run_01/plots_parton.html 
+INFO: End Plots for parton level 
+INFO: End Plots for parton level 
+store_events
+store_events
+INFO: Storing parton level results 
+INFO: Storing parton level results 
+INFO: Plots for parton level generated, see /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5397/MG5_aMC/MSSMD/HTML/run_01/plots_parton.html 
+INFO: End Plots for parton level 
+store_events
+INFO: Storing parton level results 
+INFO: Plots for parton level generated, see /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8094/MG5_aMC/MSSMD/HTML/run_01/plots_parton.html 
+INFO: End Plots for parton level 
+store_events
+INFO: Storing parton level results 
+INFO: Plots for parton level generated, see /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_5528/MG5_aMC/MSSMD/HTML/run_01/plots_parton.html 
+INFO: End Plots for parton level 
+store_events
+INFO: Storing parton level results 
+INFO: Plots for parton level generated, see /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8899/MG5_aMC/MSSMD/HTML/run_01/plots_parton.html 
+INFO: End Plots for parton level 
+store_events
+INFO: Storing parton level results 
+INFO: Plots for parton level generated, see /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_8919/MG5_aMC/MSSMD/HTML/run_01/plots_parton.html 
+INFO: End Plots for parton level 
+store_events
+INFO: Storing parton level results 
+INFO: Plots for parton level generated, see /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_2915/MG5_aMC/MSSMD/HTML/run_01/plots_parton.html 
+INFO: End Plots for parton level 
+store_events
+INFO: Storing parton level results 
+INFO: Plots for parton level generated, see /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_281/MG5_aMC/MSSMD/HTML/run_01/plots_parton.html 
+INFO: End Plots for parton level 
+store_events
+INFO: Storing parton level results 
+INFO: Plots for parton level generated, see /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_9603/MG5_aMC/MSSMD/HTML/run_01/plots_parton.html 
+INFO: End Plots for parton level 
+store_events
+INFO: Storing parton level results 
+INFO: End Parton 
+reweight -from_cards
+decay_events -from_cards
+INFO: End Parton 
+reweight -from_cards
+decay_events -from_cards
+INFO: Running MadSpin 
+INFO: This functionality allows for the decay of resonances 
+INFO: in a .lhe file, keeping track of the spin correlation effets. 
+INFO: BE AWARE OF THE CURRENT LIMITATIONS: 
+INFO:   (1) Only a succession of 2 body decay are currently allowed 
+************************************************************
+*                                                          *
+*           W E L C O M E  to  M A D S P I N               *
+*                                                          *
+************************************************************
+INFO: Extracting the banner ... 
+INFO: Running MadSpin 
+INFO: This functionality allows for the decay of resonances 
+INFO: in a .lhe file, keeping track of the spin correlation effets. 
+INFO: BE AWARE OF THE CURRENT LIMITATIONS: 
+INFO:   (1) Only a succession of 2 body decay are currently allowed 
+************************************************************
+*                                                          *
+*           W E L C O M E  to  M A D S P I N               *
+*                                                          *
+************************************************************
+INFO: Extracting the banner ... 
+INFO: process: g g > h 
+INFO: options:  
+INFO: process: g g > h 
+INFO: options:  
+INFO: detected model: heft. Loading... 
+INFO: detected model: heft. Loading... 
+set lhapdf to /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0/HEPTools/lhapdf6/bin/lhapdf-config
+set spinmode none
+import model MSSMD_UFO ../models/MSSMD_UFO/param_card.dat --bypass_check
+INFO: detected model: MSSMD_UFO. Loading... 
+set lhapdf to /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0/HEPTools/lhapdf6/bin/lhapdf-config
+set spinmode none
+import model MSSMD_UFO ../models/MSSMD_UFO/param_card.dat --bypass_check
+INFO: detected model: MSSMD_UFO. Loading... 
+INFO: End Parton 
+reweight -from_cards
+decay_events -from_cards
+INFO: End Parton 
+reweight -from_cards
+decay_events -from_cards
+INFO: End Parton 
+reweight -from_cards
+decay_events -from_cards
+INFO: Running MadSpin 
+INFO: This functionality allows for the decay of resonances 
+INFO: in a .lhe file, keeping track of the spin correlation effets. 
+INFO: BE AWARE OF THE CURRENT LIMITATIONS: 
+INFO:   (1) Only a succession of 2 body decay are currently allowed 
+************************************************************
+*                                                          *
+*           W E L C O M E  to  M A D S P I N               *
+*                                                          *
+************************************************************
+INFO: Extracting the banner ... 
+INFO: Running MadSpin 
+INFO: This functionality allows for the decay of resonances 
+INFO: in a .lhe file, keeping track of the spin correlation effets. 
+INFO: BE AWARE OF THE CURRENT LIMITATIONS: 
+INFO:   (1) Only a succession of 2 body decay are currently allowed 
+************************************************************
+*                                                          *
+*           W E L C O M E  to  M A D S P I N               *
+*                                                          *
+************************************************************
+INFO: Running MadSpin 
+INFO: This functionality allows for the decay of resonances 
+INFO: in a .lhe file, keeping track of the spin correlation effets. 
+INFO: BE AWARE OF THE CURRENT LIMITATIONS: 
+INFO:   (1) Only a succession of 2 body decay are currently allowed 
+************************************************************
+*                                                          *
+*           W E L C O M E  to  M A D S P I N               *
+*                                                          *
+************************************************************
+INFO: End Parton 
+reweight -from_cards
+decay_events -from_cards
+INFO: Extracting the banner ... 
+INFO: Extracting the banner ... 
+INFO: process: g g > h 
+INFO: options:  
+INFO: Running MadSpin 
+INFO: This functionality allows for the decay of resonances 
+INFO: in a .lhe file, keeping track of the spin correlation effets. 
+INFO: BE AWARE OF THE CURRENT LIMITATIONS: 
+INFO:   (1) Only a succession of 2 body decay are currently allowed 
+************************************************************
+*                                                          *
+*           W E L C O M E  to  M A D S P I N               *
+*                                                          *
+************************************************************
+INFO: detected model: heft. Loading... 
+INFO: process: g g > h 
+INFO: options:  
+INFO: Extracting the banner ... 
+INFO: process: g g > h 
+INFO: options:  
+INFO: End Parton 
+reweight -from_cards
+decay_events -from_cards
+INFO: End Parton 
+set lhapdf to /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0/HEPTools/lhapdf6/bin/lhapdf-config
+INFO: detected model: heft. Loading... 
+reweight -from_cards
+decay_events -from_cards
+set spinmode none
+import model MSSMD_UFO ../models/MSSMD_UFO/param_card.dat --bypass_check
+INFO: detected model: MSSMD_UFO. Loading... 
+INFO: End Parton 
+reweight -from_cards
+decay_events -from_cards
+INFO: End Parton 
+reweight -from_cards
+decay_events -from_cards
+INFO: detected model: heft. Loading... 
+set lhapdf to /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0/HEPTools/lhapdf6/bin/lhapdf-config
+set spinmode none
+import model MSSMD_UFO ../models/MSSMD_UFO/param_card.dat --bypass_check
+INFO: detected model: MSSMD_UFO. Loading... 
+INFO: process: g g > h 
+INFO: options:  
+INFO: Running MadSpin 
+INFO: This functionality allows for the decay of resonances 
+INFO: in a .lhe file, keeping track of the spin correlation effets. 
+INFO: BE AWARE OF THE CURRENT LIMITATIONS: 
+INFO:   (1) Only a succession of 2 body decay are currently allowed 
+************************************************************
+*                                                          *
+*           W E L C O M E  to  M A D S P I N               *
+*                                                          *
+************************************************************
+set lhapdf to /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0/HEPTools/lhapdf6/bin/lhapdf-config
+set spinmode none
+import model MSSMD_UFO ../models/MSSMD_UFO/param_card.dat --bypass_check
+INFO: detected model: MSSMD_UFO. Loading... 
+INFO: Running MadSpin 
+INFO: This functionality allows for the decay of resonances 
+INFO: in a .lhe file, keeping track of the spin correlation effets. 
+INFO: BE AWARE OF THE CURRENT LIMITATIONS: 
+INFO:   (1) Only a succession of 2 body decay are currently allowed 
+************************************************************
+*                                                          *
+*           W E L C O M E  to  M A D S P I N               *
+*                                                          *
+************************************************************
+INFO: Running MadSpin 
+INFO: This functionality allows for the decay of resonances 
+INFO: in a .lhe file, keeping track of the spin correlation effets. 
+INFO: BE AWARE OF THE CURRENT LIMITATIONS: 
+INFO:   (1) Only a succession of 2 body decay are currently allowed 
+************************************************************
+*                                                          *
+*           W E L C O M E  to  M A D S P I N               *
+*                                                          *
+************************************************************
+INFO: Running MadSpin 
+INFO: This functionality allows for the decay of resonances 
+INFO: in a .lhe file, keeping track of the spin correlation effets. 
+INFO: BE AWARE OF THE CURRENT LIMITATIONS: 
+INFO:   (1) Only a succession of 2 body decay are currently allowed 
+************************************************************
+*                                                          *
+*           W E L C O M E  to  M A D S P I N               *
+*                                                          *
+************************************************************
+INFO: Extracting the banner ... 
+INFO: detected model: heft. Loading... 
+INFO: Extracting the banner ... 
+INFO: Extracting the banner ... 
+INFO: Extracting the banner ... 
+set lhapdf to /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0/HEPTools/lhapdf6/bin/lhapdf-config
+set spinmode none
+import model MSSMD_UFO ../models/MSSMD_UFO/param_card.dat --bypass_check
+INFO: detected model: MSSMD_UFO. Loading... 
+INFO: process: g g > h 
+INFO: options:  
+INFO: process: g g > h 
+INFO: options:  
+INFO: process: g g > h 
+INFO: options:  
+INFO: process: g g > h 
+INFO: options:  
+INFO: detected model: heft. Loading... 
+INFO: detected model: heft. Loading... 
+INFO: detected model: heft. Loading... 
+INFO: detected model: heft. Loading... 
+set lhapdf to /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0/HEPTools/lhapdf6/bin/lhapdf-config
+set spinmode none
+import model MSSMD_UFO ../models/MSSMD_UFO/param_card.dat --bypass_check
+INFO: detected model: MSSMD_UFO. Loading... 
+set lhapdf to /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0/HEPTools/lhapdf6/bin/lhapdf-config
+set spinmode none
+import model MSSMD_UFO ../models/MSSMD_UFO/param_card.dat --bypass_check
+INFO: detected model: MSSMD_UFO. Loading... 
+set lhapdf to /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0/HEPTools/lhapdf6/bin/lhapdf-config
+set spinmode none
+import model MSSMD_UFO ../models/MSSMD_UFO/param_card.dat --bypass_check
+INFO: detected model: MSSMD_UFO. Loading... 
+set lhapdf to /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0/HEPTools/lhapdf6/bin/lhapdf-config
+set spinmode none
+import model MSSMD_UFO ../models/MSSMD_UFO/param_card.dat --bypass_check
+INFO: detected model: MSSMD_UFO. Loading... 
+INFO: load particles 
+INFO: load vertices 
+INFO: load particles 
+INFO: load vertices 
+INFO: load particles 
+INFO: load vertices 
+INFO: load particles 
+INFO: load vertices 
+INFO: load particles 
+INFO: load vertices 
+INFO: load particles 
+INFO: load vertices 
+INFO: load particles 
+INFO: load particles 
+INFO: load vertices 
+INFO: load vertices 
+INFO: load particles 
+INFO: load particles 
+INFO: load vertices 
+INFO: load vertices 
+srun: got SIGCONT
+slurmstepd: error: *** JOB 54370 ON ibnodo13 CANCELLED AT 2020-03-15T14:35:35 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: forcing job termination
+slurmstepd: error: *** STEP 54370.0 ON ibnodo13 CANCELLED AT 2020-03-15T14:35:35 ***

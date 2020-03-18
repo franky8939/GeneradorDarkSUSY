@@ -1,0 +1,506 @@
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 0.25 :: TcPhoD :: 0
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_TcPhoD_0_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_TcPhoD_0_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 0.25 :: TcPhoD :: 5
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_TcPhoD_5_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_TcPhoD_5_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 0.25 :: TcPhoD :: 10
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_TcPhoD_10_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_TcPhoD_10_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 0.25 :: TcPhoD :: 20
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_TcPhoD_20_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_TcPhoD_20_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 0.25 :: TcPhoD :: 30
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_TcPhoD_30_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_TcPhoD_30_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 0.25 :: TcPhoD :: 40
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_TcPhoD_40_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_TcPhoD_40_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 0.25 :: TcPhoD :: 50
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_TcPhoD_50_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_TcPhoD_50_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 0.25 :: TcPhoD :: 60
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_TcPhoD_60_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_TcPhoD_60_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 0.25 :: TcPhoD :: 70
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_TcPhoD_70_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_TcPhoD_70_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 0.25 :: TcPhoD :: 80
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_TcPhoD_80_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_TcPhoD_80_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 0.25 :: TcPhoD :: 90
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_TcPhoD_90_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_TcPhoD_90_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 0.25 :: TcPhoD :: 100
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_TcPhoD_100_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_0.25/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_0.25_TcPhoD_100_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 1 :: TcPhoD :: 0
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_TcPhoD_0_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_TcPhoD_0_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 1 :: TcPhoD :: 5
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_TcPhoD_5_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_TcPhoD_5_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 1 :: TcPhoD :: 10
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_TcPhoD_10_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_TcPhoD_10_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 1 :: TcPhoD :: 20
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_TcPhoD_20_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_TcPhoD_20_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 1 :: TcPhoD :: 30
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_TcPhoD_30_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_TcPhoD_30_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 1 :: TcPhoD :: 40
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_TcPhoD_40_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_TcPhoD_40_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 1 :: TcPhoD :: 50
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_TcPhoD_50_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_TcPhoD_50_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 1 :: TcPhoD :: 60
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_TcPhoD_60_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_TcPhoD_60_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 1 :: TcPhoD :: 70
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_TcPhoD_70_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_TcPhoD_70_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 1 :: TcPhoD :: 80
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_TcPhoD_80_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_TcPhoD_80_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 1 :: TcPhoD :: 90
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_TcPhoD_90_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_TcPhoD_90_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 1 :: TcPhoD :: 100
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_TcPhoD_100_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_1/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_1_TcPhoD_100_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 2 :: TcPhoD :: 0
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_TcPhoD_0_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_TcPhoD_0_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 2 :: TcPhoD :: 5
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_TcPhoD_5_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_TcPhoD_5_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 2 :: TcPhoD :: 10
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_TcPhoD_10_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_TcPhoD_10_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 2 :: TcPhoD :: 20
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_TcPhoD_20_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_TcPhoD_20_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 2 :: TcPhoD :: 30
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_TcPhoD_30_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_TcPhoD_30_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 2 :: TcPhoD :: 40
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_TcPhoD_40_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_TcPhoD_40_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 2 :: TcPhoD :: 50
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_TcPhoD_50_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_TcPhoD_50_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 2 :: TcPhoD :: 60
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_TcPhoD_60_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_TcPhoD_60_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 2 :: TcPhoD :: 70
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_TcPhoD_70_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_TcPhoD_70_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 2 :: TcPhoD :: 80
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_TcPhoD_80_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_TcPhoD_80_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 2 :: TcPhoD :: 90
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_TcPhoD_90_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_TcPhoD_90_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 2 :: TcPhoD :: 100
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_TcPhoD_100_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_2/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_2_TcPhoD_100_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 3 :: TcPhoD :: 0
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_3/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_3_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_3_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_3/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.root exist or is runing :: 
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_3/DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_3_TcPhoD_0_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_3/Mu_min4/Mu4_DarkSUSY_CMS_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_3_TcPhoD_0_.root
+ :: File *.root reduction exist :: 
+ ************************* CORRIDA NUEVA ************************* 
+ :: Condiciones de Trabajo :: 
+ :: Events :: 10000 :: MneuL :: 10 :: MneuD :: 0.25 :: MphoD :: 3 :: TcPhoD :: 5
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_3/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: File *.lhe exist or is running :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_3_.txt
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/RUN_lhe_DarkSUSY_LHE_Event_10000_MNeuL_10_MNeuD_0.25_MPhoD_3_.root
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_3/lhe/run_01_decayed_1/unweighted_events.lhe
+ :: Run the programs for obtein root file
+ :: ERROR :: Create file :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_4507
+ :: Create file :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_4507
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_4507
+ :: Create file :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_4507/MG5_aMC
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_4507/MG5_aMC
+ :: ERROR IN EXECUTION :: Copy :: /LUSTRE/home/fmsanchez/MG5_aMC_v2_7_0 :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_4507/MG5_aMC
+python: can't open file 'write_param_card.py': [Errno 2] No such file or directory
+sh: ./bin/mg5_aMC: No existe el fichero o el directorio
+cp: no se puede crear el fichero regular «/LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_4507/MG5_aMC/MSSMD/Cards»: No existe el fichero o el directorio
+cp: no se puede crear el fichero regular «/LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_4507/MG5_aMC/MSSMD/Cards»: No existe el fichero o el directorio
+cp: no se puede crear el fichero regular «/LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_4507/MG5_aMC/MSSMD/Cards»: No existe el fichero o el directorio
+gzip: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_3/lhe/run_01_decayed_1/unweighted_events.lhe.gz: No such file or directory
+ :: ERROR :: Incorrect bash execution :: 
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_4507/MG5_aMC/models/MSSMD_UFO/
+ :: Not posible clear file :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_4507/MG5_aMC/models/MSSMD_UFO/
+ :: Create file :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_4507/MG5_aMC/models/MSSMD_UFO
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_4507/MG5_aMC/models/MSSMD_UFO
+ :: ERROR IN EXECUTION :: Copy :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/MSSMD_UFO :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_4507/MG5_aMC/models/MSSMD_UFO
+False
+ :: Execute correct :: 512 :: python write_param_card.py
+ :: ERROR :: Execution of :: Ma_DPhoincorrect
+ :: ERROR :: Execution of :: Ma_LNeuincorrect
+ :: ERROR :: Execution of :: Ma_DNeuincorrect
+ :: ERROR :: Clear file :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_4507/MG5_aMC/proc_card.dat
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/proc_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_4507/MG5_aMC
+False
+ :: Execute correct :: 32512 :: ./bin/mg5_aMC proc_card.dat
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/madspin_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_4507/MG5_aMC/MSSMD/Cards
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/madspin_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_4507/MG5_aMC/MSSMD/Cards
+ :: Copy file :: /LUSTRE/home/fmsanchez/GDarkSUSY/source/run_card.dat :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_4507/MG5_aMC/MSSMD/Cards
+ :: ERROR :: Execution of :: Eventsincorrect
+ :: ERROR :: Create file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000
+ :: ERROR :: Create file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10
+ :: ERROR :: Create file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25
+ :: ERROR :: Create file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_3
+ :: ERROR :: Create file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_3/lhe
+ :: ERROR :: Create file :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_3/Mu_min4
+ :: Not exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_4507/MG5_aMC/MSSMD/Events
+ :: Not posible clear file :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_4507/MG5_aMC/MSSMD/Events
+ :: Create file :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_4507/MG5_aMC/MSSMD/Events
+ :: Exist file :: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_4507/MG5_aMC/MSSMD/Events
+ :: Execute correct :: 256 :: gzip -d /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_3/lhe/run_01_decayed_1/unweighted_events.lhe.gz
+ :: ERROR IN EXECUTION :: Copy :: /LUSTRE/home/fmsanchez/GDarkSUSY/data/Events_10000/MneuL_10/MneuD_0.25/MphoD_3/lhe :: to folder:: /LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_4507/MG5_aMC/MSSMD/Events
+Traceback (most recent call last):
+  File "genera_v5.py", line 156, in <module>
+    info=info  # info of process
+  File "/LUSTRE/home/fmsanchez/GDarkSUSY/modules/genera/genera_ALL.py", line 81, in genera_ini
+    output=DirMadgraph + "/MSSMD/Events/run_01_decayed_1/unweighted_events.lhe")  # change Tc
+  File "/LUSTRE/home/fmsanchez/GDarkSUSY/modules/genera/modification_card.py", line 24, in lifetime
+    g = open(output, 'w')
+IOError: [Errno 2] No such file or directory: '/LUSTRE/home/fmsanchez/GDarkSUSY/temp/Process_4507/MG5_aMC/MSSMD/Events/run_01_decayed_1/unweighted_events.lhe'
+srun: error: ibnodo23: task 0: Exited with exit code 1

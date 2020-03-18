@@ -32,7 +32,7 @@ def lifetime(ctau_mean_mm, input="unweighted_events.lhe", output="unweighted_eve
             event_begin = False
             event_end = True
         new_line = ''
-        if event_begin == True and event_end == False:
+        if event_begin and not event_end:
             word_n = 0
             for word in line.split():
                 if word == '3000022' or word_n > 0:
@@ -66,127 +66,130 @@ def change(inp, var, num, info=None):
         if var == "Ma_DPho":
             modificarLinea(inp, "  3000022 2.500000e-01 # MAD", "  3000022 " + str(num) + " # MAD ")
 
-            printG(" :: Change mass of dark photon to :: " + str(num), info)
+            printG(" :: Change mass of dark photon to :: " + str(num), info=info)
             return True
         elif var == "Ma_LNeu":
             # *** || Change the mass of lightest neutalino || *** #
             modificarLinea(inp, "  1000022 1.000000e+01 # Mneu1", "  1000022 " + str(num) + " # Mneu1 ")
 
-            printG(" :: Change mass of lightest neutalino to :: " + str(num), info)
+            printG(" :: Change mass of lightest neutalino to :: " + str(num), info=info)
             return True
         elif var == "Ma_DNeu":
             # *** || Change the mass of dark neutalino || *** #
             modificarLinea(inp, "  3000001 1.000000e+00 # MneuD", "  3000001 " + str(num) + " # MneuD ")
 
-            printG(" :: Change mass of dark neutalino to :: " + str(num), info)
+            printG(" :: Change mass of dark neutalino to :: " + str(num), info=info)
             return True
         elif var == "events" or var == "Events":
             modificarLinea(inp, "  10000 = nevents ! Number of unweighted events requested",
                            "  " + str(num) + "  = nevents ! Number of unweighted events requested ")
 
-            printG(" :: Change Event to :: " + str(num), info)
+            printG(" :: Change Event to :: " + str(num), info=info)
             return True
         else:
-            printG(" :: ERROR :: var no incluide :: ", info)
+            printG(" :: ERROR :: var no incluide :: ", info=info)
             return False
     except:
-        printG(" :: ERROR :: Execution of :: " + var + "incorrect", info)
+        printG(" :: ERROR :: Execution of :: " + var + "incorrect", info=info)
         return False
 
 
 def activate(card, action, position_of_Card, position_of_Source=None, info=None, type=None):
     if action in ["ON", "On", "oN", "on"]:
         if card == "Pythia" or card == "pythia" or card == "Pythia8" or card == "pythia8":
-            if file_exists(position_of_Card + "/pythia8_card_default.dat", info):
-                file_copy(position_of_Card + "/pythia8_card_default.dat", position_of_Card + "/pythia8_card.dat", info)
+            if file_exists(position_of_Card + "/pythia8_card_default.dat", info=info):
+                file_copy(position_of_Card + "/pythia8_card_default.dat",
+                          position_of_Card + "/pythia8_card.dat",
+                          "ff",
+                          info=info)
 
-                printG(" :: Pythia8 Activate :: ", info)
+                printG(" :: Pythia8 Activate :: ", info=info)
                 return True
             else:
 
-                printG(" :: ERROR :: Incorrect pythia8_card_default.dat not exist :: ", info)
+                printG(" :: ERROR :: Incorrect pythia8_card_default.dat not exist :: ", info=info)
                 return False
         elif card == "Delphes" or card == "delphes":
             if type == "CMS":
                 file_copy(position_of_Card + "/delphes_card_CMS.dat",
-                          position_of_Card + "/delphes_card.dat", "ff", info)
+                          position_of_Card + "/delphes_card.dat", "ff", info=info)
 
-                printG(" :: Delphes CMS Activate :: ", info)
+                printG(" :: Delphes CMS Activate :: ", info=info)
                 return True
             elif type == "HL":
                 if file_copy(position_of_Card + "/delphes_card_HL.dat",
-                             position_of_Card + "/delphes_card.dat", "ff", info):
+                             position_of_Card + "/delphes_card.dat", "ff", info=info, local=True):
 
-                    printG(" :: Delphes HL Activate :: ", info)
+                    printG(" :: Delphes HL Activate :: ", info=info)
                     return True
                 elif file_copy(position_of_Card + "/delphes_card_HLLHC.dat",
-                               position_of_Card + "/delphes_card.dat", "ff", info):
+                               position_of_Card + "/delphes_card.dat", "ff", info=info, local=True):
 
-                    printG(" :: Delphes HL Activate :: ", info)
+                    printG(" :: Delphes HL Activate :: ", info=info)
                     return True
                 elif file_copy(position_of_Source + "/delphes_card_HL.dat",
-                               position_of_Source + "/delphes_card.dat", "ff", info):
+                               position_of_Source + "/delphes_card.dat", "ff", info=info, local=True):
 
-                    printG(" :: Delphes HL Activate :: ", info)
+                    printG(" :: Delphes HL Activate :: ", info=info)
                     return True
                 elif file_copy(position_of_Source + "/delphes_card_HLLHC.dat",
-                               position_of_Source + "/delphes_card.dat", "ff", info):
+                               position_of_Source + "/delphes_card.dat", "ff", info=info, local=True):
 
-                    printG(" :: Delphes HL Activate :: ", info)
+                    printG(" :: Delphes HL Activate :: ", info=info)
                     return True
                 else:
 
-                    printG(" :: ERROR :: Incorrect delphes_card_HL*.dat not exist :: ", info)
+                    printG(" :: ERROR :: Incorrect delphes_card_HL*.dat not exist :: ", info=info)
                     return False
             elif type == "HL2":
                 if file_copy(position_of_Card + "/delphes_card_HL2.dat",
-                             position_of_Card + "/delphes_card.dat", "ff", info):
+                             position_of_Card + "/delphes_card.dat", "ff", info=info, local=True):
 
-                    printG(" :: Delphes HL2 Activate :: ", info)
+                    printG(" :: Delphes HL2 Activate :: ", info=info)
                     return True
                 elif file_copy(position_of_Card + "/delphes_card_HLLHC2.dat",
-                               position_of_Card + "/delphes_card.dat", "ff", info):
+                               position_of_Card + "/delphes_card.dat", "ff", info=info, local=True):
 
-                    printG(" :: Delphes HL2 Activate :: ", info)
+                    printG(" :: Delphes HL2 Activate :: ", info=info)
                     return True
                 elif file_copy(position_of_Source + "/delphes_card_HL2.dat",
-                               position_of_Source + "/delphes_card.dat", "ff", info):
+                               position_of_Source + "/delphes_card.dat", "ff", info=info, local=True):
 
-                    printG(" :: Delphes HL2 Activate :: ", info)
+                    printG(" :: Delphes HL2 Activate :: ", info=info)
                     return True
                 elif file_copy(position_of_Source + "/delphes_card_HLLHC2.dat",
-                               position_of_Source + "/delphes_card.dat", "ff", info):
+                               position_of_Source + "/delphes_card.dat", "ff", info=info, local=True):
 
-                    printG(" :: Delphes HL2 Activate :: ", info)
+                    printG(" :: Delphes HL2 Activate :: ", info=info)
                     return True
                 else:
 
-                    printG(" :: ERROR :: Incorrect delphes_card_HL2*.dat not exist :: ", info)
+                    printG(" :: ERROR :: Incorrect delphes_card_HL2*.dat not exist :: ", info=info)
                     return False
             else:
 
-                printG(" :: ERROR :: Incorrect type of card not include in program :: ", info)
+                printG(" :: ERROR :: Incorrect type of card not include in program :: ", info=info)
                 return False
         else:
 
-            printG(" :: ERROR :: Incorrect Position of Card for activate :: ", info)
+            printG(" :: ERROR :: Incorrect Position of Card for activate :: ", info=info)
             return True
     elif action in ["OFF", "Off", "oFF", "off"]:
-        if file_exists(position_of_Card, info):
+        if file_exists(position_of_Card, info=info, local=True):
             if card == "Pythia" or card == "pythia" or card == "Pythia8" or card == "pythia8":
-                file_clear(position_of_Card + "/pythia8_card.dat", "File", info)  # clear
+                file_clear(position_of_Card + "/pythia8_card.dat", "File", info=info, local=True)  # clear
 
-                printG(" :: Pythia8 Deactivate :: ", info)
+                printG(" :: Pythia8 Deactivate :: ", info=info)
                 return True
             elif card == "Delphes" or card == "delphes":
-                file_clear(position_of_Card + "/delphes_card.dat", "File", info)  # clear
+                file_clear(position_of_Card + "/delphes_card.dat", "File", info=info, local=True)  # clear
 
-                printG(" :: Delphes Deactivate :: ", info)
+                printG(" :: Delphes Deactivate :: ", info=info)
                 return True
             else:
 
-                printG(" :: ERROR :: Incorrect Card for deactivate :: ", info)
+                printG(" :: ERROR :: Incorrect Card for deactivate :: ", info=info)
                 return False
         else:
-            printG(" :: ERROR :: Incorrect Position of Card for deactivate :: ", info)
+            printG(" :: ERROR :: Incorrect Position of Card for deactivate :: ", info=info)
             return False
