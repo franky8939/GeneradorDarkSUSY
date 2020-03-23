@@ -25,11 +25,11 @@ def genera_root(DirMadgraph,
                 if ".root" in i:
                     outROOT = i
 
-            '''if outROOT is None:
-                execute("./bin/madevent delphes run_01_decayed_1/ <<< 0", info=info, position=position, local=True)  # genera root
-                for i in os.listdir(DirMadgraph + "/MSSMD/Events/run_01_decayed_1/"):
-                    if ".root" in i:
-                        outROOT = i'''
+        if outROOT is None:
+            execute("./bin/madevent delphes run_01_decayed_1/ <<< 0", info=info, position=position, local=True)  # genera root
+            for i in os.listdir(DirMadgraph + "/MSSMD/Events/run_01_decayed_1/"):
+                if ".root" in i:
+                    outROOT = i
 
     if outROOT is None:
         printG(" :: Not find file *.root :: ", info=info)

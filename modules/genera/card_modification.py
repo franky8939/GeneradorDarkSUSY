@@ -114,51 +114,51 @@ def activate(card, action, position_of_Card, position_of_Source=None, info=None,
                 printG(" :: Delphes CMS Activate :: ", info=info)
                 return True
             elif typ == "HL":
-                if file_copy(position_of_Card + "/delphes_card_HL.dat",
+                # if file_copy(position_of_Card + "/delphes_card_HL.dat",
+                #             position_of_Card + "/delphes_card.dat", "ff", info=info, local=True):
+
+                #    printG(" :: Delphes HL Activate :: ", info=info)
+                #    return True
+                # elif file_copy(position_of_Card + "/delphes_card_HLLHC.dat",
+                #               position_of_Card + "/delphes_card.dat", "ff", info=info, local=True):
+
+                #    printG(" :: Delphes HL Activate :: ", info=info)
+                #    return True
+                if file_copy(position_of_Source + "/delphes_card_HL.dat",
                              position_of_Card + "/delphes_card.dat", "ff", info=info, local=True):
 
                     printG(" :: Delphes HL Activate :: ", info=info)
                     return True
-                elif file_copy(position_of_Card + "/delphes_card_HLLHC.dat",
-                               position_of_Card + "/delphes_card.dat", "ff", info=info, local=True):
+                # elif file_copy(position_of_Source + "/delphes_card_HLLHC.dat",
+                #               position_of_Card + "/delphes_card.dat", "ff", info=info, local=True):
 
-                    printG(" :: Delphes HL Activate :: ", info=info)
-                    return True
-                elif file_copy(position_of_Source + "/delphes_card_HL.dat",
-                               position_of_Source + "/delphes_card.dat", "ff", info=info, local=True):
-
-                    printG(" :: Delphes HL Activate :: ", info=info)
-                    return True
-                elif file_copy(position_of_Source + "/delphes_card_HLLHC.dat",
-                               position_of_Source + "/delphes_card.dat", "ff", info=info, local=True):
-
-                    printG(" :: Delphes HL Activate :: ", info=info)
-                    return True
+                #    printG(" :: Delphes HL Activate :: ", info=info)
+                #    return True
                 else:
 
                     printG(" :: ERROR :: Incorrect delphes_card_HL*.dat not exist :: ", info=info)
                     return False
             elif typ == "HL2":
-                if file_copy(position_of_Card + "/delphes_card_HL2.dat",
+                # if file_copy(position_of_Card + "/delphes_card_HL2.dat",
+                #             position_of_Card + "/delphes_card.dat", "ff", info=info, local=True):
+
+                #    printG(" :: Delphes HL2 Activate :: ", info=info)
+                #    return True
+                # elif file_copy(position_of_Card + "/delphes_card_HLLHC2.dat",
+                #               position_of_Card + "/delphes_card.dat", "ff", info=info, local=True):
+
+                #    printG(" :: Delphes HL2 Activate :: ", info=info)
+                #    return True
+                if file_copy(position_of_Source + "/delphes_card_HL2.dat",
                              position_of_Card + "/delphes_card.dat", "ff", info=info, local=True):
 
                     printG(" :: Delphes HL2 Activate :: ", info=info)
                     return True
-                elif file_copy(position_of_Card + "/delphes_card_HLLHC2.dat",
-                               position_of_Card + "/delphes_card.dat", "ff", info=info, local=True):
+                # elif file_copy(position_of_Source + "/delphes_card_HLLHC2.dat",
+                #               position_of_Source + "/delphes_card.dat", "ff", info=info, local=True):
 
-                    printG(" :: Delphes HL2 Activate :: ", info=info)
-                    return True
-                elif file_copy(position_of_Source + "/delphes_card_HL2.dat",
-                               position_of_Source + "/delphes_card.dat", "ff", info=info, local=True):
-
-                    printG(" :: Delphes HL2 Activate :: ", info=info)
-                    return True
-                elif file_copy(position_of_Source + "/delphes_card_HLLHC2.dat",
-                               position_of_Source + "/delphes_card.dat", "ff", info=info, local=True):
-
-                    printG(" :: Delphes HL2 Activate :: ", info=info)
-                    return True
+                #    printG(" :: Delphes HL2 Activate :: ", info=info)
+                #    return True
                 else:
 
                     printG(" :: ERROR :: Incorrect delphes_card_HL2*.dat not exist :: ", info=info)
