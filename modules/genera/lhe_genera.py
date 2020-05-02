@@ -1,4 +1,5 @@
 from modules.genera.card_modification import *
+import sys
 
 
 def lhe_genera(DirMadgraph,  # directory of temporal install Madgraph
@@ -14,7 +15,8 @@ def lhe_genera(DirMadgraph,  # directory of temporal install Madgraph
 
     # *** || genera datos || *** #
     position = DirMadgraph + "/MSSMD/"
-    execute("./bin/generate_events <<< 0 <<< 0 ", info=info, position=position, local=True)
 
+    execute("./bin/generate_events", info=info, position=position, local=True)
+    #sys.exit()
     printG(" :: ********** Finally generate LHE file for using Dark Susy ********** :: ", info=info)
-    return file_exists(DirMadgraph + "/MSSMD/Events/run_01_decayed_1/unweighted_events.lhe", info=info, local=True)
+    return file_exists(DirMadgraph + "/MSSMD/Events/run_01_decayed_1/unweighted_events.lhe.gz", info=info, local=True)

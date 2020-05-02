@@ -1,13 +1,11 @@
 #!/bin/bash       
                                                                                                                                              
-#SBATCH --nodes=1
-#SBATCH --ntasks=10
-#SBATCH --cpus-per-task=2
+#SBATCH --ntasks=20
 #SBATCH --distribution=cyclic:cyclic
-##SBATCH --out=out.txt
+#SBATCH --out=generar.txt
 
 
-#SBATCH --job-name=DarkSUSY_CMS                                                                                                                                 
+#SBATCH --job-name=DarkSUSY                                                                                                                             
 #SBATCH --time=168:0:0                                                                                                                                          
 #SBATCH --partition=general                                                                                                                                    
 #SBATCH --constraint=broadwell                                                                                                                                 

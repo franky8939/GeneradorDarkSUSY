@@ -148,8 +148,8 @@ def execute(inp, position=None, info=None, local=False):
         printG(" :: Relocate directory to :: " + position, info=info)
         #printG(" :: Nos encontramos en  :: " + os.getcwd(), info=info)
     try:
-        g = subprocess.call(inp, shell=True)
-        #g = os.system(inp)  # Execute the program
+        #g = subprocess.call(inp, shell=True)
+        g = os.system(inp)  # Execute the program
         if g == 0:
             printG(" :: Execute correct :: " + str(g) + " :: " + inp, info=info)
             return True
